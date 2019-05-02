@@ -1,0 +1,28 @@
+Go language course
+Lesson 3
+20 May 2019
+Tags: golang, go
+
+Stanislav Kozina; Ivan Nečas; Pavel Tišnovský; Jakub Čajka
+Red Hat, Inc.
+email@email.email
+https://github.com/RedHatOfficial/GoCourse
+@RedHat
+
+* Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/fiveyears.jpg
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/fiveyears.jpg _ 900
+
+* First slide
+- One
+- Two
+- Three
+
+#last slide
+* More Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/bumper.png
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/bumper.png  _ 900
