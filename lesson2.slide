@@ -15,10 +15,15 @@ https://github.com/RedHatOfficial/GoCourse
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
-* First slide
-- One
-- Two
-- Three
+* Lesson #2
+- Defer statement
+- Pointers
+- structs (records)
+- arrays
+- slices
+- maps
+- loops that use range
+- user-defined data types
 
 #last slide
 * More Gophers

@@ -15,10 +15,13 @@ https://github.com/RedHatOfficial/GoCourse
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
-* First slide
-- One
-- Two
-- Three
+* Lesson #3
+- Lambda functions
+- Closures
+- Methods on types
+- Interfaces
+- Type assertions
+- Overview of standard libraries
 
 #last slide
 * More Gophers
