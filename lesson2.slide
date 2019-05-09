@@ -25,6 +25,30 @@ https://github.com/RedHatOfficial/GoCourse
 - loops that use range
 - user-defined data types
 
+* Defer statement
+
+.play lesson2/01_defer_basic_usage.go
+
+.play lesson2/02_defer_func.go
+
+.play lesson2/03_defer_with_parameters.go
+
+.play lesson2/04_more_defers.go
+
+* Pointers
+
+* Structs (records)
+
+* Arrays
+
+* Slices
+
+* Maps
+
+* Loops and the range clause
+
+* User-defined data types
+
 #last slide
 * More Gophers
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
