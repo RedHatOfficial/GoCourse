@@ -1,13 +1,12 @@
-Go language course
+Introduction, Syntax, Formatting, Packages, Types
 Lesson 1
 20 May 2019
 Tags: golang, go
 
-Stanislav Kozina; Ivan Nečas; Pavel Tišnovský; Jakub Čajka
+Stanislav Kozina <skozina@redhat.com>
+Jakub Čajka <jcajka@redhat.com>
 Red Hat, Inc.
-email@email.email
 https://github.com/RedHatOfficial/GoCourse
-@RedHat
 
 * Gophers
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
@@ -15,10 +14,61 @@ https://github.com/RedHatOfficial/GoCourse
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
-* First slide
-- One
-- Two
-- Three
+* Introduction
+- Launched in November 2009 by Google
+- Rob Pike, Ken Thompson, Robert Griesemer
+- More readable replacement for C/C++/Java/...
+- statically typed, compiled, garbage collected
+- built-in concurrency
+- server-side web (PHP, Node.js, Python)
+- cloud technlogies (docker, kubernetes)
+
+* Packages and Imports
+- Program building blocks ("libraries")
+- Imported by other programs
+- Package name is the last element of the import path
+- Standard packages: [[https://golang.org/pkg/]]
+
+.code lesson1/packages.go
+
+* Hello world
+.play lesson1/hello.go
+.code lesson1/run_hello.go
+.code lesson1/build_hello.go
+
+* go-fmt
+.play lesson1/gofmt1.go
+.code lesson1/gofmt.go
+.play lesson1/gofmt2.go
+
+* Syntax
+- Evolved from C
+- Declarations in postfix
+- Exported symbols begin with Capital letter
+- [[https://blog.golang.org/gos-declaration-syntax]]
+
+.code lesson1/syntax_c.go
+.code lesson1/syntax_go.go
+
+* Functions
+.play lesson1/functions.go
+
+* Multiple return values
+.play lesson1/functions2.go
+
+* Variables
+.play lesson1/vars.go
+
+* Types
+- Similar to C
+- No auto casts
+- Type inference && default types
+- Each type has clear zero value (0, false, "")
+.code lesson1/types.go
+
+* Type conversions
+- No auto casts
+.play lesson1/casts.go
 
 #last slide
 * More Gophers
