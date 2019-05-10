@@ -1,4 +1,4 @@
-Go language course
+Go language fundamentals
 Lesson 2
 20 May 2019
 Tags: golang, go
@@ -15,39 +15,139 @@ https://github.com/RedHatOfficial/GoCourse
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
+
+
+############################################################
+
 * Lesson #2
-- Defer statement
-- Pointers
+- defer statement
 - structs (records)
 - arrays
 - slices
+- pointers
 - maps
 - loops that use range
 - user-defined data types
+
+
+
+############################################################
 
 * Defer statement
 
 .play lesson2/01_defer_basic_usage.go
 
+* Function declaration in defer statement
+
 .play lesson2/02_defer_func.go
+
+* Function declaration with parameters in defer statement
 
 .play lesson2/03_defer_with_parameters.go
 
+* More defer statements in one function
+
 .play lesson2/04_more_defers.go
 
-* Pointers
+* Defer arguments evaluation
+
+.play lesson2/05_defer_arguments_evaluation.go
+
+* Defer arguments evaluation (more complicated example)
+
+.play lesson2/06_defer_arguments_evaluation.go
+
+* Defer and (many) return statements
+
+.play lesson2/07_defer_on_all_returns.go
+
+* Practical usage of defer
+
+.play lesson2/08_defer_practical_usage.go
+
+* Practical usage of defer (cont)
+
+.play lesson2/09_defer_practical_usage.go
+
+* Defer and return values
+
+.play lesson2/10_defer_return_values.go
+
+
+
+############################################################
 
 * Structs (records)
 
+.play lesson2/11_struct.go
+
+.play lesson2/12_struct_init.go
+
+.play lesson2/13_better_struct_init.go
+
+.play lesson2/14_struct_comparison.go
+
+.play lesson2/15_print_user.go
+
+
+
+############################################################
+
 * Arrays
+
+.play lesson2/16_arrays.go
+
+
+
+############################################################
 
 * Slices
 
+.play lesson2/18_slices.go
+
+.play lesson2/19_slice_copy.go
+
+.play lesson2/20_slice_from_slice.go
+
+.play lesson2/21_slice_append.go
+
+.play lesson2/17_array_copy.go
+
+
+
+############################################################
+
+* Pointers
+
+.play lesson2/22_pointer_to_int.go
+
+.play lesson2/23_pointer_to_struct.go
+
+.play lesson2/24_pointer_to_struct_item.go
+
+.play lesson2/25_pointer_to_array.go
+
+
+
+############################################################
+
 * Maps
+
+
+
+############################################################
 
 * Loops and the range clause
 
+
+
+############################################################
+
 * User-defined data types
+
+
+
+############################################################
 
 #last slide
 * More Gophers
