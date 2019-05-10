@@ -21,7 +21,7 @@ https://github.com/RedHatOfficial/GoCourse
 - statically typed, compiled, garbage collected
 - built-in concurrency
 - server-side web (PHP, Node.js, Python)
-- cloud technlogies (docker, kubernetes)
+- cloud technologies (docker, kubernetes)
 
 * Packages and Imports
 - Program building blocks ("libraries")
