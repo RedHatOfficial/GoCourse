@@ -29,8 +29,8 @@ func main() {
 	fmt.Println(*p_s)
 	fmt.Println("------------------")
 
-	(*p_n) = "Steve"
-	(*p_s) = "Ballmer"
+	(*p_n) = "Rob"
+	(*p_s) = "Pike"
 	fmt.Println(*p_n)
 	fmt.Println(*p_s)
 }

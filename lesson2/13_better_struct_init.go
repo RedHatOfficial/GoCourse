@@ -17,8 +17,8 @@ func main() {
 	fmt.Println(user1)
 
 	user1.id = 2
-	user1.name = "Steve"
-	user1.surname = "Ballmer"
+	user1.name = "Rob"
+	user1.surname = "Pike"
 
 	fmt.Println(user1)
 }

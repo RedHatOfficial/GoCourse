@@ -16,8 +16,8 @@ func main() {
 
 	var user2 User
 	user2.id = 1
-	user2.name = "Steve"
-	user2.surname = "Ballmer"
+	user2.name = "Rob"
+	user2.surname = "Pike"
 
 	user3 := User{
 		id:      1,
