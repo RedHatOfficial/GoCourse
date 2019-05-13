@@ -33,44 +33,95 @@ https://github.com/RedHatOfficial/GoCourse
 
 ############################################################
 
-* Defer statement
+* defer statement
+- used to "remember" commands that will be called before `return` or exit
+- based on LIFO (stack)
+- parameters are evaluated when `defer` is declared
+- (not when the specified code is called)
+- it is possible to change function return value(s) via `defer`
 
+
+
+* Basic usage of defer statement
+- function `on_finish()` is called before exit from `main()`
 .play lesson2/01_defer_basic_usage.go
 
-* Function declaration in defer statement
 
+
+* Function declaration in defer statement
+- usually the function definition is part of `defer` statement
 .play lesson2/02_defer_func.go
 
-* Function declaration with parameters in defer statement
 
+
+* Function declaration with parameters in defer statement
+- it is possible to specify arguments passed into function in `defer`
 .play lesson2/03_defer_with_parameters.go
 
-* More defer statements in one function
 
+
+* More defer statements in one function
+- ten `defer` statements
+- LIFO behaviour
+- (check in runtime)
 .play lesson2/04_more_defers.go
 
-* Defer arguments evaluation
 
+
+* Defer arguments evaluation
+- one function can be used in more `defer` statements
+- actual parameters are evaluated in runtime
+- (check in runtime)
+
+
+
+* Defer arguments evaluation
 .play lesson2/05_defer_arguments_evaluation.go
 
-* Defer arguments evaluation (more complicated example)
 
+
+* Defer arguments evaluation (more complicated example)
+- arrays are a bit tricky
+- (call by value vs. call by reference)
+- (check in runtime)
+
+
+
+* Defer arguments evaluation (more complicated example)
 .play lesson2/06_defer_arguments_evaluation.go
 
-* Defer and (many) return statements
 
+
+* Defer and (many) return statements
+- `defer` is called even when more `return` statements are used
+
+
+
+* Defer and (many) return statements
 .play lesson2/07_defer_on_all_returns.go
 
-* Practical usage of defer
 
+
+* Practical usage of defer
+- how to use `defer` in an application to copy files
 .play lesson2/08_defer_practical_usage.go
 
-* Practical usage of defer (cont)
 
+
+* Practical usage of defer (cont)
+- refactored previous example
 .play lesson2/09_defer_practical_usage.go
 
-* Defer and return values
 
+
+* Defer and return values
+- it is possible to change function return value(s) via `defer`
+- function return values needs to be named!
+- used in applications to set `err` return value
+
+
+
+* Defer and return values
 .play lesson2/10_defer_return_values.go
 
 
