@@ -56,6 +56,9 @@ https://github.com/RedHatOfficial/GoCourse
 * Multiple return values
 .play lesson1/functions2.go
 
+* Named return values
+.play lesson1/functions3.go
+
 * Variables
 .play lesson1/vars.go
 
@@ -69,6 +72,46 @@ https://github.com/RedHatOfficial/GoCourse
 * Type conversions
 - No auto casts
 .play lesson1/casts.go
+
+* Constants
+.play lesson1/const.go
+
+* Loops
+- Just for loop which also serves as while loop
+.play lesson1/for.go
+
+* Conditions
+- Similarly to for loop allows init statement
+- Variables declared there don't exist outside of the if block
+.play lesson1/if.go
+
+* Else statement
+- Variables declared in the init statement do exist in the else block
+.play lesson1/if2.go
+
+* Switch statement
+- Again allows init statement
+- Like set of if-else statements
+- Evaluated top-bottom, first successful case is executed
+- Thus there's no break statement
+.play lesson1/switch.go
+
+* Switch statement 2
+- Allows non-constant and non-integer values
+.play lesson1/switch2.go
+
+* Switch with no condition
+- switch without condition is like switch true
+.play lesson1/switch3.go
+
+* Error handling
+- error is built-in type
+[[https://blog.golang.org/error-handling-and-go]]
+.play lesson1/ret.go
+
+* Ignoring return values
+- '_' idiom can be used to drop return values
+.play lesson1/ret2.go
 
 #last slide
 * More Gophers
