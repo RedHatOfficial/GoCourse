@@ -98,19 +98,44 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Defer and (many) return statements
-.play lesson2/07_defer_on_all_returns.go
+.play lesson2/07_defer_on_all_returns.go /^package main/,/^func main/
+
+
+
+* Defer and (many) return statements (cont.)
+.play lesson2/07_defer_on_all_returns.go /^func main/,/^}/
 
 
 
 * Practical usage of defer
 - how to use `defer` in an application to copy files
-.play lesson2/08_defer_practical_usage.go
+.play lesson2/08_defer_practical_usage.go /^package main/,/func copyFile/
 
 
 
-* Practical usage of defer (cont)
+* Practical usage of defer (cont.)
+.play lesson2/08_defer_practical_usage.go /^func copyFile/,/^}/
+
+
+
+* Practical usage of defer (cont.)
+.play lesson2/08_defer_practical_usage.go /^func main/,/^}/
+
+
+
+* Practical usage of defer
 - refactored previous example
-.play lesson2/09_defer_practical_usage.go
+.play lesson2/09_defer_practical_usage.go /^package main/,/func copyFile/
+
+
+
+* Practical usage of defer (cont.)
+.play lesson2/09_defer_practical_usage.go /^func copyFile/,/^}/
+
+
+
+* Practical usage of defer (cont.)
+.play lesson2/09_defer_practical_usage.go /^func main/,/^}/
 
 
 
@@ -129,23 +154,55 @@ https://github.com/RedHatOfficial/GoCourse
 ############################################################
 
 * Structs (records)
+- a.k.a. records
+- user-defined data type (so called named structure)
+- or anonymous structure
+- dot operator to access struct members
+- initialization using {}
+- or by using named members (which is more explicit and better)
+- structs are comparable
+- pass to functions as value or via pointer (by reference)
 
+
+* Structs and dot operator
 .play lesson2/11_struct.go
 
+* Initialization of struct members
 .play lesson2/12_struct_init.go
 
+* Beter (more explicit) initialization of struct members
 .play lesson2/13_better_struct_init.go
 
-.play lesson2/14_struct_comparison.go
+* Comparison of whole structs is possible!
+.play lesson2/14_struct_comparison.go /package main/,/^func main//
 
-.play lesson2/15_print_user.go
+* Comparison of whole structs is possible! (cont.)
+.play lesson2/14_struct_comparison.go /^func main/,/^}/
+
+* Passing structs as values into functions
+.play lesson2/15_print_user.go /package main/,/^func main//
+
+* Passing structs as values into functions (cont.)
+.play lesson2/15_print_user.go /^func main/,/^}/
+
+* Anonymous structure
+
+    var employee struct {  
+            firstName, lastName string
+            age int
+    }
 
 
 
 ############################################################
 
 * Arrays
+- basic data type in Go
+- array items has the same type
+- index 0..length-1
+- indexing via []
 
+* Basic operations with arrays
 .play lesson2/16_arrays.go
 
 
@@ -189,6 +246,8 @@ https://github.com/RedHatOfficial/GoCourse
 ############################################################
 
 * Loops and the range clause
+- (see the 1st lesson for a `for` loop examples)
+- `range` keyword used in `for` to loop over array items, map pairs etc.
 
 
 
