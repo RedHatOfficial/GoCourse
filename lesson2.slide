@@ -1,11 +1,10 @@
-Go language fundamentals
+Go language fundamentals, the first part
 Lesson 2
-20 May 2019
+27 May 2019
 Tags: golang, go
 
-Stanislav Kozina; Ivan Nečas; Pavel Tišnovský; Jakub Čajka
+Pavel Tišnovský <ptisnovs@redhat.com>
 Red Hat, Inc.
-email@email.email
 https://github.com/RedHatOfficial/GoCourse
 @RedHat
 
@@ -20,6 +19,9 @@ https://github.com/RedHatOfficial/GoCourse
 ############################################################
 
 * Lesson #2
+
+Outline:
+
 - defer statement
 - structs (records)
 - arrays
@@ -34,9 +36,10 @@ https://github.com/RedHatOfficial/GoCourse
 ############################################################
 
 * defer statement
+- `defer` is a keyword in the Go programming language
 - used to "remember" commands that will be called before `return` or exit
-- based on LIFO (stack)
-- parameters are evaluated when `defer` is declared
+- based on LIFO (stack) of remembered commands
+- parameters are evaluated when `defer` is declared (ie. in runtime)
 - (not when the specified code is called)
 - it is possible to change function return value(s) via `defer`
 
@@ -50,7 +53,15 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Function declaration in defer statement
 - usually the function definition is part of `defer` statement
+- this function is anonymous - lambda, and usually it is a closure as well
+- (we will talk about lambdas and closures in the next lesson)
 .play lesson2/02_defer_func.go
+
+
+
+* Function declaration in defer statement (cont.)
+- parenthesis around lambda are not required
+.play lesson2/02B_defer_func.go
 
 
 
@@ -63,7 +74,7 @@ https://github.com/RedHatOfficial/GoCourse
 * More defer statements in one function
 - ten `defer` statements
 - LIFO behaviour
-- (check in runtime)
+- (check in runtime how it works)
 .play lesson2/04_more_defers.go
 
 
@@ -75,7 +86,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 
-* Defer arguments evaluation
+* Defer arguments evaluation (cont.)
 .play lesson2/05_defer_arguments_evaluation.go
 
 
@@ -83,11 +94,11 @@ https://github.com/RedHatOfficial/GoCourse
 * Defer arguments evaluation (more complicated example)
 - arrays are a bit tricky
 - (call by value vs. call by reference)
-- (check in runtime)
+- (check in runtime, again)
 
 
 
-* Defer arguments evaluation (more complicated example)
+* Defer arguments evaluation (more complicated example, cont.)
 .play lesson2/06_defer_arguments_evaluation.go
 
 
@@ -124,7 +135,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Practical usage of defer
-- refactored previous example
+- previous example refactored
 .play lesson2/09_defer_practical_usage.go /^package main/,/func copyFile/
 
 
@@ -141,6 +152,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Defer and return values
 - it is possible to change function return value(s) via `defer`
+- (works because function declared in defer is closure)
 - function return values needs to be named!
 - used in applications to set `err` return value
 
@@ -164,28 +176,61 @@ https://github.com/RedHatOfficial/GoCourse
 - pass to functions as value or via pointer (by reference)
 
 
+
 * Structs and dot operator
 .play lesson2/11_struct.go
 
+
+
 * Initialization of struct members
+- similar to C language initialization
+- usage of {} parenthesis
+- C-like initialization: order matters!
+
+
+
+* Initialization of struct members (cont.)
 .play lesson2/12_struct_init.go
 
+
+
 * Beter (more explicit) initialization of struct members
+- struct members are explicitly specified by name
+- better readability 
+- preffered approach
+
+
+
+* Beter (more explicit) initialization of struct members (cont.)
 .play lesson2/13_better_struct_init.go
 
+
+
 * Comparison of whole structs is possible!
+- `==` and `!=` operators
 .play lesson2/14_struct_comparison.go /package main/,/^func main//
+
+
 
 * Comparison of whole structs is possible! (cont.)
 .play lesson2/14_struct_comparison.go /^func main/,/^}/
 
+
+
 * Passing structs as values into functions
+- by value
+- by reference (via pointer)
 .play lesson2/15_print_user.go /package main/,/^func main//
+
+
 
 * Passing structs as values into functions (cont.)
 .play lesson2/15_print_user.go /^func main/,/^}/
 
+
+
 * Anonymous structure
+- just declare new variable and specify its type to `struct` _something_
 
     var employee struct {  
             firstName, lastName string
@@ -197,49 +242,222 @@ https://github.com/RedHatOfficial/GoCourse
 ############################################################
 
 * Arrays
-- basic data type in Go
-- array items has the same type
-- index 0..length-1
-- indexing via []
+- basic data type in the Go programming language
+- all array items has the same type
+- (well, you can use `interface{}` to allow _dynamic typing behaviour_)
+- type of array is derived from type of items *and* array size
+- (unlike slices)
+- index in range 0..length-1
+- items indexing via [] (as in most other languages)
+
+
 
 * Basic operations with arrays
 .play lesson2/16_arrays.go
 
 
 
-############################################################
+* Matrix (two dimensional array)
+.play lesson2/16B_arrays.go
 
-* Slices
 
-.play lesson2/18_slices.go
 
-.play lesson2/19_slice_copy.go
-
-.play lesson2/20_slice_from_slice.go
-
-.play lesson2/21_slice_append.go
-
+* Array copy
+- unlike slices, arrays can be copied
 .play lesson2/17_array_copy.go
 
 
 
 ############################################################
 
+* Slices
+- proper data type in the Go programming language
+- interface to sequences (better than arrays)
+- slices are used more often than _plain_ _old_ _arrays_
+- type of slice is derived from type of items
+- slices has defined length and capacity (those numbers can be different)
+- internaly a slice is triple: (pointer to the first element + `len` + `cap`)
+- so called "slice operator" `[from:to]`
+- `append` function to add a new element to slice (complicated internally)
+
+
+
+* Usage of slices
+
+.play lesson2/18_slices.go /package main/,/cont//
+
+
+
+* Usage of slices (cont.)
+
+.play lesson2/18_slices.go /cont/,/^}//
+
+
+
+* Slices and arrays as data source for them
+
+- slice can be created from any array
+- but the slice does not contain any data, just a pointer to array element
+- so any modify in slice element is reflected in an array as well
+
+.play lesson2/19_slice_copy.go /package main/,/cont//
+
+
+
+* Slices and arrays as data source for them (cont.)
+- modify array elements
+- then modify the same elements, but via slice
+
+.play lesson2/19_slice_copy.go /cont/,/^}//
+
+
+
+* Slice from slice
+- "slicing" of another slice is possible
+.play lesson2/20_slice_from_slice.go /package main/,/cont//
+
+
+
+* Slice from slice (cont.)
+.play lesson2/20_slice_from_slice.go /cont/,/^}//
+
+
+
+* Append function
+- the function `append` returns a new slice
+- the capacity of new slice can be increased (realloc magic inside!)
+.play lesson2/21_slice_append.go
+
+
+
+############################################################
+
 * Pointers
+- always points to an element of some type
+- ie. `void` pointers are not supported
+- implicit pointer value is `nil`
+- address of element can be retrieved using the `&` operator
+- access via pointer (reference in some other languages) using the `*` operator
+
+
+
+* Basic usage of pointers
+- please note the usage of `*p_i++`
 
 .play lesson2/22_pointer_to_int.go
 
-.play lesson2/23_pointer_to_struct.go
 
-.play lesson2/24_pointer_to_struct_item.go
 
-.play lesson2/25_pointer_to_array.go
+* Pointer to structure
+
+.play lesson2/23_pointer_to_struct.go /package main/,/func main//
+
+
+
+* Pointer to structure (cont.)
+- please note the possibility to write `p_u.id` instead of `(*p_u).id`
+.play lesson2/23_pointer_to_struct.go /func main/,/^}//
+
+
+
+* Pointer to structure item/member
+.play lesson2/24_pointer_to_struct_item.go /package main/,/func main//
+
+
+
+* Pointer to structure item/member (cont.)
+.play lesson2/24_pointer_to_struct_item.go /func main/,/^}//
+
+
+
+* Pointer to array item
+.play lesson2/25_pointer_to_array.go /package main/,/cont//
+
+
+
+* Pointer to array item (cont.)
+.play lesson2/25_pointer_to_array.go /cont/,/^}//
 
 
 
 ############################################################
 
 * Maps
+- a.k.a. associative array or hash
+- container for key-value pairs
+- "nil map":
+    var m1 map[int]string
+- empty map:
+    var m3 map[int]string = make(map[int]string)
+    m1 := make(map[int]string)
+
+
+
+* Maps
+- two basic operations: add/put, get, and delete
+- add/put items to a map:
+    m3[0] = "zero"
+    m3[1] = "one"
+    m3[2] = "two"
+- get item from a map:
+    m3[3] = "tri"
+- delete from a map
+    delete(m3, "zero")
+
+
+
+* Unitialized map ("nil map")
+.play lesson2/26_uninitialized_map.go
+
+
+
+* Empty map
+.play lesson2/27_initialized_map.go
+
+
+
+* Empty map (shorter idiom)
+.play lesson2/28_initialized_map.go
+
+
+
+* Maps and struct
+.play lesson2/29_map_and_struct.go /^package main/,/^func main/
+
+
+
+* Maps and struct (cont.)
+.play lesson2/29_map_and_struct.go /^func main/,/^}/
+
+
+
+* Struct can be used as key as well
+.play lesson2/30_map_and_struct_B.go /^package main/,/^func main/
+
+
+
+* Struct can be used as key as well (cont.)
+.play lesson2/30_map_and_struct_B.go /^func main/,/^}/
+
+
+
+* Reading items from map
+.play lesson2/31_reading_from_maps.go /^package main/,/cont/
+
+
+
+* Reading items from map (cont.)
+.play lesson2/31_reading_from_maps.go /cont/,/^}/
+
+
+
+* Deleting items from map
+.play lesson2/32_delete_from_map.go /^package main/,/^func main/
+
+
+
+* Deleting items from map (cont.)
+.play lesson2/32_delete_from_map.go /^func main/,/^}/
 
 
 
@@ -248,12 +466,50 @@ https://github.com/RedHatOfficial/GoCourse
 * Loops and the range clause
 - (see the 1st lesson for a `for` loop examples)
 - `range` keyword used in `for` to loop over array items, map pairs etc.
+- provides an item index as well (Java on the other side...)
+
+
+
+* Iterating over an array
+.play lesson2/33_for_range_1.go
+
+
+
+* Index can be ignored
+.play lesson2/34_for_range_2.go
+
+
+
+* Iterating over slice
+.play lesson2/35_for_range_3.go
+
+
+
+* Iterating over Unicode glyphs
+.play lesson2/36_for_range_4.go
+
+
+
+* Iterating over map pairs (key+value)
+.play lesson2/37_for_range_map.go
 
 
 
 ############################################################
 
 * User-defined data types
+- `type` keyword
+- Go is very strict in typing (see examples)
+
+
+
+* User-defined data types
+.play lesson2/38_user_types.go
+
+
+
+* User-defined data types (passing to function)
+.play lesson2/39_type_func_params.go
 
 
 
