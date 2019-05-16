@@ -1,11 +1,10 @@
-Go language course
+Go language fundamentals, second part
 Lesson 3
 20 May 2019
 Tags: golang, go
 
-Stanislav Kozina; Ivan Nečas; Pavel Tišnovský; Jakub Čajka
+Pavel Tišnovský <ptisnovs@redhat.com>
 Red Hat, Inc.
-email@email.email
 https://github.com/RedHatOfficial/GoCourse
 @RedHat
 
@@ -15,7 +14,14 @@ https://github.com/RedHatOfficial/GoCourse
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
+
+
+############################################################
+
 * Lesson #3
+
+Outline:
+
 - Lambda functions
 - Closures
 - Methods on types
@@ -23,17 +29,290 @@ https://github.com/RedHatOfficial/GoCourse
 - Type assertions
 - Overview of standard libraries
 
+
+
+############################################################
+
 * Lambda functions
+- a.k.a. function literals
+- https://golang.org/ref/spec#Function_literals
+- can be assigned to a variable or invoked directly
+
+* Typical usages for lambda functions
+- go blocks
+- defer statement
+- callback functions
+- 'compare' for sorting
+
+
+
+* Function as a value (like any other value)
+.play lesson3/01_func_type.go
+
+
+
+* Function with parameters as a value (like any other value)
+.play lesson3/02_func_type.go
+
+
+
+* Functions stored in local variables (just a toy)
+.play lesson3/03_functions_as_values.go
+
+
+
+* Anonymous functions (just a toy again)
+.play lesson3/04_lambdas.go
+
+
+* Function types
+- a new type `BinaryOp` is defined
+- it is used to specify parameter type in `applyBinaryOp`
+.play lesson3/05_function_type.go /^package main/,/^func testBinaryOps/
+
+
+* Function types (cont.)
+.play lesson3/05_function_type.go /^func testBinaryOps/,/^}/
+
+
+
+############################################################
 
 * Closures
+- lambda functions that refer to variables defined outside the function
+- it "closes over" another function -> the name closure
+- code pointer and environment pointer internally
+- useful for function that needs to store its state "somewhere"
+
+
+
+* Practical example - sorting elements in slice
+.play lesson3/06_sort_function.go /^package main/,/^func main/
+
+
+* Practical example - sorting elements in slice (cont.)
+.play lesson3/06_sort_function.go /^func main/,/^}/
+
+
+
+* Practical example - sorting elements in a slice
+- implemented as a closure
+.play lesson3/07_sort_closure.go /^package main/,/^func main/
+
+
+* Practical example - sorting elements in slice (cont.)
+- implemented as a closure
+.play lesson3/07_sort_closure.go /^func main/,/^}/
+
+
+* Implementation of sort-by
+.play lesson3/08_sort_by.go /^package main/,/^func main/
+
+
+
+* Implementation of sort-by (cont.)
+.play lesson3/08_sort_by.go /^func main/,/^}/
+
+
+
+############################################################
 
 * Methods on types
+- a _method_ is a function that has a defined receiver
+- (in OOP: a method is a function on an instance of an object)
+- concept of a _receiver_
+- usage - method declaration
+
+    func (receiver) method_name(parameters) return_types {
+        ...
+        ...
+        ...
+    }
+
+- method is called by
+
+    some_object.method_name(parameters)
+
+- methods can modify (mutate) a receiver
+- call by value vs. call by reference (via pointer)
+
+
+
+* User type with one method
+.play lesson3/09_methods.go
+
+
+* Receiver used as a value
+.play lesson3/10_methods_with_parameters.go
+
+
+* Receiver used via pointer
+.play lesson3/11_methods_ptr.go
+
+
+
+* More methods for the same type
+.play lesson3/12_more_methods.go
+
+
+
+############################################################
 
 * Interfaces
+- set of methods required to implement such interface
+- declared via `interface` keyword:
+
+    type XI interface {
+        method1()
+        method2(int) int
+    }
+
+- interface type — variable of interface type, can hold any value implementing an interface
+- variable of interface type *I* can hold any value _implementing_ *I*
+
+
+
+* Implementing an interface
+- a.k.a. _satisfying_ an interface
+- no such keyword (`implements` or anything similar)
+- in Go: every type which implements all interface’s method automatically satisfies such interface
+
+
+
+* Embedding other interface(s)
+- embedding other interfaces is possible
+
+    type XII interface {
+        m2()
+        XI
+    }
+
+- order does not matter there
+
+
+* Circular embedding
+- disabled, detected by compiler
+
+    type I1 interface {
+        I2
+        method_i1()
+    }
+    
+    type I2 interface {
+        I3
+        method_i2()
+    }
+    
+    type I3 interface {
+        I1
+        method_i3()
+    }
+
+* Declaration of two interfaces
+.play lesson3/13_interface.go
+
+
+
+* Missing interface implementation
+.play lesson3/14_interface_missing_implementation.go /^package main/,/^func main/
+
+
+
+* Missing interface implementation (cont.)
+.play lesson3/14_interface_missing_implementation.go /^func main/,/^}/
+
+
+
+* Implementation of an interface
+.play lesson3/15_interface_implementation_via_methods.go /^package main/,/^func main/
+
+
+
+* Implementation of an interface (cont.)
+.play lesson3/15_interface_implementation_via_methods.go /^func main/,/^}/
+
+
+
+* More implementations of one interface (1/5)
+- the longest example :)
+.play lesson3/16_more_interface_implementations.go /^package main/,/^type Line/
+
+
+
+* More implementations of one interface (2/5)
+.play lesson3/16_more_interface_implementations.go /^type Line/,/^func/
+
+
+
+* More implementations of one interface (3/5)
+.play lesson3/16_more_interface_implementations.go /^func \(line/,/^func main/
+
+
+
+* More implementations of one interface (4/5)
+.play lesson3/16_more_interface_implementations.go /^func main/,/cont/
+
+
+
+* More implementations of one interface (5/5)
+.play lesson3/16_more_interface_implementations.go /cont/,/^}/
+
+
+
+* Empty interface
+- is automatically satisfied by any type
+- value of any type can be assigned to such interface type variable
+.play lesson3/17_empty_interface.go
+
+
+
+* `nil` interface
+- Interface type value consists of two components: dynamic type and dynamic value
+- *static* *type*: known by compiler, from the declaration
+- *dynamic* *type*: type of assigned _value_
+- *dynamic* *value*: the actual value assigned
+- where's the problem?
+- interface type value is `nil` iff both dynamic value *and* dynamic type are `nil`
+- sometimes we get the impression that `nil != nil`
+
+
+
+* `nil` interface
+.play lesson3/18_nil_interface_riddle.go
+
+
+
+############################################################
 
 * Type assertions
+- access to an interface value's underlying concrete value
+
+    variable := iface.(Type)
+
+- two operations:
+- check that the interface value `iface` holds the concrete type `Type` (with panicking)
+- assign the underlying `Type` value to the variable `variable`.
+
+    variable, ok := iface.(Type)
+
+- check that the interface value `iface` holds the concrete type `Type`
+- if check failed, `variable` will contain zero value and `ok` will be `true`
+- if check passed, assign the underlying `Type` value to the variable `variable`, `ok` will be `false`
+
+.play lesson3/19_type_assertions.go
+
+
+
+############################################################
 
 * Overview of standard libraries
+- Go is used for making CLI apps, network tools, web servers etc.
+- it is reflected in its standard library
+- https://golang.org/pkg/
+
+
+
+############################################################
 
 #last slide
 * More Gophers
