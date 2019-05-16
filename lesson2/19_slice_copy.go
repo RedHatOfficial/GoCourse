@@ -11,6 +11,8 @@ func main() {
 	fmt.Printf("Slice before modification: %v\n", slice)
 	fmt.Println()
 
+	// cont
+
 	for i := 0; i < len(a); i++ {
 		a[i] = i * 2
 	}

@@ -20,6 +20,8 @@ func main() {
 	fmt.Printf("Slice 1 capacity: %d\n", cap(slice1))
 	fmt.Println()
 
+	// cont
+
 	var slice2 = a1[20:30]
 	fmt.Printf("Slice 2 length:   %d\n", len(slice2))
 	fmt.Printf("Slice 2 capacity: %d\n", cap(slice2))

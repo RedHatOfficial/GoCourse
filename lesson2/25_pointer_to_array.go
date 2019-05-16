@@ -19,6 +19,8 @@ func main() {
 
 	fmt.Println(month)
 
+	// cont
+
 	p_third := &month[2]
 	*p_third = "Březen"
 

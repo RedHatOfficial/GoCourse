@@ -20,7 +20,4 @@ func main() {
 	}
 
 	fmt.Printf("Modified array: %v\n", a)
-
-	var matrix [10][10]float32
-	fmt.Printf("Matrix:    %v\n", matrix)
 }

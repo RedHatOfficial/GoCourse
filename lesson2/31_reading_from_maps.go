@@ -12,6 +12,8 @@ func main() {
 
 	fmt.Println(m1)
 
+	// cont
+
 	value, exist := m1["two"]
 
 	if exist {

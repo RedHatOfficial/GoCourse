@@ -19,6 +19,8 @@ func main() {
 	fmt.Printf("Slice 2 length:   %d\n", len(slice2))
 	fmt.Printf("Slice 2 capacity: %d\n\n", cap(slice2))
 
+	// cont
+
 	slice2[0] = 99
 	slice2[1] = 99
 

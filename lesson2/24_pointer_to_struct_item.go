@@ -10,7 +10,6 @@ type User struct {
 
 func main() {
 	var u User
-
 	u.id = 1
 	u.name = "Linus"
 	u.surname = "Torvalds"

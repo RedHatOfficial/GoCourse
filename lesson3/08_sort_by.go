@@ -32,13 +32,11 @@ func main() {
 	fmt.Println("--------------------")
 
 	sort.Slice(roles, func(i, j int) bool { return roles[i].name < roles[j].name })
-
 	fmt.Println("Sorted by name:")
 	printRoles(roles)
 	fmt.Println("--------------------")
 
 	sort.Slice(roles, func(i, j int) bool { return roles[i].surname < roles[j].surname })
-
 	fmt.Println("Sorted by surname:")
 	printRoles(roles)
 	fmt.Println("--------------------")
