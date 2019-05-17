@@ -1,24 +1,20 @@
-Go language course
+Concurrency
 Lesson 4
 20 May 2019
 Tags: golang, go
 
-Stanislav Kozina; Ivan Nečas; Pavel Tišnovský; Jakub Čajka
+Stanislav Kozina <skozina@redhat.com>
 Red Hat, Inc.
-email@email.email
 https://github.com/RedHatOfficial/GoCourse
-@RedHat
 
-* Gophers
-#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
-#Source https://golang.org/doc/gopher/fiveyears.jpg
-#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
-.image ./common/fiveyears.jpg _ 900
+* Threads and goroutines
+- Reminder: Threads share memory
+- Go routines are light-weighted threads, cheap to spawn
+- Internally multiplexed across thread pool
+- Spawned with simple go keyword
 
-* First slide
-- One
-- Two
-- Three
+* Goroutines
+.play lesson4/goroutines.go
 
 #last slide
 * More Gophers
