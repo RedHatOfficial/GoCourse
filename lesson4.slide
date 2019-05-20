@@ -10,11 +10,32 @@ https://github.com/RedHatOfficial/GoCourse
 * Threads and goroutines
 - Reminder: Threads share memory
 - Go routines are light-weighted threads, cheap to spawn
+- It should be fine to spawn thousands of goroutines
 - Internally multiplexed across thread pool
 - Spawned with simple go keyword
 
 * Goroutines
 .play lesson4/goroutines.go
+
+* Channels
+- Way to transfer data between goroutines
+- Type of data is part of the channel type
+- By default blocks on both tx/rx (but can be buffered too)
+- Same operator to send and receive from channel
+- Created with make()
+.code lesson4/chan.go
+
+* Channels
+- Note that this is racy.. more about that later
+.play lesson4/chan2.go
+
+* Channels
+- Unbuffered channels do block (and golang kindly detects deadlock)
+.play lesson4/chan3.go
+
+* Buffered channels
+- Size of buffer as second argument to make()
+.play lesson4/chan4.go
 
 #last slide
 * More Gophers
