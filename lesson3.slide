@@ -282,6 +282,11 @@ Outline:
 
 
 
+* `nil` interface
+.play lesson3/20_three_nil_interfaces.go
+
+
+
 ############################################################
 
 * Type assertions
@@ -299,6 +304,9 @@ Outline:
 - if check failed, `variable` will contain zero value and `ok` will be `true`
 - if check passed, assign the underlying `Type` value to the variable `variable`, `ok` will be `false`
 
+
+
+* Type assertions
 .play lesson3/19_type_assertions.go
 
 
