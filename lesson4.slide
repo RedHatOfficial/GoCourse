@@ -37,6 +37,20 @@ https://github.com/RedHatOfficial/GoCourse
 - Size of buffer as second argument to make()
 .play lesson4/chan4.go
 
+* Closing channels
+- Channels can be closed with close()
+- Readers can check for closed channels using optional second return argument
+- Alternatively readers can detect closed channel with the loop over range
+
+* Closed channel detection with return value
+.play lesson4/chan_close.go
+
+* Closed channel detection with range
+.play lesson4/range.go
+
+* Select on multiple channels
+- You can read wait on multiple channels at the same time using select
+
 #last slide
 * More Gophers
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
