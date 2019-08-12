@@ -51,6 +51,15 @@ https://github.com/RedHatOfficial/GoCourse
 * Select on multiple channels
 - You can read wait on multiple channels at the same time using select
 
+* Select on multiple channels
+.play lesson4/select.go
+
+* Default selection
+- Default action to take if all other actions would block
+
+* Default selection
+.play lesson4/default.go
+
 #last slide
 * More Gophers
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)

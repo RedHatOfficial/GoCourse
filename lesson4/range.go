@@ -11,7 +11,7 @@ func main() {
 		for i := range c {
 			fmt.Println(i)
 		}
-		fmt.Println("Channel closed, f() over")
+		fmt.Println("Channel closed")
 	}()
 	for i := 0; i < 5; i++ {
 		c <- i*2
