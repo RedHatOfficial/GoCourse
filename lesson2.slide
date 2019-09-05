@@ -197,7 +197,7 @@ Outline:
 * Beter (more explicit) initialization of struct members
 - struct members are explicitly specified by name
 - better readability 
-- preffered approach
+- preferred approach
 
 
 
