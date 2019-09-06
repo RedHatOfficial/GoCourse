@@ -36,6 +36,11 @@ https://github.com/RedHatOfficial/GoCourse
 .code lesson1/run_hello.go
 .code lesson1/build_hello.go
 
+* Packages
+- special package main: main() for executables
+- Workspace defined by $GOPATH
+- Structure for libraries, binaries: src, bin
+
 * go-fmt
 .play lesson1/gofmt1.go
 .code lesson1/gofmt.go
