@@ -194,14 +194,14 @@ Outline:
 
 
 
-* Beter (more explicit) initialization of struct members
+* Better (more explicit) initialization of struct members
 - struct members are explicitly specified by name
 - better readability 
 - preferred approach
 
 
 
-* Beter (more explicit) initialization of struct members (cont.)
+* Better (more explicit) initialization of struct members (cont.)
 .play lesson2/13_better_struct_init.go
 
 
