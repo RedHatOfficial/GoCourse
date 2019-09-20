@@ -400,7 +400,7 @@ Outline:
     m3[1] = "one"
     m3[2] = "two"
 - get item from a map:
-    m3[3] = "tri"
+    m3[2]
 - delete from a map
     delete(m3, "zero")
 
