@@ -3,12 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	m1 := make(map[string]int)
+	m1 := make(map[string]string)
 	fmt.Println(m1)
 
-	m1["one"] = 0
-	m1["two"] = 1
-	m1["three"] = 2
+	m1["one"] = "I"
+	m1["two"] = "II"
+	m1["three"] = "III"
+	m1["four"] = "IV"
+	m1["five"] = "V"
 
 	fmt.Println(m1)
 
