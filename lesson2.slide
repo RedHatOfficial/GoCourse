@@ -394,7 +394,7 @@ Outline:
 
 
 * Maps
-- two basic operations: add/put, get, and delete
+- three basic operations: add/put, get, and delete
 - add/put items to a map:
     m3[0] = "zero"
     m3[1] = "one"
