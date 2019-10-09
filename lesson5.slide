@@ -1,11 +1,10 @@
-Go language course
+Testing, CGo and tools
 Lesson 5
-20 May 2019
+11 Oct 2019
 Tags: golang, go
 
-Stanislav Kozina; Ivan Nečas; Pavel Tišnovský; Jakub Čajka
+Jakub Čajka <jcajka@redhat.com>
 Red Hat, Inc.
-email@email.email
 https://github.com/RedHatOfficial/GoCourse
 @RedHat
 
@@ -15,10 +14,102 @@ https://github.com/RedHatOfficial/GoCourse
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
-* First slide
-- One
-- Two
-- Three
+* Testing and Benchmarking in Go
+- Unit test "framework" integral to the Go command
+- go test
+- (Micro)Benchmark "framework" part of it too
+- go test -bench .
+- package testing
+- code needs to be "vetable", pass go vet check
+
+* Tests
+- in _test.go files
+- all Test*(t *testing.T) functions get executed
+
+* Test main
+- func TestMain(m *testing.M)
+- m.Run
+- provides ability to do setup, passing CLI flags,...
+- execute tests that don't fit the basic framework, etc.
+- checkout misc/cgo GC tests
+
+* Benchmarks
+- in _test.go files
+- all Benchmark*(b *testing.B) functions get executed
+- can benchmark not only performance(-bench), but memory usage(-benchmem)
+
+* Go test tips&tricks
+- you can use build tags and/or short mode
+- good practice auxiliary data in testdata sub-directory/package, ignored by go build
+
+* Example 1
+.code lesson5/cgo-math-test-bench/cgo-math_test.go /T1/,/T1/
+
+* Example 2
+.code lesson5/cgo-math-test-bench/cgo-math_test.go /T2/,/T2/
+
+* Example 3
+.code lesson5/cgo-math-test-bench/cgo-math_test.go /benchmark/,/benchmark/
+
+* CGo?
+- C and Go, Cgo, but not a Go
+- allows  interoperability between Go and C code
+- calling C function in Go and Go functions in C
+- "FFI"
+- "C" "meta" package
+
+* CGo
+- has overhead, look for solution in Go
+- C code can't hold pointers in to the Go world
+- ^^ due to the copying nature of the GC
+- need to manually free malloc'ed(heap) C memory
+- string, arrays and such
+
+* Example C in Go inline
+.code lesson5/cgo-inlinec/cgo-inlinec.go
+
+* Example C in Go separate files
+.code lesson5/cgo-independent/cgo-independent.go
+
+* Example memory management with CGo and C strings
+.code lesson5/cgo-strings/cgo-string.go /memory management/,/memory management end/
+
+* Example Go in C
+- don't
+- again don't
+- look at the CGo docs
+- BEWARE! it has extreme overhead
+
+* Builtin tools
+- go vet
+- reports suspicions code construct, possible bugs
+- go fmt
+- formates code to the common coding standard
+- go fix
+- forward ports your code to latest release version of Go
+
+* Dependency management
+
+* The Past
+- go get and GOPATH
+- vendoring aka bundling
+- plethora of tools, godep, govendor, glide
+
+* The Present
+- Go modules, go mod
+- local cache instead of GOPATH
+- go mod
+- go.mod storing informations for module
+- init, vendor, download
+- go get bar@...
+- go list -m
+
+* Proxies and sumdbs
+- Proxies facilitates fetches, instead of direct
+- SumDBs hashes of repos for corresponding versions
+
+* The future?
+-?
 
 #last slide
 * More Gophers
