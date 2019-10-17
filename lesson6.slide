@@ -1,28 +1,75 @@
 Go language course
 Lesson 6
-20 May 2019
 Tags: golang, go
 
-Stanislav Kozina; Ivan Nečas; Pavel Tišnovský; Jakub Čajka
+Ivan Nečas <inecas@rehdat.com>
 Red Hat, Inc.
 email@email.email
 https://github.com/RedHatOfficial/GoCourse
 @RedHat
 
-* Gophers
-#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
-#Source https://golang.org/doc/gopher/fiveyears.jpg
-#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
-.image ./common/fiveyears.jpg _ 900
+* Web services in Go
 
-* First slide
-- One
-- Two
-- Three
+- one of he most common thing written in go these days
+- largery used in http-based microservices 
+- rich support for HTTP-related directly [[https://golang.org/pkg/net/http/][in the language]] (batteries included)
 
-#last slide
-* More Gophers
-#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
-#Source https://golang.org/doc/gopher/bumper.png
-#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
-.image ./common/bumper.png  _ 900
+* Basic web server
+
+.play lesson6/web_server.go
+
+* Basic web server
+
+- a global `http.DefaultServerMux` is used for registering handlers
+
+* Web server with more control
+
+.play lesson6/web_server_more_control.go
+
+* Multiple paths
+
+.play lesson6/web_server_multi.go
+
+* Multiple paths
+
+-  the longest prefix always wins
+
+* Inspecting requests (cool trick)
+
+.play lesson6/web_server_inspect.go
+
+* Parsing requests: query
+
+.play lesson6/web_server_params.go
+
+* Parsing requests: raw body
+
+.play lesson6/web_server_body.go
+
+* Parsing requests: json
+
+.play lesson6/web_server_json.go
+
+* Parsing requests: json (2)
+
+.play lesson6/web_server_json_2.go
+
+* Headers and status codes
+
+.play lesson6/web_server_headers.go
+
+* Status codes (2)
+
+.play lesson6/web_server_status_codes.go
+
+* Client
+
+.play lesson6/client.go
+
+* Client (post)
+
+.play lesson6/client_post.go
+
+* Proxy
+
+.play lesson6/proxy.go
