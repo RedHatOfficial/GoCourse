@@ -1,0 +1,45 @@
+Go language course
+Golang Testing Frameworks
+02 Now 2019
+Tags: golang, go, testing
+
+Pavel Tišnovský
+Red Hat, Inc.
+ptisnovs@redhat.com
+https://github.com/RedHatOfficial/GoCourse
+@RedHat
+
+* Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/fiveyears.jpg
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/fiveyears.jpg _ 900
+
+* Golang Testing Frameworks
+- Unit testing
+- BDD testing
+- REST API testing
+- Performance analysis
+
+* Unit testing
+- Standard `testing` package
+- Extensions (`testify`)
+
+* Standard `testing` package
+
+* Extension `testify` package
+
+* BDD testing
+
+* REST API testing
+
+* Performance analysis
+
+* Useful links
+
+#last slide
+* More Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/bumper.png
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/bumper.png  _ 900
