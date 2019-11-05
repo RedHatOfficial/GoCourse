@@ -23,19 +23,65 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Unit testing
 - Standard `testing` package
+- Helper tool `go-carpet`
 - Extensions (`testify`)
+- Alternative package `oglematchers`
+- Combination of `ogletest` and `oglematchers`
+- Package `assertions`
 
 * Standard `testing` package
 
+* Helper tool `go-carpet`
+
 * Extension `testify` package
 
+* Extensions (`testify`)
+
+* Alternative package `oglematchers`
+
+* Combination of `ogletest` and `oglematchers`
+
+* Package `assertions`
+
+
+
+#############################################################
+
 * BDD testing
+- GoConvey
+
+
+
+#############################################################
 
 * REST API testing
 
+
+
+#############################################################
+
 * Performance analysis
 
+
+
+#############################################################
+
 * Useful links
+
+An introduction to programming in Go: Testing
+https://www.golang-book.com/books/intro/12
+
+Package testing 
+https://golang.org/pkg/testing/
+
+Code Coverage Tutorial: Branch, Statement, Decision, FSM 
+https://www.guru99.com/code-coverage.html
+
+Go Test Your Code: An introduction to testing in Go
+https://medium.com/rate-engineering/go-test-your-code-an-introduction-to-effective-testing-in-go-6e4f66f2c259
+
+Comparative Analysis Of GoLang Testing Frameworks 
+https://www.slideshare.net/DushyantBhalgami/comparative-analysis-of-golang-testing-frameworks
 
 #last slide
 * More Gophers
