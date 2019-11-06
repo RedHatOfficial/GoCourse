@@ -23,6 +23,15 @@ https://github.com/RedHatOfficial/GoCourse
 - server-side web (PHP, Node.js, Python)
 - cloud technologies (docker, kubernetes)
 
+* Resources
+- Tour of Go [[https://tour.golang.org/welcome/1]]
+- Effective Go [[https://golang.org/doc/effective_go.html]]
+- Go Doc [[https://godoc.org/]]
+
+* Development interface
+- Vim;-)
+- Visual Studio Code + go lang support [[https://code.visualstudio.com/docs/setup/linux]]
+
 * Packages and Imports
 - Program building blocks ("libraries")
 - Imported by other programs
