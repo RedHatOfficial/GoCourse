@@ -49,7 +49,53 @@ https://github.com/RedHatOfficial/GoCourse
 
 * BDD testing
 - GoConvey
+- Godog
 
+
+* BDD testing
+- Test pyramid
+- BDD: behavior-driven development
+- Simple DSL
+
+* GoConvey
+
+* Godog
+
+* Gherkin language
+- Feature/Scenario/Scenario Outline
+- Given/when/then
+- Variable parameters in tests
+- Tables as data source
+- Tables for multiple test runs with variable parameters
+
+* Gherkin language
+- Based on natural language + a few keywords
+- usually English is used
+- translated into other languages as well
+- It is quite similar to Python, AsciiDoc etc.
+- indentation
+- based on keywords, not on special characters
+- tables "drawn" in ASCII
+- It is not tightly bound with any real programming language
+- it can be used by non-developers
+
+* Given-When-Then
+- Semi-structured way to write down test cases
+
+** Three clauses
+- Given
+- When
+- Then
+
+** The same clause on more consecutive lines?
+- And
+
+* Gherkin language - an example
+
+    Given the customer has logged into their current account
+      And the balance is shown to be 100 euros
+     When the customer transfers 75 euros to their savings account
+     Then the new current account balance should be 25 euros
 
 
 #############################################################
