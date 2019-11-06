@@ -7,6 +7,17 @@ Stanislav Kozina <skozina@redhat.com>
 Red Hat, Inc.
 https://github.com/RedHatOfficial/GoCourse
 
+* Concurrency
+- Definition: Computations happening at the same time
+- Even on single CPU (kernel makes that feeling)
+
+* Communication via message queues
+- Analogy of phone calls
+- Phone ringing: blocking call
+- Answerphone: non-blocking call (tape length = queue size)
+- Multiple receivers: Call centre
+- Multiple senders: Conf call
+
 * Threads and goroutines
 - Reminder: Threads share memory
 - Go routines are light-weighted threads, cheap to spawn
