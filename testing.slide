@@ -58,8 +58,14 @@ https://github.com/RedHatOfficial/GoCourse
 - Simple DSL
 
 * GoConvey
+- Test steps are written directly as Go source code
+- Pros: support in IDE, most issues can be detected by the compiler
+- Cons: no proper separation from Go language
 
 * Godog
+- Based on Gherkin language
+- Pros: behaviour tests are separated from the code
+- Cons: "glue" between test scenarios and test step implementations
 
 * Gherkin language
 - Feature/Scenario/Scenario Outline
@@ -96,6 +102,40 @@ https://github.com/RedHatOfficial/GoCourse
       And the balance is shown to be 100 euros
      When the customer transfers 75 euros to their savings account
      Then the new current account balance should be 25 euros
+
+
+* Test scenario parts
+
+** Keywords/clauses
+- Given, And, When, Then
+** The rest is written in "plain English"
+- or in other supported language (ANY language in case of Godog)
+** Contains variable parts as well
+- 100, 75, 25
+
+
+
+* Tables
+- has two purposes in Gherkin language
+- specify list of values used later in tests
+- specify multiple test scenarios with the same sentences, but with different parameters/variables.
+
+* Scenario outlines
+
+  Scenario Outline: Check the user search feature, perform the search for more users
+    Given GitHub is accessible
+    When I search for user with nick <nick>
+    Then I should receive 200 status code
+     And I should receive proper JSON response
+     And I should find the user with full name <fullname>
+     And I should find that the user works for company <company>
+
+     Examples: users
+     |nick|fullname|company|
+     |torvalds|Linus Torvalds|Linux Foundation|
+     |brammool|Bram Moolenaar|Zimbu Labs|
+     |tisnik|Pavel Tišnovský|Red Hat, Inc.|
+
 
 
 #############################################################
