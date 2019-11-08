@@ -9,17 +9,23 @@ ptisnovs@redhat.com
 https://github.com/RedHatOfficial/GoCourse
 @RedHat
 
+
+
 * Gophers
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
 #Source https://golang.org/doc/gopher/fiveyears.jpg
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
+
+
 * Golang Testing Frameworks
 - Unit testing
 - BDD testing
 - REST API testing
 - Performance analysis
+
+
 
 * Unit testing
 - Standard `testing` package
@@ -29,17 +35,67 @@ https://github.com/RedHatOfficial/GoCourse
 - Combination of `ogletest` and `oglematchers`
 - Package `assertions`
 
+
+
 * Standard `testing` package
+- Each test needs to be stored in a function `func TestXxx(*testing.T)`
+- Basic Methods for `testing.T` structure (data type)
+- `Log(args ...interface{})`
+- `Skip(args ...interface{})`
+- `Error(args ...interface{})`
+- `Fatal(args ...interface{})`
+- `Fail()`
+- `FailNow()`
+
+
+
+* Standard `testing` package
+- Formatting output
+- `Logf(format string, args ...interface{})`
+- `Skipf(format string, args ...interface{})`
+- `Errorf(format string, args ...interface{})`
+- `Fatalf(format string, args ...interface{})`
+
+
+
+* Unit test files
+- Usually stored in `package_test.go`
+- Can be split into many files, as necessary
+
+
+
+* How to start unit tests
+- basic command: `go test`
+- usually: `go test ./...`
+
+
 
 * Helper tool `go-carpet`
 
+
+
 * Extension `testify` package
+** Package `require`
+- provides same global functions as the assert package
+- but instead of returning a boolean result they terminate current test
+** Package `mock`
+- provides a mechanism for writing mock objects
+- they can be used in place of real objects when writing test code
+** Package `suite`
+
+
 
 * Extensions (`testify`)
 
+
+
 * Alternative package `oglematchers`
 
+
+
 * Combination of `ogletest` and `oglematchers`
+
+
 
 * Package `assertions`
 
