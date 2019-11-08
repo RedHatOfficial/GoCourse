@@ -38,12 +38,12 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Standard `testing` package
-- Each test needs to be stored in a function `func TestXxx(*testing.T)`
+- Each test needs to be stored in a function `func` `TestXxx(*testing.T)`
 - Basic Methods for `testing.T` structure (data type)
-- `Log(args ...interface{})`
-- `Skip(args ...interface{})`
-- `Error(args ...interface{})`
-- `Fatal(args ...interface{})`
+- `Log(args` `...interface{})`
+- `Skip(args` `...interface{})`
+- `Error(args` `...interface{})`
+- `Fatal(args` `...interface{})`
 - `Fail()`
 - `FailNow()`
 
@@ -51,10 +51,10 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Standard `testing` package
 - Formatting output
-- `Logf(format string, args ...interface{})`
-- `Skipf(format string, args ...interface{})`
-- `Errorf(format string, args ...interface{})`
-- `Fatalf(format string, args ...interface{})`
+- `Logf(format` `string,` `args` `...interface{})`
+- `Skipf(format` `string,` `args` `...interface{})`
+- `Errorf(format` `string,` `args` `...interface{})`
+- `Fatalf(format` `string,` `args` `...interface{})`
 
 
 
@@ -65,8 +65,8 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * How to start unit tests
-- basic command: `go test`
-- usually: `go test ./...`
+- basic command: `go` `test`
+- usually: `go` `test` `./...`
 
 
 
@@ -144,13 +144,13 @@ https://github.com/RedHatOfficial/GoCourse
 * Given-When-Then
 - Semi-structured way to write down test cases
 
-** Three clauses
-- Given
-- When
-- Then
+* Three clauses
+- `Given`
+- `When`
+- `Then`
 
-** The same clause on more consecutive lines?
-- And
+* The same clause on more consecutive lines?
+- `And`
 
 * Gherkin language - an example
 
@@ -162,12 +162,12 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Test scenario parts
 
-** Keywords/clauses
-- Given, And, When, Then
-** The rest is written in "plain English"
-- or in other supported language (ANY language in case of Godog)
-** Contains variable parts as well
-- 100, 75, 25
+- Keywords/clauses:
+- `Given`, `And`, `When`, `Then`
+- The rest is written in "plain English":
+- Or in other supported language (ANY language in case of Godog)
+- Contains variable parts as well
+- `100`, `75`, `25`, `test`
 
 
 
@@ -211,19 +211,26 @@ https://github.com/RedHatOfficial/GoCourse
 * Useful links
 
 An introduction to programming in Go: Testing
-https://www.golang-book.com/books/intro/12
+[[https://www.golang-book.com/books/intro/12]]
 
 Package testing 
-https://golang.org/pkg/testing/
+[[https://golang.org/pkg/testing/]]
 
 Code Coverage Tutorial: Branch, Statement, Decision, FSM 
-https://www.guru99.com/code-coverage.html
+[[https://www.guru99.com/code-coverage.html]]
 
 Go Test Your Code: An introduction to testing in Go
-https://medium.com/rate-engineering/go-test-your-code-an-introduction-to-effective-testing-in-go-6e4f66f2c259
+[[https://medium.com/rate-engineering/go-test-your-code-an-introduction-to-effective-testing-in-go-6e4f66f2c259]]
 
 Comparative Analysis Of GoLang Testing Frameworks 
-https://www.slideshare.net/DushyantBhalgami/comparative-analysis-of-golang-testing-frameworks
+[[https://www.slideshare.net/DushyantBhalgami/comparative-analysis-of-golang-testing-frameworks]]
+
+* Useful links (cont.)
+
+Exploring the landscape of Go testing frameworks
+[[https://bmuschko.com/blog/go-testing-frameworks/]]
+
+
 
 #last slide
 * More Gophers
