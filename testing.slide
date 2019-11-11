@@ -197,6 +197,19 @@ https://github.com/RedHatOfficial/GoCourse
 #############################################################
 
 * REST API testing
+- in many aspects like software testing at UI level
+- instead of input-ouput testing, REST API is validated
+
+* REST API testing frameworks
+- Frisby
+- RestIt
+
+
+* Frisby
+- All basic HTTP methods (GET, POST, PUT, PATCH, DELETE)
+- Assertions
+- JSON parser
+- XML parser
 
 
 
