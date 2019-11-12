@@ -141,16 +141,24 @@ https://github.com/RedHatOfficial/GoCourse
 - It is not tightly bound with any real programming language
 - it can be used by non-developers
 
+
+
 * Given-When-Then
 - Semi-structured way to write down test cases
+
+
 
 * Three clauses
 - `Given`
 - `When`
 - `Then`
 
+
+
 * The same clause on more consecutive lines?
 - `And`
+
+
 
 * Gherkin language - an example
 
@@ -198,24 +206,79 @@ https://github.com/RedHatOfficial/GoCourse
 
 * REST API testing
 - in many aspects like software testing at UI level
-- instead of input-ouput testing, REST API is validated
+- instead of input-output testing, REST API is validated
+- very important in niche where Go language is used
+- supports HTTP and HTTPS as well
+
+
 
 * REST API testing frameworks
+- several packages/frameworks are available
 - Frisby
 - RestIt
 
 
+
 * Frisby
 - All basic HTTP methods (GET, POST, PUT, PATCH, DELETE)
-- Assertions
+- Built-in assertions
 - JSON parser
 - XML parser
+- Based of 'fluent API'
+- The whole test can be written as a chain of method of `*Frisby` object
+- Can be used as-is or as part of unit tests (usually not recommended)
+
+
+
+* Checking REST API with just GET method available
+.play testing/frisby/02_frisby_basic_usage.go
+
+
+
+* The same example, but with fluent API
+.play testing/frisby/01_frisby_basic_usage.go
+
+
+
+* Reporting similar to unit tests output
+.play testing/frisby/03_frisby_basic_usage.go
+
+
+
+* Behaviour when some tests fail
+.play testing/frisby/04_frisby_failures.go
+
+
+
+* Checking headers in the server response
+.play testing/frisby/05_frisby_check_headers.go
+
+
+
+* Using HTTP method POST
+
+
+
+* Sending JSON over HTTP/HTTPS
+
+
+
+* Checking content of HTTP response
+
+
+
+* Basic cookies handling
+
+
+
+* Using Frisby package in unit tests
 
 
 
 #############################################################
 
 * Performance analysis
+- very important part of testing
 
 
 
