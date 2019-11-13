@@ -34,6 +34,7 @@ https://github.com/RedHatOfficial/GoCourse
 - Alternative package `oglematchers`
 - Combination of `ogletest` and `oglematchers`
 - Package `assertions`
+- Package `goblin`
 
 
 
@@ -75,13 +76,26 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Extension `testify` package
-** Package `require`
+
+- package `require`
+- package `mock`
+- package `suite`
+
+
+
+* Package `require`
 - provides same global functions as the assert package
 - but instead of returning a boolean result they terminate current test
-** Package `mock`
+
+
+
+* Package `mock`
 - provides a mechanism for writing mock objects
 - they can be used in place of real objects when writing test code
-** Package `suite`
+
+
+
+* Package `suite`
 
 
 
@@ -98,6 +112,12 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Package `assertions`
+
+
+
+* Package `goblin`
+
+.image ./testing/goblin.png _ 600
 
 
 
@@ -220,6 +240,11 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Frisby
+.image ./testing/frisby.png _ 600
+
+
+
+* Frisby
 - All basic HTTP methods (GET, POST, PUT, PATCH, DELETE)
 - Built-in assertions
 - JSON parser
@@ -254,24 +279,55 @@ https://github.com/RedHatOfficial/GoCourse
 .play testing/frisby/05_frisby_check_headers.go
 
 
+* Checking headers in the server response (negative test)
+.play testing/frisby/06_frisby_check_headers.go
+
+
 
 * Using HTTP method POST
+.play testing/frisby/07_frisby_post.go
 
 
 
 * Sending JSON over HTTP/HTTPS
+.play testing/frisby/09_frisby_post_json.go
 
 
 
 * Checking content of HTTP response
+.play testing/frisby/10_frisby_check_content.go
 
 
 
 * Basic cookies handling
+.play testing/frisby/11_frisby_cookies.go
 
 
 
-* Using Frisby package in unit tests
+* Method threading / Fluent API
+.play testing/frisby/12_frisby_threading.go
+
+
+
+* Using Frisby package in unit tests (passing tests)
+- (can not be run directly from slides!)
+
+.play testing/frisby/13_frisby_as_test_pass_test.go
+
+
+* Using Frisby package in unit tests (failing tests)
+- (can not be run directly from slides!)
+
+.play testing/frisby/14_frisby_as_test_fail_test.go
+
+* Using Frisby package in unit tests (combination)
+- (can not be run directly from slides!)
+
+.play testing/frisby/15_frisby_more_test.go
+
+
+* Some tips and tricks for Frisby
+
 
 
 
