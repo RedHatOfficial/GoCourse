@@ -118,6 +118,7 @@ https://github.com/RedHatOfficial/GoCourse
 * Package `goblin`
 
 .image ./testing/goblin.png _ 600
+Author: https://github.com/leandroreox
 
 
 
@@ -241,6 +242,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Frisby
 .image ./testing/frisby.png _ 600
+(MIT License)
 
 
 
