@@ -1,0 +1,31 @@
+Feature: simple accumulator checks
+  An accumulator must be able to add a number to its content
+
+  Scenario Outline: Accumulate multiple values          # features/accumulator.feature:4
+    Given I have an accumulator with 0                  # accumulator_test.go:11 -> iHaveAnAccumulatorWith
+    When I add <amount> to accumulator                  # accumulator_test.go:16 -> iAddToAccumulator
+    Then the accumulated result should be <accumulated> # accumulator_test.go:20 -> theAccumulatedResultShouldBe
+
+    Examples:
+      | amount | accumulated |
+      | 0      | 0           |
+      | 1      | 1           |
+      | 1      | 2           |
+        Incorrect accumulator value 1
+      | 10     | 12          |
+        Incorrect accumulator value 10
+
+--- Failed steps:
+
+  Scenario Outline: Accumulate multiple values # features/accumulator.feature:4
+    Then the accumulated result should be 2 # features/accumulator.feature:7
+      Error: Incorrect accumulator value 1
+
+  Scenario Outline: Accumulate multiple values # features/accumulator.feature:4
+    Then the accumulated result should be 12 # features/accumulator.feature:7
+      Error: Incorrect accumulator value 10
+
+
+4 scenarios (2 passed, 2 failed)
+12 steps (10 passed, 2 failed)
+356.714µs
