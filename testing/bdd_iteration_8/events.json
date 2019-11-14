@@ -1,0 +1,74 @@
+{"event":"TestRunStarted","version":"0.1.0","timestamp":1572963740811,"suite":"godogs"}
+{"event":"TestSource","location":"features/accumulator.feature:1","source":"Feature: simple accumulator checks\n  An accumulator must be able to add a number to its content\n\n  Scenario Outline: Accumulate multiple values\n    Given I have an accumulator with 0\n    When I add \u003camount\u003e to accumulator\n    Then the accumulated result should be \u003caccumulated\u003e\n    When I add \u003camount2\u003e to accumulator\n    Then the accumulated result should be \u003caccumulated2\u003e\n\n  Examples:\n   |amount|accumulated|amount2|accumulated2|\n   | 0    | 0         | 0     | 0          |\n   | 1    | 1         | 1     | 2          |\n   | 2    | 2         | 2     | 4          |\n   | 10   | 10        | 10    | 20         |\n\n"}
+{"event":"TestCaseStarted","location":"features/accumulator.feature:13","timestamp":1572963740811}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:5","definition_id":"accumulator_test.go:14 -\u003e iHaveAnAccumulatorWith","arguments":[[27,28]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:5","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:5","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:6","definition_id":"accumulator_test.go:19 -\u003e iAddToAccumulator","arguments":[[6,7]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:6","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:6","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:7","definition_id":"accumulator_test.go:23 -\u003e theAccumulatedResultShouldBe","arguments":[[33,34]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:7","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:7","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:8","definition_id":"accumulator_test.go:19 -\u003e iAddToAccumulator","arguments":[[6,7]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:8","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:8","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:9","definition_id":"accumulator_test.go:23 -\u003e theAccumulatedResultShouldBe","arguments":[[33,34]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:9","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:9","timestamp":1572963740811,"status":"passed"}
+{"event":"TestCaseFinished","location":"features/accumulator.feature:13","timestamp":1572963740811,"status":"passed"}
+{"event":"TestCaseStarted","location":"features/accumulator.feature:14","timestamp":1572963740811}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:5","definition_id":"accumulator_test.go:14 -\u003e iHaveAnAccumulatorWith","arguments":[[27,28]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:5","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:5","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:6","definition_id":"accumulator_test.go:19 -\u003e iAddToAccumulator","arguments":[[6,7]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:6","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:6","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:7","definition_id":"accumulator_test.go:23 -\u003e theAccumulatedResultShouldBe","arguments":[[33,34]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:7","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:7","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:8","definition_id":"accumulator_test.go:19 -\u003e iAddToAccumulator","arguments":[[6,7]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:8","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:8","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:9","definition_id":"accumulator_test.go:23 -\u003e theAccumulatedResultShouldBe","arguments":[[33,34]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:9","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:9","timestamp":1572963740811,"status":"passed"}
+{"event":"TestCaseFinished","location":"features/accumulator.feature:14","timestamp":1572963740811,"status":"passed"}
+{"event":"TestCaseStarted","location":"features/accumulator.feature:15","timestamp":1572963740811}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:5","definition_id":"accumulator_test.go:14 -\u003e iHaveAnAccumulatorWith","arguments":[[27,28]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:5","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:5","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:6","definition_id":"accumulator_test.go:19 -\u003e iAddToAccumulator","arguments":[[6,7]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:6","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:6","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:7","definition_id":"accumulator_test.go:23 -\u003e theAccumulatedResultShouldBe","arguments":[[33,34]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:7","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:7","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:8","definition_id":"accumulator_test.go:19 -\u003e iAddToAccumulator","arguments":[[6,7]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:8","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:8","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:9","definition_id":"accumulator_test.go:23 -\u003e theAccumulatedResultShouldBe","arguments":[[33,34]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:9","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:9","timestamp":1572963740811,"status":"passed"}
+{"event":"TestCaseFinished","location":"features/accumulator.feature:15","timestamp":1572963740811,"status":"passed"}
+{"event":"TestCaseStarted","location":"features/accumulator.feature:16","timestamp":1572963740811}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:5","definition_id":"accumulator_test.go:14 -\u003e iHaveAnAccumulatorWith","arguments":[[27,28]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:5","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:5","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:6","definition_id":"accumulator_test.go:19 -\u003e iAddToAccumulator","arguments":[[6,8]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:6","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:6","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:7","definition_id":"accumulator_test.go:23 -\u003e theAccumulatedResultShouldBe","arguments":[[33,35]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:7","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:7","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:8","definition_id":"accumulator_test.go:19 -\u003e iAddToAccumulator","arguments":[[6,8]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:8","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:8","timestamp":1572963740811,"status":"passed"}
+{"event":"StepDefinitionFound","location":"features/accumulator.feature:9","definition_id":"accumulator_test.go:23 -\u003e theAccumulatedResultShouldBe","arguments":[[33,35]]}
+{"event":"TestStepStarted","location":"features/accumulator.feature:9","timestamp":1572963740811}
+{"event":"TestStepFinished","location":"features/accumulator.feature:9","timestamp":1572963740811,"status":"passed"}
+{"event":"TestCaseFinished","location":"features/accumulator.feature:16","timestamp":1572963740811,"status":"passed"}
+{"event":"TestRunFinished","status":"passed","timestamp":1572963740811,"snippets":"","memory":""}
+testing: warning: no tests to run
+PASS
+ok  	_/home/ptisnovs/src/go-root/article_41/bdd_iteration_7	0.007s

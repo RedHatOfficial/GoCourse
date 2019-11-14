@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="godogs" tests="4" skipped="0" failures="0" errors="0" time="165.39µs">
+  <testsuite name="simple accumulator checks" tests="4" skipped="0" failures="0" errors="0" time="73.038µs">
+    <testcase name="Accumulate multiple values #1" status="passed" time="23.303µs"></testcase>
+    <testcase name="Accumulate multiple values #2" status="passed" time="9.687µs"></testcase>
+    <testcase name="Accumulate multiple values #3" status="passed" time="11.763µs"></testcase>
+    <testcase name="Accumulate multiple values #4" status="passed" time="9.692µs"></testcase>
+  </testsuite>
+</testsuites>testing: warning: no tests to run
+PASS
+ok  	_/home/ptisnovs/src/go-root/article_41/bdd_iteration_7	0.006s

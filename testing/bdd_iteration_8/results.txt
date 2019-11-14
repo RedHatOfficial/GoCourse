@@ -1,0 +1,24 @@
+$ go test -godog.format=pretty
+Feature: simple accumulator checks
+  An accumulator must be able to add a number to its content
+
+  Scenario Outline: Accumulate multiple values           # features/accumulator.feature:4
+    Given I have an accumulator with 0                   # accumulator_test.go:14 -> iHaveAnAccumulatorWith
+    When I add <amount> to accumulator                   # accumulator_test.go:19 -> iAddToAccumulator
+    Then the accumulated result should be <accumulated>  # accumulator_test.go:23 -> theAccumulatedResultShouldBe
+    When I add <amount2> to accumulator                  # accumulator_test.go:19 -> iAddToAccumulator
+    Then the accumulated result should be <accumulated2> # accumulator_test.go:23 -> theAccumulatedResultShouldBe
+
+    Examples:
+      | amount | accumulated | amount2 | accumulated2 |
+      | 0      | 0           | 0       | 0            |
+      | 1      | 1           | 1       | 2            |
+      | 2      | 2           | 2       | 4            |
+      | 10     | 10          | 10      | 20           |
+
+4 scenarios (4 passed)
+20 steps (20 passed)
+468.319µs
+testing: warning: no tests to run
+PASS
+ok      _/home/ptisnovs/src/go/bank     0.006s

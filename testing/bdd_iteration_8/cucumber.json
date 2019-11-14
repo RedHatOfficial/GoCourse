@@ -1,0 +1,295 @@
+[
+    {
+        "uri": "features/accumulator.feature",
+        "id": "simple-accumulator-checks",
+        "keyword": "Feature",
+        "name": "simple accumulator checks",
+        "description": "  An accumulator must be able to add a number to its content",
+        "line": 1,
+        "elements": [
+            {
+                "id": "simple-accumulator-checks;accumulate-multiple-values;;2",
+                "keyword": "Scenario Outline",
+                "name": "Accumulate multiple values",
+                "description": "",
+                "line": 13,
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "name": "I have an accumulator with 0",
+                        "line": 13,
+                        "match": {
+                            "location": "accumulator_test.go:14"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 22618
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "I add 0 to accumulator",
+                        "line": 13,
+                        "match": {
+                            "location": "accumulator_test.go:19"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 5715
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "the accumulated result should be 0",
+                        "line": 13,
+                        "match": {
+                            "location": "accumulator_test.go:23"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3841
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "I add 0 to accumulator",
+                        "line": 13,
+                        "match": {
+                            "location": "accumulator_test.go:19"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3180
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "the accumulated result should be 0",
+                        "line": 13,
+                        "match": {
+                            "location": "accumulator_test.go:23"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3639
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "simple-accumulator-checks;accumulate-multiple-values;;3",
+                "keyword": "Scenario Outline",
+                "name": "Accumulate multiple values",
+                "description": "",
+                "line": 14,
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "name": "I have an accumulator with 0",
+                        "line": 14,
+                        "match": {
+                            "location": "accumulator_test.go:14"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3244
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "I add 1 to accumulator",
+                        "line": 14,
+                        "match": {
+                            "location": "accumulator_test.go:19"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3421
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "the accumulated result should be 1",
+                        "line": 14,
+                        "match": {
+                            "location": "accumulator_test.go:23"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3440
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "I add 1 to accumulator",
+                        "line": 14,
+                        "match": {
+                            "location": "accumulator_test.go:19"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 6680
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "the accumulated result should be 2",
+                        "line": 14,
+                        "match": {
+                            "location": "accumulator_test.go:23"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 4879
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "simple-accumulator-checks;accumulate-multiple-values;;4",
+                "keyword": "Scenario Outline",
+                "name": "Accumulate multiple values",
+                "description": "",
+                "line": 15,
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "name": "I have an accumulator with 0",
+                        "line": 15,
+                        "match": {
+                            "location": "accumulator_test.go:14"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3421
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "I add 2 to accumulator",
+                        "line": 15,
+                        "match": {
+                            "location": "accumulator_test.go:19"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3465
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "the accumulated result should be 2",
+                        "line": 15,
+                        "match": {
+                            "location": "accumulator_test.go:23"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3379
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "I add 2 to accumulator",
+                        "line": 15,
+                        "match": {
+                            "location": "accumulator_test.go:19"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3195
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "the accumulated result should be 4",
+                        "line": 15,
+                        "match": {
+                            "location": "accumulator_test.go:23"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 4928
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "simple-accumulator-checks;accumulate-multiple-values;;5",
+                "keyword": "Scenario Outline",
+                "name": "Accumulate multiple values",
+                "description": "",
+                "line": 16,
+                "type": "scenario",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "name": "I have an accumulator with 0",
+                        "line": 16,
+                        "match": {
+                            "location": "accumulator_test.go:14"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3124
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "I add 10 to accumulator",
+                        "line": 16,
+                        "match": {
+                            "location": "accumulator_test.go:19"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 5087
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "the accumulated result should be 10",
+                        "line": 16,
+                        "match": {
+                            "location": "accumulator_test.go:23"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3425
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "name": "I add 10 to accumulator",
+                        "line": 16,
+                        "match": {
+                            "location": "accumulator_test.go:19"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3226
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "name": "the accumulated result should be 20",
+                        "line": 16,
+                        "match": {
+                            "location": "accumulator_test.go:23"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 3299
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
+testing: warning: no tests to run
+PASS
+ok  	_/home/ptisnovs/src/go-root/article_41/bdd_iteration_7	0.007s
