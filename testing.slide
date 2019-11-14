@@ -61,13 +61,122 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Unit test files
 - Usually stored in `package_test.go`
-- Can be split into many files, as necessary
+- Can be split into as many files, as necessary
 
 
 
 * How to start unit tests
 - basic command: `go` `test`
 - usually: `go` `test` `./...`
+
+
+
+* Simples example
+
+.code testing/tests01/add.go
+.code testing/tests01/add_test.go
+
+
+
+* It is possible to test local functions/methods
+
+.code testing/tests02/add.go
+.code testing/tests02/add_test.go
+
+
+
+* Test failures (due to an error in source code)
+
+.code testing/tests03/add.go
+.code testing/tests03/add_test.go
+
+
+
+* Tests can be stopped at any time
+
+.code testing/tests04/add_test.go
+
+
+* Table-driven tests
+
+.code testing/tests05/add_test.go /^package main/,/^func TestAdd/
+
+
+
+* Table-driven tests (cont.)
+
+.code testing/tests05/add_test.go /^func TestAdd/,/^}/
+
+
+
+* Refactoring
+
+.code testing/tests07/add_test.go /^package main/,/^func TestAdd/
+
+
+
+*  Refactoring (cont.)
+
+.code testing/tests07/add_test.go /^func TestAdd/,/^}/
+
+
+
+* Normal/fast/slow tests
+- normal
+
+.code testing/tests08/add_test.go
+
+
+
+* Normal/fast/slow tests
+- fast
+
+.code testing/tests08/add_fast_test.go /^package main/,/^func checkAdd/
+
+
+
+* Normal/fast/slow tests
+- fast (cont.)
+
+.code testing/tests08/add_fast_test.go /^func checkAdd/,/^}/
+
+
+
+* Normal/fast/slow tests
+- fast (cont.)
+
+.code testing/tests08/add_fast_test.go /^func TestAddBasic/,/^}/
+
+.code testing/tests08/add_fast_test.go /^func TestAddNegative/,/^}/
+
+
+
+* Normal/fast/slow tests
+- slow
+
+.code testing/tests08/add_slow_test.go /^package main/,/^func checkAdd/
+
+
+
+* Normal/fast/slow tests
+- slow (cont.)
+
+.code testing/tests08/add_slow_test.go /^func checkAdd/,/^}/
+
+
+
+* Normal/fast/slow tests
+- slow (cont.)
+
+.code testing/tests08/add_slow_test.go /^func TestAddMinValue/,/^}/
+.code testing/tests08/add_slow_test.go /^func TestAddMaxValue/,/^}/
+
+
+
+* Normal/fast/slow tests
+- slow (cont.)
+
+.code testing/tests08/add_slow_test.go /^func TestAddMinMaxValue/,/^}/
 
 
 
@@ -314,18 +423,18 @@ Author: https://github.com/leandroreox
 * Using Frisby package in unit tests (passing tests)
 - (can not be run directly from slides!)
 
-.play testing/frisby/13_frisby_as_test_pass_test.go
+.code testing/frisby/13_frisby_as_test_pass_test.go
 
 
 * Using Frisby package in unit tests (failing tests)
 - (can not be run directly from slides!)
 
-.play testing/frisby/14_frisby_as_test_fail_test.go
+.code testing/frisby/14_frisby_as_test_fail_test.go
 
 * Using Frisby package in unit tests (combination)
 - (can not be run directly from slides!)
 
-.play testing/frisby/15_frisby_more_test.go
+.code testing/frisby/15_frisby_more_test.go
 
 
 * Some tips and tricks for Frisby
