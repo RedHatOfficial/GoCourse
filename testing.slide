@@ -260,6 +260,31 @@ Author: https://github.com/leandroreox
 
 
 
+* Tests splitted into more functions
+.code ./testing/goblin/07_nested_struct_test.go
+
+
+
+* Behaviour of Goblin when some test fails
+.code ./testing/goblin/09_nested_struct_failed_test.go
+
+
+
+* Behaviour of Goblin when some test fails
+.code ./testing/goblin/10_split_failed_test.go
+
+
+
+* Usage of method Goblin.Before
+.code ./testing/goblin/11_before_test.go
+
+
+
+* Usage of method Goblin.Before
+.code ./testing/goblin/12_before_test.go
+
+
+
 #############################################################
 
 * BDD testing
