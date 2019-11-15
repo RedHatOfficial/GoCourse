@@ -230,6 +230,35 @@ https://github.com/RedHatOfficial/GoCourse
 Author: https://github.com/leandroreox
 
 
+* Package `goblin`
+- based on Mocha library from the JavaScript/TypeScript world
+- 'It' and 'Describe' clausules
+- assertion functions are built-in
+
+
+
+* Stub for test based on Goblin
+.code ./testing/goblin/01_intro_test.go
+
+
+* Checking behaviour of + operator
+.code ./testing/goblin/02_passing_test.go
+
+
+* More 'It' blocks in one 'Describe' block
+.code ./testing/goblin/03_intro_test.go
+
+
+
+* Example of all test steps that are passing
+.code ./testing/goblin/04_all_passing_test.go
+
+
+
+* Nested 'Describe' blocks in one test function
+.code ./testing/goblin/06_nested_describe_test.go
+
+
 
 #############################################################
 
