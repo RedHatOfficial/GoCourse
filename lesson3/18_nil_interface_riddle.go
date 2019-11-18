@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type I interface {}
+type I interface{}
 
 type T struct{}
 
