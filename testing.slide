@@ -71,7 +71,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 
-* Simples example
+* Simplest example
 
 .code testing/tests01/add.go
 .code testing/tests01/add_test.go
@@ -180,8 +180,39 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 
+* Code coverage
+
+    $ go test -v -cover
+    === RUN   TestAdd
+    --- PASS: TestAdd (0.00s)
+    PASS
+    coverage: 50.0% of statements
+    ok      _/home/tester/tests01   0.004s
+
+* Code coverage as HTML page
+
+    go test -coverprofile coverage
+    go tool cover -html coverage
+
+
+
+* Code coverage as HTML page
+
+.image ./testing/coverage.png _ 600
+
+
+
 * Helper tool `go-carpet`
 
+- show test coverage in terminal for Go source files
+- with -256colors shows coverage in various shades of green
+- installation: `go get -u github.com/msoap/go-carpet`
+- run `go-carpet`
+
+
+* Helper tool `go-carpet`
+
+.image ./testing/go-carpet.png _ 600
 
 
 * Extension `testify` package
@@ -527,6 +558,8 @@ Comparative Analysis Of GoLang Testing Frameworks
 Exploring the landscape of Go testing frameworks
 [[https://bmuschko.com/blog/go-testing-frameworks/]]
 
+Go coverage service
+https://gocover.io/
 
 
 #last slide
