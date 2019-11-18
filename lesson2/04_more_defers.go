@@ -2,13 +2,13 @@ package main
 
 import "fmt"
 
-func on_finish(i int) {
+func onFinish(i int) {
 	fmt.Printf("Defer #%2d\n", i)
 }
 
 func main() {
 	for i := 0; i <= 10; i++ {
-		defer on_finish(i)
+		defer onFinish(i)
 	}
 	fmt.Println("Finishing main() function")
 }
