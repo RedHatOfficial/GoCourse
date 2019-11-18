@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	c := make(chan int)
-	quit := make (chan int)
+	quit := make(chan int)
 	go func() {
 		for {
 			select {

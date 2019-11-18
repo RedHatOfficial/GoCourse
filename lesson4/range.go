@@ -14,7 +14,7 @@ func main() {
 		fmt.Println("Channel closed")
 	}()
 	for i := 0; i < 5; i++ {
-		c <- i*2
+		c <- i * 2
 	}
 	close(c)
 	time.Sleep(time.Second)

@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-
 func f(c chan int) {
 	a := <-c
 	fmt.Println("Received", a)
