@@ -1,8 +1,8 @@
 package main
 
-type I interface {}
+type I interface{}
 
-type T struct {}
+type T struct{}
 
 func (T) M() {
 	println("Nothing happened...")
