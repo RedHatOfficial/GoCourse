@@ -17,6 +17,6 @@ func (line Line) length() float64 {
 func main() {
 	line1 := Line{x1: 0, y1: 0, x2: 100, y2: 100}
 	fmt.Println(line1)
-	line_length := line1.length()
-	fmt.Println(line_length)
+	lineLength := line1.length()
+	fmt.Println(lineLength)
 }
