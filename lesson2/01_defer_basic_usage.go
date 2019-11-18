@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func on_finish() {
+func onFinish() {
 	fmt.Println("Finished")
 }
 
 func main() {
-	defer on_finish()
+	defer onFinish()
 
 	for i := 10; i >= 0; i-- {
 		fmt.Printf("%2d\n", i)
