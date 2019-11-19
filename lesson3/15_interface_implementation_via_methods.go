@@ -27,6 +27,6 @@ func main() {
 
 	fmt.Println(line1)
 
-	line_length := length(line1)
-	fmt.Println(line_length)
+	lineLength := length(line1)
+	fmt.Println(lineLength)
 }
