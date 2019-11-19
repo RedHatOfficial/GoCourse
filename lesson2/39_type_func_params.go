@@ -6,7 +6,7 @@ type Id uint32
 type Name string
 type Surname string
 
-func register_user(id Id, name Name, surname Surname) {
+func registerUser(id Id, name Name, surname Surname) {
 	fmt.Printf("Registering: %d %s %s", id, name, surname)
 }
 
@@ -15,5 +15,5 @@ func main() {
 	var n Name = "Jan"
 	var s Surname = "Novák"
 
-	register_user(i, n, s)
+	registerUser(i, n, s)
 }
