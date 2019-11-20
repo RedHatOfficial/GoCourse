@@ -5,8 +5,8 @@
 package slices
 
 import (
-	"testing"
 	. "github.com/smartystreets/goconvey/convey"
+	"testing"
 )
 
 func TestSliceManipulation(t *testing.T) {
