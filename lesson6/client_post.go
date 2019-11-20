@@ -1,4 +1,5 @@
 package main
+
 import (
 	"bytes"
 	"encoding/json"
@@ -7,9 +8,11 @@ import (
 	"net/http"
 	"os"
 )
+
 type Params struct {
 	Hello string
 }
+
 func main() {
 	buffer := new(bytes.Buffer)
 	params := Params{Hello: "world"}
