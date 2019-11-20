@@ -1,8 +1,8 @@
 package factorial
 
-import(
-	"testing"
+import (
 	. "github.com/smartystreets/goconvey/convey"
+	"testing"
 )
 
 func TestFactorial(t *testing.T) {
