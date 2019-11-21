@@ -77,111 +77,111 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Simplest example
 
-.code testing/tests01/add.go
-.code testing/tests01/add_test.go
+.code testing/testing/tests01/add.go
+.code testing/testing/tests01/add_test.go
 
 
 
 * It is possible to test local functions/methods
 
-.code testing/tests02/add.go
-.code testing/tests02/add_test.go
+.code testing/testing/tests02/add.go
+.code testing/testing/tests02/add_test.go
 
 
 
 * Test failures (due to an error in source code)
 
-.code testing/tests03/add.go
-.code testing/tests03/add_test.go
+.code testing/testing/tests03/add.go
+.code testing/testing/tests03/add_test.go
 
 
 
 * Tests can be stopped at any time
 
-.code testing/tests04/add_test.go
+.code testing/testing/tests04/add_test.go
 
 
 
 * Table-driven tests
 
-.code testing/tests05/add_test.go /^package main/,/^func TestAdd/
+.code testing/testing/tests05/add_test.go /^package main/,/^func TestAdd/
 
 
 
 * Table-driven tests (cont.)
 
-.code testing/tests05/add_test.go /^func TestAdd/,/^}/
+.code testing/testing/tests05/add_test.go /^func TestAdd/,/^}/
 
 
 
 * Refactoring
 
-.code testing/tests07/add_test.go /^package main/,/^func TestAdd/
+.code testing/testing/tests07/add_test.go /^package main/,/^func TestAdd/
 
 
 
 *  Refactoring (cont.)
 
-.code testing/tests07/add_test.go /^func TestAdd/,/^}/
+.code testing/testing/tests07/add_test.go /^func TestAdd/,/^}/
 
 
 
 * Normal/fast/slow tests
 - Normal tests
 
-.code testing/tests08/add_test.go
+.code testing/testing/tests08/add_test.go
 
 
 
 * Normal/fast/slow tests
 - Fast tests
 
-.code testing/tests08/add_fast_test.go /^package main/,/^func checkAdd/
+.code testing/testing/tests08/add_fast_test.go /^package main/,/^func checkAdd/
 
 
 
 * Normal/fast/slow tests
 - Fast tests (cont.)
 
-.code testing/tests08/add_fast_test.go /^func checkAdd/,/^}/
+.code testing/testing/tests08/add_fast_test.go /^func checkAdd/,/^}/
 
 
 
 * Normal/fast/slow tests
 - Fast tests (cont.)
 
-.code testing/tests08/add_fast_test.go /^func TestAddBasic/,/^}/
+.code testing/testing/tests08/add_fast_test.go /^func TestAddBasic/,/^}/
 
-.code testing/tests08/add_fast_test.go /^func TestAddNegative/,/^}/
+.code testing/testing/tests08/add_fast_test.go /^func TestAddNegative/,/^}/
 
 
 
 * Normal/fast/slow tests
 - Slow tests
 
-.code testing/tests08/add_slow_test.go /^package main/,/^func checkAdd/
+.code testing/testing/tests08/add_slow_test.go /^package main/,/^func checkAdd/
 
 
 
 * Normal/fast/slow tests
 - Slow tests (cont.)
 
-.code testing/tests08/add_slow_test.go /^func checkAdd/,/^}/
+.code testing/testing/tests08/add_slow_test.go /^func checkAdd/,/^}/
 
 
 
 * Normal/fast/slow tests
 - Slow tests (cont.)
 
-.code testing/tests08/add_slow_test.go /^func TestAddMinValue/,/^}/
-.code testing/tests08/add_slow_test.go /^func TestAddMaxValue/,/^}/
+.code testing/testing/tests08/add_slow_test.go /^func TestAddMinValue/,/^}/
+.code testing/testing/tests08/add_slow_test.go /^func TestAddMaxValue/,/^}/
 
 
 
 * Normal/fast/slow tests
 - Slow tests (cont.)
 
-.code testing/tests08/add_slow_test.go /^func TestAddMinMaxValue/,/^}/
+.code testing/testing/tests08/add_slow_test.go /^func TestAddMinMaxValue/,/^}/
 
 
 
