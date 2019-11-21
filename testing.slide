@@ -41,6 +41,7 @@ https://github.com/RedHatOfficial/GoCourse
 * Standard `testing` package
 - Each test needs to be stored in a function `func` `TestXxx(*testing.T)`
 - Basic Methods for `testing.T` structure (data type)
+- There are no "assertions" in the `testing` package!
 - `Log(args` `...interface{})`
 - `Skip(args` `...interface{})`
 - `Error(args` `...interface{})`
@@ -62,12 +63,15 @@ https://github.com/RedHatOfficial/GoCourse
 * Unit test files
 - Usually stored in `package_test.go`
 - Can be split into as many files, as necessary
+- So called table-driven tests
+- Usually array/slice of structs with inputs and expected output is used
 
 
 
 * How to start unit tests
-- basic command: `go` `test`
-- usually: `go` `test` `./...`
+- Basic command: `go` `test`
+- Usually: `go` `test` `./...`
+- It is possible to specify regexp to select just subset of tests
 
 
 
@@ -97,6 +101,7 @@ https://github.com/RedHatOfficial/GoCourse
 .code testing/tests04/add_test.go
 
 
+
 * Table-driven tests
 
 .code testing/tests05/add_test.go /^package main/,/^func TestAdd/
@@ -122,28 +127,28 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Normal/fast/slow tests
-- normal
+- Normal tests
 
 .code testing/tests08/add_test.go
 
 
 
 * Normal/fast/slow tests
-- fast
+- Fast tests
 
 .code testing/tests08/add_fast_test.go /^package main/,/^func checkAdd/
 
 
 
 * Normal/fast/slow tests
-- fast (cont.)
+- Fast tests (cont.)
 
 .code testing/tests08/add_fast_test.go /^func checkAdd/,/^}/
 
 
 
 * Normal/fast/slow tests
-- fast (cont.)
+- Fast tests (cont.)
 
 .code testing/tests08/add_fast_test.go /^func TestAddBasic/,/^}/
 
@@ -152,21 +157,21 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Normal/fast/slow tests
-- slow
+- Slow tests
 
 .code testing/tests08/add_slow_test.go /^package main/,/^func checkAdd/
 
 
 
 * Normal/fast/slow tests
-- slow (cont.)
+- Slow tests (cont.)
 
 .code testing/tests08/add_slow_test.go /^func checkAdd/,/^}/
 
 
 
 * Normal/fast/slow tests
-- slow (cont.)
+- Slow tests (cont.)
 
 .code testing/tests08/add_slow_test.go /^func TestAddMinValue/,/^}/
 .code testing/tests08/add_slow_test.go /^func TestAddMaxValue/,/^}/
@@ -174,13 +179,15 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Normal/fast/slow tests
-- slow (cont.)
+- Slow tests (cont.)
 
 .code testing/tests08/add_slow_test.go /^func TestAddMinMaxValue/,/^}/
 
 
 
 * Code coverage
+
+- Basic code coverage report can be displayed by using just standard tools
 
     $ go test -v -cover
     === RUN   TestAdd
@@ -189,7 +196,11 @@ https://github.com/RedHatOfficial/GoCourse
     coverage: 50.0% of statements
     ok      _/home/tester/tests01   0.004s
 
+
+
 * Code coverage as HTML page
+
+- It is possible to export code coverage report as HTML page (with colors, selection etc. etc.)
 
     go test -coverprofile coverage
     go tool cover -html coverage
@@ -204,10 +215,12 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Helper tool `go-carpet`
 
-- show test coverage in terminal for Go source files
-- with -256colors shows coverage in various shades of green
-- installation: `go get -u github.com/msoap/go-carpet`
-- run `go-carpet`
+- Show test coverage in terminal for Go source files
+- With -256colors shows coverage in various shades of green
+- Installation: `go get -u github.com/msoap/go-carpet`
+- (`~/go/bin` should be put into `PATH`)
+- Run `go-carpet` in project directory
+
 
 
 * Helper tool `go-carpet`
@@ -215,7 +228,8 @@ https://github.com/RedHatOfficial/GoCourse
 .image ./testing/go-carpet.png _ 600
 
 
-* Extension `testify` package
+
+* Extension for the standard `testify` package
 
 - package `require`
 - package `mock`
@@ -224,14 +238,15 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 * Package `require`
-- provides same global functions as the assert package
-- but instead of returning a boolean result they terminate current test
+- Provides same global functions as the `assert` package
+- But instead of returning a boolean result they terminate current test
+- Tests written using this package are similar to unit tests in Python for example
 
 
 
 * Package `mock`
-- provides a mechanism for writing mock objects
-- they can be used in place of real objects when writing test code
+- Provides a mechanism for writing mock objects
+- They can be used in place of real objects when writing test code
 
 
 
@@ -261,10 +276,11 @@ https://github.com/RedHatOfficial/GoCourse
 Author: https://github.com/leandroreox
 
 
+
 * Package `goblin`
-- based on Mocha library from the JavaScript/TypeScript world
+- Based on Mocha library from the JavaScript/TypeScript world
 - 'It' and 'Describe' clausules
-- assertion functions are built-in
+- Assertion functions are built-in
 
 
 
@@ -272,8 +288,10 @@ Author: https://github.com/leandroreox
 .code ./testing/goblin/01_intro_test.go
 
 
+
 * Checking behaviour of + operator
 .code ./testing/goblin/02_passing_test.go
+
 
 
 * More 'It' blocks in one 'Describe' block
@@ -544,8 +562,11 @@ An introduction to programming in Go: Testing
 Package testing 
 [[https://golang.org/pkg/testing/]]
 
-Code Coverage Tutorial: Branch, Statement, Decision, FSM 
-[[https://www.guru99.com/code-coverage.html]]
+Go(lang) Unit Testing for Absolute Beginners
+https://jonathanmh.com/golang-unit-testing-for-absolute-beginners/
+
+Testing in Go by example: Part 1
+https://smartystreets.com/blog/2015/02/go-testing-part-1-vanillla
 
 Go Test Your Code: An introduction to testing in Go
 [[https://medium.com/rate-engineering/go-test-your-code-an-introduction-to-effective-testing-in-go-6e4f66f2c259]]
@@ -553,13 +574,22 @@ Go Test Your Code: An introduction to testing in Go
 Comparative Analysis Of GoLang Testing Frameworks 
 [[https://www.slideshare.net/DushyantBhalgami/comparative-analysis-of-golang-testing-frameworks]]
 
+
+
 * Useful links (cont.)
+
+Code Coverage Tutorial: Branch, Statement, Decision, FSM 
+[[https://www.guru99.com/code-coverage.html]]
 
 Exploring the landscape of Go testing frameworks
 [[https://bmuschko.com/blog/go-testing-frameworks/]]
 
 Go coverage service
 https://gocover.io/
+
+
+
+* Useful links (cont.)
 
 
 #last slide
