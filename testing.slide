@@ -27,6 +27,13 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 
+* Test pyramid and ice-cream cone
+
+[[https://watirmelon.files.wordpress.com/2018/02/automated-testing-pyramid-with-eye.jpg?w=840]]
+[[https://watirmelon.files.wordpress.com/2018/02/software-testing-icecream-cone-antipattern.jpg?w=840]]
+
+
+
 * Unit testing
 - Standard `testing` package
 - Helper tool `go-carpet`
@@ -341,15 +348,64 @@ Author: https://github.com/leandroreox
 - Godog
 
 
+
 * BDD testing
 - Test pyramid
 - BDD: behavior-driven development
 - Simple DSL
 
+
+
 * GoConvey
 - Test steps are written directly as Go source code
 - Pros: support in IDE, most issues can be detected by the compiler
 - Cons: no proper separation from Go language
+- Supports web UI
+- Displays test coverage
+- Test code generator is included as well
+
+
+
+* GoConvey
+- `Convey`
+- `So`
+- `ShouldEqual`
+- `ShouldNotEqual`
+- `ShouldBeBetween`
+- `ShouldBeGreaterThan`
+- `ShouldNotBeEmpty`
+- ...
+- [[https://github.com/smartystreets/goconvey/wiki/Assertions]]
+- Possible to use: Convey("This isn't yet implemented", nil)
+
+
+
+* GoConvey output
+- `convey.Print`
+- `convey.Printf`
+- `convey.Println`
+
+
+
+* GoConvey - tested code
+.code testing/go-convey/go_convey1/factorial.go
+
+
+
+* GoConvey - behaviour test
+.code testing/go-convey/go_convey1/behaviour_test.go
+
+
+
+* GoConvey - checking behaviour of slice
+.code testing/go-convey/go_convey2/slice_test.go
+
+
+
+* GoConvey - more checks for factorial implementation
+.code testing/go-convey/go_convey3/behaviour_test.go
+
+
 
 * Godog
 - Based on Gherkin language
@@ -563,7 +619,7 @@ Package testing
 [[https://golang.org/pkg/testing/]]
 
 Go(lang) Unit Testing for Absolute Beginners
-https://jonathanmh.com/golang-unit-testing-for-absolute-beginners/
+[[https://jonathanmh.com/golang-unit-testing-for-absolute-beginners/]]
 
 Testing in Go by example: Part 1
 https://smartystreets.com/blog/2015/02/go-testing-part-1-vanillla
@@ -585,11 +641,33 @@ Exploring the landscape of Go testing frameworks
 [[https://bmuschko.com/blog/go-testing-frameworks/]]
 
 Go coverage service
-https://gocover.io/
+[[https://gocover.io/]]
+
+GoConvey
+[[http://goconvey.co/]]
+
+GoConvey assertions
+[[https://github.com/smartystreets/goconvey/wiki/Assertions]]
+
+GoConvey FAQ
+[[https://github.com/smartystreets/goconvey/wiki/FAQ]]
 
 
 
 * Useful links (cont.)
+
+Test-driven development
+[[https://en.wikipedia.org/wiki/Test-driven_development]]
+
+TheThreeRulesOfTdd
+[[http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd]]
+
+The Difference Between TDD and BDD
+[[https://joshldavis.com/2013/05/27/difference-between-tdd-and-bdd/]]
+
+The difference between TDD and BDD
+[[https://www.hindsightsoftware.com/blog/tdd-vs-bdd/]]
+
 
 
 #last slide
