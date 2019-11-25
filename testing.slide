@@ -22,6 +22,7 @@ https://github.com/RedHatOfficial/GoCourse
 * Golang Testing Frameworks
 - Unit testing
 - BDD testing
+- Expect-like frameworks and libraries
 - REST API testing
 - Performance analysis
 
@@ -493,6 +494,42 @@ Author: https://github.com/leandroreox
 
 #############################################################
 
+* Expect-like framework and libraries
+
+- Originally an extension to the TCL scripting language
+- Written by Don Libes for Unix, then ported to other operation systems
+- Automates interactions with programs that expose a text terminal interface
+- Also used to test such applications
+- Examples: Telnet, FTP, passwd, fsck, rlogin, tip, SSH
+- Used heavily in telco
+
+
+
+* Expect-like framework and libraries
+
+- Package goexpect [[https://github.com/google/goexpect]]
+- Package go-expect [[https://github.com/Netflix/go-expect]]
+- Package gexpect [[https://github.com/ThomasRooney/gexpect]]
+
+
+
+* Package go-expect
+
+- One of expect-like golang library to automate control of terminal or console based programs
+- Unlike expect it does not spawn or manage process lifecycle
+- Only focuses on expecting output and sending input through it's pseudoterminal
+
+
+
+* Package gexpect
+
+
+* Package goexpect
+
+
+
+#############################################################
+
 * REST API testing
 - in many aspects like software testing at UI level
 - instead of input-output testing, REST API is validated
@@ -667,6 +704,15 @@ The Difference Between TDD and BDD
 
 The difference between TDD and BDD
 [[https://www.hindsightsoftware.com/blog/tdd-vs-bdd/]]
+
+Package goexpect
+[[https://github.com/google/goexpect]]
+
+Package go-expect
+[[https://github.com/Netflix/go-expect]]
+
+Package gexpect
+[[https://github.com/ThomasRooney/gexpect]]
 
 
 
