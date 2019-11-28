@@ -127,6 +127,12 @@ https://github.com/RedHatOfficial/GoCourse
 - '_' idiom can be used to drop return values
 .play lesson1/ret2.go
 
+* Useful links
+
+The Why of Go (put many Go-related things into context)
+[[https://www.youtube.com/watch?v=bmZNaUcwBt4&list=WL]]
+
+
 #last slide
 * More Gophers
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
