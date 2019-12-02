@@ -21,7 +21,8 @@ func TestGCD(t *testing.T) {
 		computed := gcd(entry.x, entry.y)
 		if computed != entry.expected {
 			t.Errorf("GCD(%d, %d) != %d, but %d", entry.x, entry.y, computed, entry.expected)
+		} else {
+			t.Logf("GCD ok for input %d and %d", entry.x, entry.y)
 		}
-		t.Logf("GCD ok for input %d and %d", entry.x, entry.y)
 	}
 }
