@@ -28,6 +28,7 @@ Outline:
 - Interfaces
 - Type assertions
 - Overview of standard libraries
+- "Line of sight"
 
 
 
@@ -317,6 +318,19 @@ Outline:
 - Go is used for making CLI apps, network tools, web servers etc.
 - it is reflected in its standard library
 - https://golang.org/pkg/
+
+
+
+############################################################
+
+* Line of sight
+- About idiomatic and easy to comprehend Go code
+- [[https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88]]
+- "Happy path" on the left (one column)
+- No nest of indented braces for "happy path"
+- Exit early
+- No else returns style statements (`golint` is able to detect it)
+- "Happy return" at the very last line
 
 
 
