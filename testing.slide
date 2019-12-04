@@ -582,13 +582,42 @@ Author: https://github.com/leandroreox
 - One of expect-like golang library to automate control of terminal or console based programs
 - Unlike expect it does not spawn or manage process lifecycle
 - Only focuses on expecting output and sending input through it's pseudoterminal
+- Can be used in cooperation with the standard `testing` module
 
 
 
 * Package gexpect
 
+- Pure golang expect-like module.
+- (IMHO) easiest to use
+- Regexp support in 'expect' commands
+- Two goroutines for `stdout` and `stdin` to make some use cases simpler
+- Can be used in cooperation with the standard `testing` module
+
+
 
 * Package goexpect
+
+- Another expect-like golang library
+- Native SSH spawner is included
+- Generic spawner that can be reused by additional spawners
+- Support for batch of commands (Batcher)
+- Support for conditionals in brach (Caser)
+- Go channel with exit status of automated/tested application
+- Verbose mode (for debugging/testing etc.)
+- Can be used in cooperation with the standard `testing` module
+
+
+
+* Examples
+
+- Bunch of examples for each expect-like library
+
+* go-expect
+
+* gexpect
+
+* goexpect
 
 
 
