@@ -276,61 +276,61 @@ https://github.com/RedHatOfficial/GoCourse
 
 * First test written using `oglematchers` (1/7)
 
-.code ./testing/oglematchers/oglematchers1/factorial_test.go /^package/,/^func TestFactorialForZero}/
+.code ./testing/oglematchers/oglematchers1/factorial_test.go /^package/,/^func TestFactorialForZero/
 
 * First test written using `oglematchers` (2/7)
 
-.code ./testing/oglematchers/oglematchers1/factorial_test.go /^TestFactorialForZero/,/^func TestFactorialForOne}/
+.code ./testing/oglematchers/oglematchers1/factorial_test.go /^func TestFactorialForZero/,/^func TestFactorialForOne/
 
 * First test written using `oglematchers` (3/7)
 
-.code ./testing/oglematchers/oglematchers1/factorial_test.go /^TestFactorialForOne/,/^func TestFactorialForSmallNumber}/
+.code ./testing/oglematchers/oglematchers1/factorial_test.go /^func TestFactorialForOne/,/^func TestFactorialForSmallNumber/
 
 * First test written using `oglematchers` (4/7)
 
-.code ./testing/oglematchers/oglematchers1/factorial_test.go /^TestFactorialForSmallNumber/,/^func TestFactorialForSmallNumberNegative}/
+.code ./testing/oglematchers/oglematchers1/factorial_test.go /^func TestFactorialForSmallNumber/,/^func TestFactorialForSmallNumberNegative/
 
 * First test written using `oglematchers` (5/7)
 
-.code ./testing/oglematchers/oglematchers1/factorial_test.go /^TestFactorialForSmallNumberNegative/,/^func TestFactorialForTen}/
+.code ./testing/oglematchers/oglematchers1/factorial_test.go /^func TestFactorialForSmallNumberNegative/,/^func TestFactorialForTen/
 
 * First test written using `oglematchers` (6/7)
 
-.code ./testing/oglematchers/oglematchers1/factorial_test.go /^TestFactorialForTen/,/^func TestFactorialForBigNumber}/
+.code ./testing/oglematchers/oglematchers1/factorial_test.go /^func TestFactorialForTen/,/^func TestFactorialForBigNumber/
 
 * First test written using `oglematchers` (7/7)
 
-.code ./testing/oglematchers/oglematchers1/factorial_test.go /^TestFactorialForBigNumber/,/^func TestFactorialForEvenBiggerNumber}/
+.code ./testing/oglematchers/oglematchers1/factorial_test.go /^func TestFactorialForBigNumber/,/^func TestFactorialForEvenBiggerNumber/
 
 
 
 * Second test written using `oglematchers` (1/7)
 
-.code ./testing/oglematchers/oglematchers2/factorial_test.go /^package/,/^func TestFactorialForZero}/
+.code ./testing/oglematchers/oglematchers2/factorial_test.go /^package/,/^func TestFactorialForZero/
 
 * Second test written using `oglematchers` (2/7)
 
-.code ./testing/oglematchers/oglematchers2/factorial_test.go /^TestFactorialForZero/,/^func TestFactorialForOne}/
+.code ./testing/oglematchers/oglematchers2/factorial_test.go /^func TestFactorialForZero/,/^func TestFactorialForOne/
 
 * Second test written using `oglematchers` (3/7)
 
-.code ./testing/oglematchers/oglematchers2/factorial_test.go /^TestFactorialForOne/,/^func TestFactorialForSmallNumber}/
+.code ./testing/oglematchers/oglematchers2/factorial_test.go /^func TestFactorialForOne/,/^func TestFactorialForSmallNumber/
 
 * Second test written using `oglematchers` (4/7)
 
-.code ./testing/oglematchers/oglematchers2/factorial_test.go /^TestFactorialForSmallNumber/,/^func TestFactorialForSmallNumberNegative}/
+.code ./testing/oglematchers/oglematchers2/factorial_test.go /^func TestFactorialForSmallNumber/,/^func TestFactorialForSmallNumberNegative/
 
 * Second test written using `oglematchers` (5/7)
 
-.code ./testing/oglematchers/oglematchers2/factorial_test.go /^TestFactorialForSmallNumberNegative/,/^func TestFactorialForTen}/
+.code ./testing/oglematchers/oglematchers2/factorial_test.go /^func TestFactorialForSmallNumberNegative/,/^func TestFactorialForTen/
 
 * Second test written using `oglematchers` (6/7)
 
-.code ./testing/oglematchers/oglematchers2/factorial_test.go /^TestFactorialForTen/,/^func TestFactorialForBigNumber}/
+.code ./testing/oglematchers/oglematchers2/factorial_test.go /^func TestFactorialForTen/,/^func TestFactorialForBigNumber/
 
 * Second test written using `oglematchers` (7/7)
 
-.code ./testing/oglematchers/oglematchers2/factorial_test.go /^TestFactorialForBigNumber/,/^func TestFactorialForEvenBiggerNumber}/
+.code ./testing/oglematchers/oglematchers2/factorial_test.go /^func TestFactorialForBigNumber/,/^func TestFactorialForEvenBiggerNumber/
 
 
 
