@@ -5,9 +5,9 @@ import (
 )
 
 type factorialEntry struct {
-	n           int64
-	expected    int64
-	should_fail bool
+	n          int64
+	expected   int64
+	shouldFail bool
 }
 
 func TestFactorial(t *testing.T) {
@@ -26,7 +26,7 @@ func TestFactorial(t *testing.T) {
 		computed, err := factorial(entry.n)
 		switch {
 		case err != nil:
-			if entry.should_fail {
+			if entry.shouldFail {
 				t.Logf("invalid input detected correctly: %d", entry.n)
 			} else {
 				t.Errorf("error returned for valid input: %d", entry.n)
