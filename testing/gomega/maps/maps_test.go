@@ -17,5 +17,5 @@ func TestCollecions(t *testing.T) {
 	g.Expect(m).To(ContainElement(1))
 	g.Expect(m).To(Not(ContainElement(42)))
 	g.Expect(m).To(HaveKey("two"))
-	g.Expect(m).To(Not(HaveKey("fourty two")))
+	g.Expect(m).To(Not(HaveKey("forty two")))
 }

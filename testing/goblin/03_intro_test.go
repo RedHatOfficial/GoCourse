@@ -14,7 +14,7 @@ func Test(t *testing.T) {
 		g.It("Should add two numbers", func() {
 			g.Assert(1 + 1).Equal(5)
 		})
-		g.It("Should substract two numbers")
+		g.It("Should subtract two numbers")
 		g.Xit("Should add two numbers, excluded ", func() {
 			g.Assert(3 + 1).Equal(4)
 		})
