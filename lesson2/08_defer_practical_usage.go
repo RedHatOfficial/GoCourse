@@ -16,18 +16,16 @@ func copyFile(srcName, dstName string) (written int64, err error) {
 	if err != nil {
 		fmt.Printf("Cannot open file '%s' for reading\n", srcName)
 		return
-	} else {
-		fmt.Printf("File '%s' opened for reading\n", srcName)
 	}
+	fmt.Printf("File '%s' opened for reading\n", srcName)
 	defer closeFile(src)
 
 	dst, err := os.Create(dstName)
 	if err != nil {
 		fmt.Printf("Cannot create destination file '%s'\n", dstName)
 		return
-	} else {
-		fmt.Printf("File '%s' opened for writing\n", dstName)
 	}
+	fmt.Printf("File '%s' opened for writing\n", dstName)
 	defer closeFile(dst)
 
 	return io.Copy(dst, src)
