@@ -7,16 +7,16 @@ func main() {
 
 	fmt.Println(i)
 
-	var p_i *int
-	fmt.Println(p_i)
+	var ptrToInteger *int
+	fmt.Println(ptrToInteger)
 
-	p_i = &i
+	ptrToInteger = &i
 
-	fmt.Println(p_i)
-	fmt.Println(*p_i)
+	fmt.Println(ptrToInteger)
+	fmt.Println(*ptrToInteger)
 
-	*p_i++
+	*ptrToInteger++
 
 	fmt.Println(i)
-	fmt.Println(*p_i)
+	fmt.Println(*ptrToInteger)
 }
