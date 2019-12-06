@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-type Id uint32
+type ID uint32
 type Name string
 type Surname string
 
 func main() {
-	var i Id
+	var i ID
 	i = 0
 	fmt.Println(i)
 
