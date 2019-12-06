@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"net/http"
 )
+
 type Params struct {
 	Hello string
 }
+
 func main() {
 	http.HandleFunc("/hello", func(w http.ResponseWriter, req *http.Request) {
 		var params Params
