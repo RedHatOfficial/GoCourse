@@ -20,6 +20,9 @@ func main() {
 		&expect.BCas{[]expect.Caser{
 			&expect.Case{R: regexp.MustCompile("Python 2"), T: expect.OK()},
 			&expect.Case{R: regexp.MustCompile("Python 3"), T: expect.OK()}}}}, time.Second)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	err = child.Send("quit()\n")
 	if err != nil {

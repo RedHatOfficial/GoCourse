@@ -17,6 +17,9 @@ func main() {
 	defer child.Close()
 
 	_, m, err := child.Expect(regexp.MustCompile("Python ([23])"), 2*time.Second)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	err = child.Send("quit()\n")
 	if err != nil {

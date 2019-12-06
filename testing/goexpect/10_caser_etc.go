@@ -26,6 +26,9 @@ func main() {
 		&expect.BExp{R: ">>> "},
 		&expect.BSnd{S: "quit()\n"}},
 		2*time.Second)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	log.Println("OK")
 	for _, b := range br {
