@@ -1,0 +1,209 @@
+Is Go language actually worth learning?
+Red Hat
+10 Dec 2019
+Tags: golang, go
+
+Pavel Tišnovský <ptisnovs@redhat.com>
+Red Hat, Inc.
+
+
+
+* Introduction
+
+There are lots of interesting programming languages that you can learn.
+The question is, should you perfect them all? The answer is no, of course.
+So what about the Go language - is it worth try?
+
+In this presentation we are going to talk about Go's pros (goroutines,
+channels, GC, type systems) and cons (a language with attributes taken from the
+previous century :)
+
+
+
+* Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/fiveyears.jpg
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./images/fiveyears.jpg _ 900
+
+
+
+* Introduction
+- Launched in November 2009 by Google
+- Rob Pike, Ken Thompson, Robert Griesemer
+- More readable replacement for C/C++/Java/...
+- „Less is more“
+
+
+
+* Introduction
+- compiled
+- statically typed
+- garbage collected
+- built-in concurrency
+- strict formatting rules
+- server-side web (PHP, Node.js, Python, Ruby, Java)
+- cloud technologies (Docker, Kubernetes, Kubernetes Operators, ...)
+- available for all interesting systems
+- and most architectures (x86-64, ARMv6, ARMv8, even s390x and PowerPC64 LE)
+- custom back end + cgo
+
+
+
+* Goals
+- simplicity
+- unambiguity
+- performance
+- pragmatic
+- safer applications (compared to C/C++)
+- microservices
+- ease to install ("DLL hell" can't happen)
+- for DevOps from DevOps
+- fast builds (CI tools like it ;-)
+
+
+
+* Attention
+- Go is a blend of modern approaches combined with quite old ideas
+- error handling
+- no generics
+- no templates
+- no class-based OOP
+- no `try`/`catch`/`finally`
+- `goto` keyword
+- `nil` identifier
+
+
+
+* Interfaces are automatically implemented
+.image ./images/interface.jpg
+
+
+
+* Go vs C(++)
+- stronger type system
+- no text substitution macros
+- no header files
+- package system + checks
+- safer memory operations + GC
+- standardized framework for tests
+- stricter rules (`++`/`--`, pointers, ...)
+- no exception handling control structures (yet?)
+- no generic data types (yet?)
+
+
+
+* But... we are in 21th century!
+
+.image ./images/ural.jpg _ 700
+
+
+
+* But... we are in 21th century!
+
+- Multi-core CPUs
+- Distributed systems
+- Memory locality
+- Readability
+
+
+
+* Multi-core CPUs
+.image ./images/perf.png
+
+
+
+* Multi-core CPUs
+.image ./images/Amdahl.png
+
+
+
+* Support for concurrency
+
+- Communicating sequential processes (a formal language etc. etc.)
+- "Don't communicate by sharing memory; share memory by communicating"
+- So called _goroutines_
+- Channels
+
+
+
+* Goroutines + channels is a way to ... Go
+
+- Deadlocks are not such a big problem then
+.image ./images/deadlock.jpg _ 700
+
+
+
+* Memory locality
+
+- True structures
+- True value types
+- No object headers
+- Java: no value types, no structures, object headers
+
+
+
+* Dynamic devel teams
+.image ./images/teams.png
+
+
+
+* Dynamic devel teams
+- stability
+- on source code level: if it compiles in version X, it will compile in version X+1 too
+- OTOH: https://pythonclock.org/
+- readability
+
+
+
+* go-fmt
+- Gofmt’s style is no one’s favorite, yet gofmt is everyone’s favorite. — Rob Pike
+- standard tool
+
+
+
+* Wanna be mainstream?
+- [[http://pypl.github.io/PYPL.html]]
+- [[https://hackernoon.com/10-best-programming-languages-to-learn-in-2019-e5b05af4a972]]
+- [[https://insights.dice.com/2018/12/17/5-programming-languages-consider-learning-2019/]]
+- [[https://www.rankred.com/new-programming-languages-to-learn/]]
+
+
+
+* Popularity chart
+.image ./images/popularity.svg  _ 800
+
+
+
+* So...is it worth to spend time learning Go?
+- networking - YES
+- (micro)services - YES
+- scalable systems - YES
+- you like strict formatting rules - YES
+- you like strong type systems - YES
+- you like minimalism - YES
+- pretty fast compilation - YES
+- the simplest deployment - YES
+- guaranteed source code compatibility - YES
+
+
+
+* So...is it worth to spend time learning Go?
+- you like classic (broken) class-bases OOP - NO
+- you like baroque languages - NO, enjoy C++
+- you like inconsistent languages - NO, enjoy Perl
+- you like homoiconic languages - NO, LISP/Scheme/Clojure are better then
+- you want to manage memory ourself - NO
+- you like to have buffer overflows - NO, there are "better" choices
+- you like really very strong type system & fast language - Rust
+
+
+
+#last slide
+* More Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/bumper.png
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./images/bumper.png  _ 900
+
+# finito
