@@ -17,19 +17,19 @@ func main() {
 	fmt.Println(u)
 	fmt.Println("------------------")
 
-	var p_n *string
-	var p_s *string
-	p_n = &u.name
-	p_s = &u.surname
+	var pName *string
+	var pSurname *string
+	pName = &u.name
+	pSurname = &u.surname
 
-	fmt.Println(p_n)
-	fmt.Println(p_s)
-	fmt.Println(*p_n)
-	fmt.Println(*p_s)
+	fmt.Println(pName)
+	fmt.Println(pSurname)
+	fmt.Println(*pName)
+	fmt.Println(*pSurname)
 	fmt.Println("------------------")
 
-	(*p_n) = "Rob"
-	(*p_s) = "Pike"
-	fmt.Println(*p_n)
-	fmt.Println(*p_s)
+	(*pName) = "Rob"
+	(*pSurname) = "Pike"
+	fmt.Println(*pName)
+	fmt.Println(*pSurname)
 }

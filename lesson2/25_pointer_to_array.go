@@ -21,8 +21,8 @@ func main() {
 
 	// cont
 
-	p_third := &month[2]
-	*p_third = "Březen"
+	pThird := &month[2]
+	*pThird = "Březen"
 
 	fmt.Println(month)
 }

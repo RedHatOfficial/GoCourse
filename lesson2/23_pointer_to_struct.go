@@ -17,15 +17,15 @@ func main() {
 
 	fmt.Println(u)
 
-	var p_u *User
-	p_u = &u
+	var pUser *User
+	pUser = &u
 
-	fmt.Println(p_u)
-	fmt.Println(*p_u)
+	fmt.Println(pUser)
+	fmt.Println(*pUser)
 
-	(*p_u).id = 10000
-	fmt.Println(*p_u)
+	(*pUser).id = 10000
+	fmt.Println(*pUser)
 
-	p_u.id = 20000
-	fmt.Println(*p_u)
+	pUser.id = 20000
+	fmt.Println(*pUser)
 }
