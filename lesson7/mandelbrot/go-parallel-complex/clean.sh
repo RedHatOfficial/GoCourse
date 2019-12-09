@@ -1,0 +1,2 @@
+rm *.times
+rm *.ppm
