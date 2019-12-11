@@ -411,8 +411,18 @@ Outline:
 
 
 
-* Empty map
+* Unitialized map ("nil map")
+.play lesson2/26_B_uninitialized_map.go
+
+
+
+* Empty map (int -> string)
 .play lesson2/27_initialized_map.go
+
+
+
+* Empty map (string -> int)
+.play lesson2/27_B_initialized_map.go
 
 
 
