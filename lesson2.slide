@@ -402,7 +402,7 @@ Outline:
 - get item from a map:
     m3[2]
 - delete from a map
-    delete(m3, "zero")
+    delete(m3, 0)
 
 
 
