@@ -18,10 +18,10 @@ func main() {
 		results[i] = make(chan float64)
 	}
 
-	for i, n := 0, 1; n <= 100000000; i, n = i+1, n*2 {
+	for i, n := 0, 1; n <= 1000000000; i, n = i+1, n*2 {
 		go computePi(n, results[i])
 	}
-	for i, n := 0, 1; n <= 100000000; i, n = i+1, n*2 {
+	for i, n := 0, 1; n <= 1000000000; i, n = i+1, n*2 {
 		fmt.Printf("%d %16.14f\n", n, <-results[i])
 	}
 }

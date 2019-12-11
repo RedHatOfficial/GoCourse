@@ -11,7 +11,7 @@ double compute_pi(int n) {
 
 int main(void) {
         long n;
-        for (n=1; n <= 100000000; n *= 2) {
+        for (n=1; n <= 1000000000; n *= 2) {
                 printf("%ld %16.14f\n", n, compute_pi(n));
         }
         return 0;

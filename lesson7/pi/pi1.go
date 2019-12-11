@@ -14,7 +14,7 @@ func computePi(n int) float64 {
 
 func main() {
 	var n int
-	for n = 1; n <= 100000000; n *= 2 {
+	for n = 1; n <= 1000000000; n *= 2 {
 		fmt.Printf("%d %16.14f\n", n, computePi(n))
 	}
 }
