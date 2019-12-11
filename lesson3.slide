@@ -180,6 +180,12 @@ Outline:
 
 
 
+* How to satisfy an interface
+- artifical example
+.play lesson3/13_B_satisfy.go
+
+
+
 * Embedding other interface(s)
 - embedding other interfaces is possible
 
