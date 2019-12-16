@@ -24,7 +24,7 @@ previous century :)
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
 #Source https://golang.org/doc/gopher/fiveyears.jpg
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
-.image ./images/fiveyears.jpg _ 900
+.image ./common/fiveyears.jpg _ 900
 
 
 
