@@ -8,7 +8,7 @@ type ID uint32
 // Name is user-defined data type
 type Name string
 
-// Surnam is user-defined data type
+// Surname is user-defined data type
 type Surname string
 
 func main() {
