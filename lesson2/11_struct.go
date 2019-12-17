@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// User is a new data type
 type User struct {
 	id      uint32
 	name    string
