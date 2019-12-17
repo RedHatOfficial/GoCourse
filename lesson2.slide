@@ -23,6 +23,7 @@ https://github.com/RedHatOfficial/GoCourse
 Outline:
 
 - keywords
+- operators
 - defer statement
 - structs (records)
 - arrays
@@ -43,6 +44,21 @@ Outline:
     chan         else         goto         package      switch
     const        fallthrough  if           range        type
     continue     for          import       return       var
+
+
+
+############################################################
+
+* Operators and characters with special meaning
+
+    +    &     +=    &=     &&    ==    !=    (    )
+    -    |     -=    |=     ||    <     <=    [    ]
+    *    ^     *=    ^=     <-    >     >=    {    }
+    /    <<    /=    <<=    ++    =     :=    ,    ;
+    %    >>    %=    >>=    --    !     ...   .    :
+         &^          &^=
+
+
 
 ############################################################
 
