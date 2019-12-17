@@ -43,10 +43,20 @@ previous century :)
 - built-in concurrency
 - strict formatting rules
 - server-side web (PHP, Node.js, Python, Ruby, Java)
-- cloud technologies (Docker, Kubernetes, Kubernetes Operators, MinIO, ...)
+- cloud technologies (Docker, Podman, Kubernetes, Kubernetes Operators, MinIO, ...)
 - available for all interesting systems
 - and most architectures (x86-64, ARMv6, ARMv8, even s390x and PowerPC64 LE)
 - custom back end + cgo
+
+
+
+* Cloud technologies
+.link https://www.docker.com/ Docker
+.link https://podman.io/ Podman
+.link https://kubernetes.io/ Kubernetes
+.link https://coreos.com/operators/ Kubernetes Operators
+.link https://min.io/ MinIO
+.link https://nsq.io/ NSQ
 
 
 
