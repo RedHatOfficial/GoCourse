@@ -2,11 +2,13 @@ package main
 
 import "fmt"
 
+// Key is a new data type
 type Key struct {
 	id   uint32
 	role string
 }
 
+// User is a new data type
 type User struct {
 	id      uint32
 	name    string
