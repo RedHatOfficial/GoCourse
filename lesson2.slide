@@ -407,6 +407,16 @@ Outline:
 
 
 
+* Return pointer to local variable from C function
+.code lesson2/25_B_return_pointer.c
+
+
+
+* Return pointer to local variable from Go function
+.play lesson2/25_B_return_pointer.go
+
+
+
 ############################################################
 
 * Maps
