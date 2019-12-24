@@ -3,7 +3,7 @@ Lesson 7
 20 May 2019
 Tags: golang, go
 
-Stanislav Kozina; Ivan Nečas; Pavel Tišnovský; Jakub Čajka
+Pavel Tišnovský, Jakub Čajka
 Red Hat, Inc.
 email@email.email
 https://github.com/RedHatOfficial/GoCourse
@@ -15,10 +15,25 @@ https://github.com/RedHatOfficial/GoCourse
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
-* First slide
-- One
-- Two
-- Three
+* Math + Golang
+- Gonum Numerical Packages
+- Gophernotes
+- Glot
+
+* Gonum Numerical Packages
+- libraries for:
+- matrices and linear algebra
+- statistics
+- probability distributions
+- function differentiation
+- function integration
+- optimization
+- network creation and analysis;
+
+* Gophernotes
+- The Go kernel for Jupyter notebooks and nteract
+
+* Glot
 
 #last slide
 * More Gophers
