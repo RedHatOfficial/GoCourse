@@ -8,6 +8,10 @@ Red Hat, Inc.
 https://github.com/RedHatOfficial/GoCourse
 @RedHat
 
+* Sources
+- [[https://github.com/RedHatOfficial/GoCourse]]
+.image ./common/qr_address.png
+
 * Gophers
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
 #Source https://golang.org/doc/gopher/fiveyears.jpg
