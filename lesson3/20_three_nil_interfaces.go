@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// T represents an user-defined data type
 type T int
 
 func main() {
