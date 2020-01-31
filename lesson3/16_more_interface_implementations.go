@@ -29,16 +29,19 @@ type Line struct {
 	x2, y2 float64
 }
 
+// Circle represents a circle in 2D plane
 type Circle struct {
 	x, y   float64
 	radius float64
 }
 
+// Ellipse represents an ellipse in 2D plane
 type Ellipse struct {
 	x, y float64
 	a, b float64
 }
 
+// Rectangle represents a rectangle in 2D plane
 type Rectangle struct {
 	x, y          float64
 	width, height float64
