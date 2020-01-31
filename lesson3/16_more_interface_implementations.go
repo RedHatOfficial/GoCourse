@@ -5,10 +5,12 @@ import (
 	"math"
 )
 
+// OpenShape represents an "open" 2D shape, such as line, arc, spline etc.
 type OpenShape interface {
 	length() float64
 }
 
+// ClosedShape represents a "closed" 2D shape, such as square, circle, and ellipse
 type ClosedShape interface {
 	area() float64
 }
@@ -21,6 +23,7 @@ func area(shape ClosedShape) float64 {
 	return shape.area()
 }
 
+// Line represents a line in 2D plane
 type Line struct {
 	x1, y1 float64
 	x2, y2 float64
