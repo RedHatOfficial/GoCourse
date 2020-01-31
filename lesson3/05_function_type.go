@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// BynaryOp represents any function that takes two int parameters and returns int as a result
 type BinaryOp func(x, y int) int
 
 func applyBinaryOp(a int, b int, operation BinaryOp) int {
