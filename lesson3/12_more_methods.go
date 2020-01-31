@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// LineType represents a line in 2D plane
+// Line represents a line in 2D plane
 type Line struct {
 	x1, y1 float64
 	x2, y2 float64
