@@ -5,6 +5,7 @@ import (
 	"sort"
 )
 
+// Role represents a role in movie, drama etc.
 type Role struct {
 	name    string
 	surname string
