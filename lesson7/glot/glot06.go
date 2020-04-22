@@ -4,6 +4,7 @@ import (
 	"github.com/Arafatk/glot"
 )
 
+// Plot represents context for a graph/chart
 type Plot struct {
 	*glot.Plot
 }
