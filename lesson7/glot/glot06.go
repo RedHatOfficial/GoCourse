@@ -16,6 +16,7 @@ func (plot *Plot) Save(filename string) {
 	plot.Cmd("replot")
 }
 
+// NewPlot function is a constructor for Plot data structure
 func NewPlot(dimensions int) *Plot {
 	plot, err := glot.NewPlot(dimensions, false, false)
 	if err != nil {
