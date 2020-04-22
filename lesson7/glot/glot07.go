@@ -8,6 +8,7 @@ type Plot struct {
 	*glot.Plot
 }
 
+// Save method saves graph or chart into PNG file
 func (plot *Plot) Save(filename string) {
 	plot.Cmd("set terminal pngcairo")
 	plot.Cmd("set output '" + filename + "'")
