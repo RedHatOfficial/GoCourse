@@ -24,6 +24,7 @@ func Csin(num float64) float64 {
 	return float64(C.sin(C.double(num)))
 }
 
+// Ccos is a proxy to C cos function
 func Ccos(num float64) float64 {
 	return float64(C.cos(C.double(num)))
 }
