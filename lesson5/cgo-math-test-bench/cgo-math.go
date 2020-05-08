@@ -28,6 +28,7 @@ func Ccos(num float64) float64 {
 	return float64(C.cos(C.double(num)))
 }
 
+// Ctgamma is a proxy to C tgamma function
 func Ctgamma(num float64) float64 {
 	return float64(C.tgamma(C.double(num)))
 }
