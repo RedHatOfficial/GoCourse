@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// Params is a type that represents data to be send in the request
 type Params struct {
 	Hello string
 }
