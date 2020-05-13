@@ -28,10 +28,10 @@ func writeImage(width uint, height uint, image []byte) {
 
 func calcMandelbrot(width uint, height uint, maxiter uint, palette [][3]byte, image []byte, cy float64, done chan bool) {
 	var c complex128 = complex(-2.0, cy)
-	var dc complex128 = complex(3.0 / float64(width), 0.0)
+	var dc complex128 = complex(3.0/float64(width), 0.0)
 	for x := uint(0); x < width; x++ {
 		var z complex128 = 0.0 + 0.0i
-		var i uint = 0
+		var i uint
 		for i < maxiter {
 			zx := real(z)
 			zy := imag(z)
