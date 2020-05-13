@@ -275,7 +275,7 @@ Outline:
 * Arrays
 - basic data type in the Go programming language
 - all array items has the same type
-- (well, you can use `interface{}` to allow _dynamic typing behaviour_)
+- (well, you can use `interface{}` to allow _dynamic_typing_behaviour_)
 - type of array is derived from type of items *and* array size
 - (unlike slices)
 - index in range 0..length-1
