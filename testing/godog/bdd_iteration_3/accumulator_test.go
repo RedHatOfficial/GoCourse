@@ -5,7 +5,7 @@ import (
 	"github.com/DATA-DOG/godog"
 )
 
-var testAccumulator *acc = nil
+var testAccumulator *acc /* = nil */
 
 func iHaveAnAccumulatorWith(initialValue int) error {
 	testAccumulator.value = initialValue
