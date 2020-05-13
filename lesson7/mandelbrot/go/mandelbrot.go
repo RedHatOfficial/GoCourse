@@ -16,9 +16,9 @@ func calcMandelbrot(width uint, height uint, maxiter uint, palette [][3]byte) {
 	for y := uint(0); y < height; y++ {
 		var cx float64 = -2.0
 		for x := uint(0); x < width; x++ {
-			var zx float64 = 0.0
-			var zy float64 = 0.0
-			var i uint = 0
+			var zx float64
+			var zy float64
+			var i uint
 			for i < maxiter {
 				zx2 := zx * zx
 				zy2 := zy * zy
