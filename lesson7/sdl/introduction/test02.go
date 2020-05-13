@@ -28,7 +28,7 @@ func main() {
 	sdl.Delay(1000)
 
 	var rects = []sdl.Rect{
-		sdl.Rect{
+		{
 			X: width / 4,
 			Y: height / 4,
 			W: width / 2,
