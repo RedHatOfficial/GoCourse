@@ -239,7 +239,7 @@ Outline:
 
 * Comparison of whole structs is possible!
 - `==` and `!=` operators
-.play lesson2/14_struct_comparison.go /package main/,/^func main//
+.play lesson2/14_struct_comparison.go /^func main/,/^}/
 
 
 
