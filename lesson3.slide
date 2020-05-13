@@ -157,7 +157,7 @@ Outline:
 
 
 * More methods for the same type
-.play lesson3/12_more_methods.go
+.play lesson3/12_more_methods.go /// Line/,/End OMIT/
 
 
 
