@@ -6,15 +6,15 @@ import (
 )
 
 const (
-	server   = "localhost:9092"
-	topic    = "upload"
-	group_id = "group1"
+	server  = "localhost:9092"
+	topic   = "upload"
+	groupID = "group1"
 )
 
 func main() {
 	consumer, err := kafka.NewConsumer(&kafka.ConfigMap{
 		"bootstrap.servers": server,
-		"group.id":          group_id,
+		"group.id":          groupID,
 		"auto.offset.reset": "earliest",
 	})
 	defer consumer.Close()
