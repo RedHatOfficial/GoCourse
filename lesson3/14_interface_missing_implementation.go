@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 // OpenShape represents an "open" 2D shape, such as line, arc, spline etc.

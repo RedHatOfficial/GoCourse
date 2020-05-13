@@ -7,7 +7,7 @@ type Adder interface {
 	add(int, int) int
 }
 
-// AdderImpl is a user-defined data types that satisfy Added interface
+// AdderImpl is a user-defined data types that satisfy Adder interface
 type AdderImpl struct {
 }
 
