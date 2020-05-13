@@ -24,3 +24,4 @@ func main() {
 	line1.rotate(90)
 	fmt.Println(line1)
 }
+// End OMIT
