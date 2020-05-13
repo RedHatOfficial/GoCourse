@@ -20,6 +20,7 @@ var data = []float64{
 }
 
 // You can't use CGo in tests
+
 // Csin is a proxy to C sin function
 func Csin(num float64) float64 {
 	return float64(C.sin(C.double(num)))
