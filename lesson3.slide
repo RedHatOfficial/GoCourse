@@ -284,7 +284,7 @@ Outline:
 - *dynamic* *value*: the actual value assigned
 - where's the problem?
 - interface type value is `nil` iff both dynamic value *and* dynamic type are `nil`
-- sometimes we get the impression that `nil != nil`
+- sometimes we get the impression that `nil`!=`nil`
 
 
 
