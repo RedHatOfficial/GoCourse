@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
+	const addr = "localhost:8080"
 	mux := http.NewServeMux()
-	addr := "localhost:8080"
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		log.Printf("Handling request at %s", req.URL.Path)

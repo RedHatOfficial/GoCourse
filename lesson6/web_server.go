@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	addr := "localhost:8080"
+	const addr = "localhost:8080"
 	log.Printf("Running server at %s", addr)
 
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
