@@ -24,7 +24,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Web server with more control
 
-.play lesson6/web_server_more_control.go
+.play lesson6/web_server_more_control.go /^func main/,/^}/
 
 * Multiple paths
 
