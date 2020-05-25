@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"time"
 )
 
 func main() {
+	const addr = "localhost:8080"
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
@@ -14,11 +16,13 @@ func main() {
 		fmt.Fprintf(w, "Hello from %s\n", req.URL.Path)
 	})
 	server := &http.Server{
-		Addr:           "localhost:8080",
+		Addr:           addr,
 		Handler:        mux,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
+
+	log.Printf("Running server at %s", addr)
 	server.ListenAndServe()
 }
