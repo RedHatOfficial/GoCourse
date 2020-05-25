@@ -68,7 +68,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Client (post)
 
-.play lesson6/client_post.go
+.play lesson6/client_post.go /// Params/,/End OMIT/
 
 * Proxy
 
