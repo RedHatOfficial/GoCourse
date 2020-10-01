@@ -312,8 +312,8 @@ Outline:
     variable, ok := iface.(Type)
 
 - check that the interface value `iface` holds the concrete type `Type`
-- if check failed, `variable` will contain zero value and `ok` will be `true`
-- if check passed, assign the underlying `Type` value to the variable `variable`, `ok` will be `false`
+- if check failed, `variable` will contain zero value and `ok` will be `false`
+- if check passed, assign the underlying `Type` value to the variable `variable`, `ok` will be `true`
 
 
 
