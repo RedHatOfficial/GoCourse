@@ -1,6 +1,6 @@
 Is Go language actually worth learning?
 Red Hat
-10 Dec 2019
+14 Apr 2021
 Tags: golang, go
 
 Pavel Tišnovský <ptisnovs@redhat.com>
@@ -177,12 +177,18 @@ previous century :)
 - [[https://hackernoon.com/10-best-programming-languages-to-learn-in-2019-e5b05af4a972]]
 - [[https://insights.dice.com/2018/12/17/5-programming-languages-consider-learning-2019/]]
 - [[https://www.rankred.com/new-programming-languages-to-learn/]]
-- [[https://redmonk.com/sogrady/2019/03/20/language-rankings-1-19/]]
+
+
+
+* Popularity
+- [[https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved]]
+- [[https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-dreaded]]
+- [[https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-wanted]]
 
 
 
 * Popularity chart
-.image ./images/popularity.svg  _ 800
+.image ./images/popularity.png  _ 600
 
 
 
