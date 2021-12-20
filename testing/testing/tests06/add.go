@@ -1,6 +1,6 @@
 package main
 
-func add(x int32, y int32) int32 {
+func add(x, y int32) int32 {
 	return x - y
 }
 
