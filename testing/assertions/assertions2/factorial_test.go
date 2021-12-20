@@ -8,9 +8,9 @@ import (
 )
 
 func TestFactorialForZero(t *testing.T) {
-	assert := assert.GetAssertion(t)
+	assertion := assert.GetAssertion(t)
 	result := factorial.Factorial(0)
-	assert.Equal(assertions.ShouldEqual(result, 1), "")
+	assertion.Equal(assertions.ShouldEqual(result, 1), "")
 }
 
 func TestFactorialForOne(t *testing.T) {
