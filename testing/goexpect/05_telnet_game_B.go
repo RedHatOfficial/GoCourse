@@ -21,7 +21,8 @@ func main() {
 		&expect.BExp{R: "Ok, see you later!"}}, 1*time.Second)
 
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 	log.Println("OK")
 }
