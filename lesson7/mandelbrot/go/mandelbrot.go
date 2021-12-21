@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func calcMandelbrot(width uint, height uint, maxiter uint, palette [][3]byte) {
+func calcMandelbrot(width, height, maxiter uint, palette [][3]byte) {
 	fmt.Println("P3")
 	fmt.Printf("%d %d\n", width, height)
 	fmt.Println("255")
