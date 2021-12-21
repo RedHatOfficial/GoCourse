@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func writeImage(width uint, height uint, image []byte) {
+func writeImage(width, height uint, image []byte) {
 	w := bufio.NewWriter(os.Stdout)
 	defer w.Flush()
 
