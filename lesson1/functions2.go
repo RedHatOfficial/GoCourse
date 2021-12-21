@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func swap(a int, b int) (int, int) {
+func swap(a, b int) (int, int) {
 	return b, a
 }
 
