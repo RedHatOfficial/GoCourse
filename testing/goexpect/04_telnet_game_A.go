@@ -18,7 +18,8 @@ func main() {
 
 	s, _, err := child.Expect(regexp.MustCompile("Your choice or name:"), 2*time.Second)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 	log.Println(s)
 
