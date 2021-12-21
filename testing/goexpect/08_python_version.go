@@ -18,12 +18,14 @@ func main() {
 
 	_, m, err := child.Expect(regexp.MustCompile("Python ([23])"), 2*time.Second)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 
 	err = child.Send("quit()\n")
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 	version := m[1]
 	log.Println("Python version:", version)
