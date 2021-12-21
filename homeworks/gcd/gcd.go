@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func gcd(x uint, y uint) uint {
+func gcd(x, y uint) uint {
 	// it needs to be implemented there
 	return 0
 }
