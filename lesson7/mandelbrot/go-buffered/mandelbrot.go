@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func calcMandelbrot(width uint, height uint, maxiter uint, palette [][3]byte) {
+func calcMandelbrot(width, height, maxiter uint, palette [][3]byte) {
 	w := bufio.NewWriter(os.Stdout)
 	defer w.Flush()
 
