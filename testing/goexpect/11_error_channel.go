@@ -26,7 +26,8 @@ func main() {
 		&expect.BSnd{S: "sys.exit(0)\n"}},
 		2*time.Second)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 
 	log.Println("OK")
