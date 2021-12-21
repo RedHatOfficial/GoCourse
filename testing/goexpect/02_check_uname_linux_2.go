@@ -19,7 +19,8 @@ func main() {
 	linuxRe := regexp.MustCompile("Linux")
 	s, match, err := child.Expect(linuxRe, time.Second)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 
 	log.Printf("Found: %s", s)
