@@ -21,12 +21,14 @@ func main() {
 			&expect.Case{R: regexp.MustCompile("Python 2"), T: expect.OK()},
 			&expect.Case{R: regexp.MustCompile("Python 3"), T: expect.OK()}}}}, time.Second)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 
 	err = child.Send("quit()\n")
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 	log.Println("OK")
 	for _, b := range br {
