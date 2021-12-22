@@ -9,7 +9,7 @@ const (
 	height = 480
 )
 
-func putpixel(surface *sdl.Surface, x int32, y int32, r byte, g byte, b byte) {
+func putpixel(surface *sdl.Surface, x, y int32, r, g, b byte) {
 	if x >= 0 && x < surface.W && y >= 0 && y < surface.H {
 		switch surface.Format.BitsPerPixel {
 		case 24:
