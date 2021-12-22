@@ -14,9 +14,9 @@ func TestFactorialForZero(t *testing.T) {
 }
 
 func TestFactorialForOne(t *testing.T) {
-	assert := assert.GetAssertion(t)
+	assertion := assert.GetAssertion(t)
 	result := factorial.Factorial(1)
-	assert.Equal(assertions.ShouldEqual(result, 1), "")
+	assertion.Equal(assertions.ShouldEqual(result, 1), "")
 }
 
 func TestFactorialForSmallNumber(t *testing.T) {
