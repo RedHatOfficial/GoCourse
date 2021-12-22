@@ -30,7 +30,8 @@ func main() {
 	time.Sleep(time.Second)
 	str, err := console.ExpectString("BSD")
 	if err != nil {
-		log.Fatalf("BSD expected, but got %s", str)
+		log.Println("BSD expected, but got %s", str)
+		return
 	}
 
 	err = command.Wait()
