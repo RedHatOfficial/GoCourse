@@ -34,7 +34,8 @@ func main() {
 
 	err = <-errChannel
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 	log.Println("Exit: success")
 }
