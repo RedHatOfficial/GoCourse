@@ -19,7 +19,8 @@ func TestPythonInterpreter(t *testing.T) {
 
 	_, m, err := child.Expect(regexp.MustCompile("Python ([23])"), 2*time.Second)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 
 	err = child.Send("quit()\n")
