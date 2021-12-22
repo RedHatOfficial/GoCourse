@@ -43,7 +43,7 @@ func main() {
 
 	z := 0.0
 	function1 := func(u, v float64) float64 {
-		z = z + 1.0
+		z += 1.0
 		return z
 	}
 
