@@ -23,7 +23,8 @@ func main() {
 
 	err = command.Start()
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 
 	time.Sleep(time.Second)
