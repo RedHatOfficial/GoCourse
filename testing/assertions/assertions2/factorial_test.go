@@ -32,10 +32,10 @@ func TestFactorialForSmallNegative(t *testing.T) {
 }
 
 func TestFactorialForTen(t *testing.T) {
-	assert := assert.GetAssertion(t)
+	assertion := assert.GetAssertion(t)
 	result := factorial.Factorial(10)
 	expected := int64(3628800)
-	assert.Equal(assertions.ShouldEqual(result, expected), "")
+	assertion.Equal(assertions.ShouldEqual(result, expected), "")
 }
 
 func TestFactorialForBigNumber(t *testing.T) {
