@@ -4,11 +4,11 @@ import (
 	"fmt"
 )
 
-func testBinaryOps(a int, b int) {
-	fmt.Printf("%d + %d = %d\n", a, b, func(a int, b int) int { return a + b }(a, b))
-	fmt.Printf("%d - %d = %d\n", a, b, func(a int, b int) int { return a - b }(a, b))
-	fmt.Printf("%d * %d = %d\n", a, b, func(a int, b int) int { return a * b }(a, b))
-	fmt.Printf("%d / %d = %d\n", a, b, func(a int, b int) int { return a / b }(a, b))
+func testBinaryOps(a, b int) {
+	fmt.Printf("%d + %d = %d\n", a, b, func(a, b int) int { return a + b }(a, b))
+	fmt.Printf("%d - %d = %d\n", a, b, func(a, b int) int { return a - b }(a, b))
+	fmt.Printf("%d * %d = %d\n", a, b, func(a, b int) int { return a * b }(a, b))
+	fmt.Printf("%d / %d = %d\n", a, b, func(a, b int) int { return a / b }(a, b))
 }
 
 func main() {
