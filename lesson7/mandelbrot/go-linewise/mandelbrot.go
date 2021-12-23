@@ -26,7 +26,7 @@ func writeImage(width, height uint, image []byte) {
 	}
 }
 
-func calcMandelbrot(width uint, height uint, maxiter uint, palette [][3]byte, image []byte, cy float64) {
+func calcMandelbrot(width, height, maxiter uint, palette [][3]byte, image []byte, cy float64) {
 	var cx float64 = -2.0
 	for x := uint(0); x < width; x++ {
 		var zx float64
