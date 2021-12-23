@@ -30,6 +30,6 @@ func main() {
 
 	fmt.Printf("input:  %v\n", users)
 
-	stream := stream.New(users)
-	fmt.Printf("stream: %v\n", stream.Out().Val())
+	newStream := stream.New(users)
+	fmt.Printf("stream: %v\n", newStream.Out().Val())
 }
