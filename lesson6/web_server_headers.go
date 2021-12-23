@@ -10,6 +10,7 @@ func main() {
 		contentType := req.Header.Get("Content-type")
 		if contentType != "application/json" {
 			http.Error(w, fmt.Sprintf("Unexpected content %s", contentType), http.StatusBadRequest)
+			return
 		}
 		// parse ...
 	})
