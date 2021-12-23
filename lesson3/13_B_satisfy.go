@@ -11,7 +11,7 @@ type Adder interface {
 type AdderImpl struct {
 }
 
-func (a AdderImpl) add(x int, y int) int {
+func (a AdderImpl) add(x, y int) int {
 	return x + y
 }
 
