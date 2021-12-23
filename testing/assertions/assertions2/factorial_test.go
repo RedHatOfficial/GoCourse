@@ -39,13 +39,13 @@ func TestFactorialForTen(t *testing.T) {
 }
 
 func TestFactorialForBigNumber(t *testing.T) {
-	assert := assert.GetAssertion(t)
+	assertion := assert.GetAssertion(t)
 	result := factorial.Factorial(20)
-	assert.Equal(assertions.ShouldBeGreaterThan(result, 0), "")
+	assertion.Equal(assertions.ShouldBeGreaterThan(result, 0), "")
 }
 
 func TestFactorialForEvenBiggerNumber(t *testing.T) {
-	assert := assert.GetAssertion(t)
+	assertion := assert.GetAssertion(t)
 	result := factorial.Factorial(30)
-	assert.Equal(assertions.ShouldBeGreaterThan(result, 0), "")
+	assertion.Equal(assertions.ShouldBeGreaterThan(result, 0), "")
 }
