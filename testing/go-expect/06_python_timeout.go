@@ -40,14 +40,16 @@ func main() {
 		console.SendLine("print 1,2,3")
 		_, err = console.ExpectString("1 2 3")
 		if err != nil {
-			log.Fatal(err)
+			log.Println(err)
+			return
 		}
 		console.ExpectString(">>> ")
 	} else {
 		console.SendLine("print(1,2,3)")
 		_, err = console.ExpectString("1 2 3")
 		if err != nil {
-			log.Fatal(err)
+			log.Println(err)
+			return
 		}
 		console.ExpectString(">>> ")
 	}
@@ -56,6 +58,7 @@ func main() {
 
 	err = command.Wait()
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 }
