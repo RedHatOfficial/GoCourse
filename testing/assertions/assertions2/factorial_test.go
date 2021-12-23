@@ -26,9 +26,9 @@ func TestFactorialForSmallNumber(t *testing.T) {
 }
 
 func TestFactorialForSmallNegative(t *testing.T) {
-	assert := assert.GetAssertion(t)
+	assertion := assert.GetAssertion(t)
 	result := factorial.Factorial(20)
-	assert.Equal(assertions.ShouldBeBetween(result, 10, 10000), "")
+	assertion.Equal(assertions.ShouldBeBetween(result, 10, 10000), "")
 }
 
 func TestFactorialForTen(t *testing.T) {
