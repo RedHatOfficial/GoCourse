@@ -36,6 +36,7 @@ func main() {
 
 	err = command.Wait()
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
+		return
 	}
 }
