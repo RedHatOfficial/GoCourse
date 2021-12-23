@@ -132,7 +132,7 @@ func saveBinaryTree(encodedTree []byte, filename string) {
 	}
 }
 
-func constructTree(bt *BinaryTree, min int, max int) {
+func constructTree(bt *BinaryTree, min, max int) {
 	middle := (min + max) / 2
 	if min < middle && middle < max {
 		fmt.Println(middle)
