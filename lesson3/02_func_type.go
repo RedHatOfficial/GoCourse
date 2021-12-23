@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-func funkce1(x int, y int) int {
+func funkce1(x, y int) int {
 	return x + y
 }
 
-func funkce2(x int, y int) int {
+func funkce2(x, y int) int {
 	return x * y
 }
 
