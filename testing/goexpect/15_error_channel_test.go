@@ -27,7 +27,7 @@ func TestPythonInterpreter(t *testing.T) {
 		&expect.BSnd{S: "sys.exit(1)\n"}},
 		2*time.Second)
 	if err != nil {
-		log.Fatal(err)
+		t.Fatal(err)
 	}
 
 	t.Log("OK")
