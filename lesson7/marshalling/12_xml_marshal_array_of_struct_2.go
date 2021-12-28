@@ -5,14 +5,14 @@ import (
 	"fmt"
 )
 
-// User struct represent one item to be marshaled into XML
+// User struct represent one item to be marshalled into XML
 type User struct {
 	Id      uint32 `xml:"id"`
 	Name    string `xml:"user_name"`
 	Surname string `xml:"surname"`
 }
 
-// Users struct represents list of items to be marshaled into XML
+// Users struct represents list of items to be marshalled into XML
 type Users struct {
 	XMLName xml.Name `xml:"users"`
 	List    []User
