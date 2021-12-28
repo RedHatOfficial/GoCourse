@@ -5,12 +5,14 @@ import (
 	"fmt"
 )
 
+// User1 struct represent one item to be marshalled into XML
 type User1 struct {
 	id      uint32 `xml:"id"`
 	name    string `xml:"user_name"`
 	surname string `xml:"surname"`
 }
 
+// User2 struct represent one item to be marshalled into XML
 type User2 struct {
 	Id      uint32 `xml:"id"`
 	Name    string `xml:"user_name"`
