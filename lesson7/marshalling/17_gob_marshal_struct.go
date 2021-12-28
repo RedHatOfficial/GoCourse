@@ -7,6 +7,7 @@ import (
 	"fmt"
 )
 
+// User struct represent one item to be marshalled into GOB
 type User struct {
 	Id      uint32
 	Name    string
