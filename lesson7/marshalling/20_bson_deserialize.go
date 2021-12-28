@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 )
 
+// User struct represent one item to be unmarshalled from BSON
 type User struct {
 	Id      uint32
 	Name    string
