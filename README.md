@@ -15,7 +15,7 @@ go get golang.org/x/tools/cmd/present
 present
 ```
 
-Afterwards connect with you browser to the mentioned address. To terminate the server use Ctrl+C.
+Afterwards connect with your browser to the mentioned address. To terminate the server use Ctrl+C.
 
 ## Sharing slides with other people
 
