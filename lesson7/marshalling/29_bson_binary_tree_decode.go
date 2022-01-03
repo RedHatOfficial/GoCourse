@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 )
 
+// Item represents value stored in binary tree node
 type Item int
 
 type Node struct {
