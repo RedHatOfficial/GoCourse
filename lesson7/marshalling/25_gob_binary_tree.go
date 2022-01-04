@@ -11,6 +11,7 @@ import (
 // Item represents value stored in binary tree node
 type Item int
 
+// Node represents one node of binary tree
 type Node struct {
 	value Item
 	left  *Node
