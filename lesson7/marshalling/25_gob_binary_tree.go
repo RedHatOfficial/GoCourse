@@ -18,6 +18,7 @@ type Node struct {
 	right *Node
 }
 
+// BinaryTree represents root node of binary tree
 type BinaryTree struct {
 	root *Node
 }
