@@ -5,6 +5,7 @@ import (
 	"github.com/wesovilabs/koazee"
 )
 
+// User data type contains all attributes about an user
 type User struct {
 	id      uint32
 	name    string
