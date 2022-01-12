@@ -23,6 +23,7 @@ type BinaryTree struct {
 	root *Node
 }
 
+// Insert methods inserts new node into binary tree
 func (bt *BinaryTree) Insert(value Item) {
 	node := &Node{value, nil, nil}
 	if bt.root == nil {
