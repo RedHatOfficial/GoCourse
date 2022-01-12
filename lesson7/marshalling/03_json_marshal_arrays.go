@@ -18,21 +18,21 @@ func main() {
 		{0, -1, 0},
 	}
 
-	a1_json, _ := json.Marshal(a1)
-	fmt.Println(string(a1_json))
+	a1JSON, _ := json.Marshal(a1)
+	fmt.Println(string(a1JSON))
 
-	a2_json, _ := json.Marshal(a2)
-	fmt.Println(string(a2_json))
+	a2JSON, _ := json.Marshal(a2)
+	fmt.Println(string(a2JSON))
 
-	a3_json, _ := json.Marshal(a3)
-	fmt.Println(string(a3_json))
+	a3JSON, _ := json.Marshal(a3)
+	fmt.Println(string(a3JSON))
 
-	a4_json, _ := json.Marshal(a4)
-	fmt.Println(string(a4_json))
+	a4JSON, _ := json.Marshal(a4)
+	fmt.Println(string(a4JSON))
 
-	a5_json, _ := json.Marshal(a5)
-	fmt.Println(string(a5_json))
+	a5JSON, _ := json.Marshal(a5)
+	fmt.Println(string(a5JSON))
 
-	matice_json, _ := json.Marshal(matice)
-	fmt.Println(string(matice_json))
+	matrixJSON, _ := json.Marshal(matice)
+	fmt.Println(string(matrixJSON))
 }
