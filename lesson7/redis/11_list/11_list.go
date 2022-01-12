@@ -10,7 +10,7 @@ import (
 // adresa určující službu Redisu, která se má použít
 const redisAddress = "localhost:6379"
 
-func mustPush(client *redis.Client, context context.Context, key string, value string) {
+func mustPush(context context.Context, client *redis.Client, key string, value string) {
 	fmt.Println("Pushing", value, "into", key)
 	// přidání prvku do seznamu
 	length, err := client.LPush(context, key, value).Result()
@@ -48,9 +48,9 @@ func main() {
 	// smazání seznamu, pokud existoval
 	client.Del(context, "seznam")
 
-	mustPush(client, context, "seznam", "foo")
-	mustPush(client, context, "seznam", "bar")
-	mustPush(client, context, "seznam", "baz")
+	mustPush(context, client, "seznam", "foo")
+	mustPush(context, client, "seznam", "bar")
+	mustPush(context, client, "seznam", "baz")
 
 	fmt.Println()
 
