@@ -9,9 +9,8 @@ func max(x, y int) int {
 	fmt.Printf("%d %d\n", x, y)
 	if x > y {
 		return x
-	} else {
-		return y
 	}
+	return y
 }
 
 func main() {
