@@ -10,6 +10,7 @@ import (
 	"io/ioutil"
 )
 
+// Item is a structure that will be encoded into BSON
 type Item struct {
 	Value string
 }
