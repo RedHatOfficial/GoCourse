@@ -21,7 +21,7 @@ func printQueueLength(length int64) {
 
 // mustEnqueue zajistí vložení prvku do fronty popř. pád aplikace v případě,
 // kdy vložení není možné provést (Redis je odpojen atd.)
-func mustEnqueue(client *redis.Client, context context.Context, key string, value string) {
+func mustEnqueue(context context.Context, client *redis.Client, key string, value string) {
 	fmt.Printf("Enqueuing '%s' into queue named '%s'\n", value, key)
 	// přidání prvku do seznamu
 	length, err := client.LPush(context, key, value).Result()
@@ -61,10 +61,10 @@ func main() {
 	client.Del(context, queueName)
 
 	// vložení prvků do fronty
-	mustEnqueue(client, context, queueName, "první")
-	mustEnqueue(client, context, queueName, "druhý")
-	mustEnqueue(client, context, queueName, "třetí")
-	mustEnqueue(client, context, queueName, "čtvrtý")
+	mustEnqueue(context, client, queueName, "první")
+	mustEnqueue(context, client, queueName, "druhý")
+	mustEnqueue(context, client, queueName, "třetí")
+	mustEnqueue(context, client, queueName, "čtvrtý")
 
 	fmt.Println()
 
