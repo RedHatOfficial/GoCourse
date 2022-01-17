@@ -14,7 +14,7 @@ type User1 struct {
 
 // User2 struct represent one item to be marshalled into XML
 type User2 struct {
-	Id      uint32 `xml:"id"`
+	ID      uint32 `xml:"id"`
 	Name    string `xml:"user_name"`
 	Surname string `xml:"surname"`
 }
