@@ -8,7 +8,7 @@ import (
 
 // User struct represent one item to be marshalled into BSON
 type User struct {
-	Id      uint32
+	ID      uint32
 	Name    string
 	Surname string
 }
