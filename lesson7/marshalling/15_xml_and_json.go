@@ -9,14 +9,14 @@ import (
 // User struct represent one item to be marshalled into XML and JSON
 type User struct {
 	XMLName xml.Name `xml:"user" json:"-"`
-	Id      uint32   `xml:"id" json:"user_id"`
+	ID      uint32   `xml:"id" json:"user_id"`
 	Name    string   `xml:"name>first" json:"user_name"`
 	Surname string   `xml:"name>last" json:"surname"`
 }
 
 func main() {
 	user := User{
-		Id:      1,
+		ID:      1,
 		Name:    "Pepek",
 		Surname: "Vyskoč"}
 
