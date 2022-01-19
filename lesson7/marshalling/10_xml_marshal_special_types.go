@@ -8,7 +8,7 @@ import (
 
 type Foobar struct {
 	XMLName xml.Name `xml:"foobar"`
-	Id      uint32   `xml:"id"`
+	ID      uint32   `xml:"id"`
 	X       float64  `xml:"x"`
 	Y       float64  `xml:"y"`
 	Z       float64  `xml:"z"`
@@ -17,14 +17,14 @@ type Foobar struct {
 
 func main() {
 	f := Foobar{
-		Id:   42,
+		ID:   42,
 		X:    math.NaN(),
 		Y:    math.Inf(1),
 		Z:    math.Inf(-1),
 		Next: nil}
 
 	g := Foobar{
-		Id:   43,
+		ID:   43,
 		X:    math.NaN(),
 		Y:    math.Inf(1),
 		Z:    math.Inf(-1),
