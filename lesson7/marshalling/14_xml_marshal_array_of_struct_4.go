@@ -7,7 +7,7 @@ import (
 
 // User struct represent one item to be marshalled into XML
 type User struct {
-	Id      uint32 `xml:"id"`
+	ID      uint32 `xml:"id"`
 	Name    string `xml:"user_name"`
 	Surname string `xml:"surname"`
 }
@@ -22,15 +22,15 @@ func main() {
 	var users Users = Users{
 		List: []User{
 			User{
-				Id:      1,
+				ID:      1,
 				Name:    "Pepek",
 				Surname: "Vyskoč"},
 			User{
-				Id:      2,
+				ID:      2,
 				Name:    "Pepek",
 				Surname: "Vyskoč"},
 			User{
-				Id:      3,
+				ID:      3,
 				Name:    "Josef",
 				Surname: "Vyskočil"},
 		},
