@@ -66,9 +66,8 @@ func encodeBinaryTree(bt BinaryTree) ([]byte, error) {
 
 	if err != nil {
 		return bsonOutput, err
-	} else {
-		return bsonOutput, nil
 	}
+	return bsonOutput, nil
 }
 
 func decodeBinaryTree(encodedTree []byte) (BinaryTree, error) {
@@ -115,7 +114,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 		return
-	} else {
-		printTree(decodedTree.Root, 0)
 	}
+	printTree(decodedTree.Root, 0)
 }
