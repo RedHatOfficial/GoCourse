@@ -10,8 +10,10 @@ import (
 	"io/ioutil"
 )
 
+// Item is data type of one item in a node
 type Item int
 
+// Node represents one node of tree
 type Node struct {
 	Value Item
 	Left  *Node
