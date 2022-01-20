@@ -10,6 +10,7 @@ import (
 	"io/ioutil"
 )
 
+// Vector represents type of data to be serialized into various formats
 type Vector []float64
 
 func encodeVectorIntoBSON(vector Vector) ([]byte, error) {
