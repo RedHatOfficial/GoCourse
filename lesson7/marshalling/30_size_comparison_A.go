@@ -18,9 +18,8 @@ func encodeVectorIntoBSON(vector Vector) ([]byte, error) {
 
 	if err != nil {
 		return bsonOutput, err
-	} else {
-		return bsonOutput, nil
 	}
+	return bsonOutput, nil
 }
 
 func encodeVectorIntoJSON(vector Vector) ([]byte, error) {
@@ -28,9 +27,8 @@ func encodeVectorIntoJSON(vector Vector) ([]byte, error) {
 
 	if err != nil {
 		return jsonOutput, err
-	} else {
-		return jsonOutput, nil
 	}
+	return jsonOutput, nil
 }
 
 func encodeVectorIntoIndentedJSON(vector Vector) ([]byte, error) {
@@ -38,9 +36,8 @@ func encodeVectorIntoIndentedJSON(vector Vector) ([]byte, error) {
 
 	if err != nil {
 		return jsonOutput, err
-	} else {
-		return jsonOutput, nil
 	}
+	return jsonOutput, nil
 }
 
 func encodeVectorIntoXML(vector Vector) ([]byte, error) {
@@ -48,9 +45,8 @@ func encodeVectorIntoXML(vector Vector) ([]byte, error) {
 
 	if err != nil {
 		return xmlOutput, err
-	} else {
-		return xmlOutput, nil
 	}
+	return xmlOutput, nil
 }
 
 func encodeVectorIntoIndentedXML(vector Vector) ([]byte, error) {
@@ -58,9 +54,8 @@ func encodeVectorIntoIndentedXML(vector Vector) ([]byte, error) {
 
 	if err != nil {
 		return xmlOutput, err
-	} else {
-		return xmlOutput, nil
 	}
+	return xmlOutput, nil
 }
 
 func encodeVectorIntoGob(vector Vector) ([]byte, error) {
@@ -70,9 +65,8 @@ func encodeVectorIntoGob(vector Vector) ([]byte, error) {
 	err := encoder.Encode(vector)
 	if err != nil {
 		return buffer.Bytes(), err
-	} else {
-		return buffer.Bytes(), nil
 	}
+	return buffer.Bytes(), nil
 }
 
 func saveVector(encodedVector []byte, filename string) {
