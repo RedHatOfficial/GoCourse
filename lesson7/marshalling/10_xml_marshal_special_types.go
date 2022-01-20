@@ -6,6 +6,7 @@ import (
 	"math"
 )
 
+// Foobar is a data structure to be serialized into XML
 type Foobar struct {
 	XMLName xml.Name `xml:"foobar"`
 	ID      uint32   `xml:"id"`
