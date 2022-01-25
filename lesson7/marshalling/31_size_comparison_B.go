@@ -20,9 +20,8 @@ func encodeStringIntoBSON(item Item) ([]byte, error) {
 
 	if err != nil {
 		return bsonOutput, err
-	} else {
-		return bsonOutput, nil
 	}
+	return bsonOutput, nil
 }
 
 func encodeStringIntoJSON(item Item) ([]byte, error) {
@@ -30,9 +29,8 @@ func encodeStringIntoJSON(item Item) ([]byte, error) {
 
 	if err != nil {
 		return jsonOutput, err
-	} else {
-		return jsonOutput, nil
 	}
+	return jsonOutput, nil
 }
 
 func encodeStringIntoIndentedJSON(item Item) ([]byte, error) {
@@ -40,9 +38,8 @@ func encodeStringIntoIndentedJSON(item Item) ([]byte, error) {
 
 	if err != nil {
 		return jsonOutput, err
-	} else {
-		return jsonOutput, nil
 	}
+	return jsonOutput, nil
 }
 
 func encodeStringIntoXML(item Item) ([]byte, error) {
@@ -50,9 +47,8 @@ func encodeStringIntoXML(item Item) ([]byte, error) {
 
 	if err != nil {
 		return xmlOutput, err
-	} else {
-		return xmlOutput, nil
 	}
+	return xmlOutput, nil
 }
 
 func encodeStringIntoIndentedXML(item Item) ([]byte, error) {
@@ -60,9 +56,8 @@ func encodeStringIntoIndentedXML(item Item) ([]byte, error) {
 
 	if err != nil {
 		return xmlOutput, err
-	} else {
-		return xmlOutput, nil
 	}
+	return xmlOutput, nil
 }
 
 func encodeStringIntoGob(item Item) ([]byte, error) {
@@ -72,9 +67,8 @@ func encodeStringIntoGob(item Item) ([]byte, error) {
 	err := encoder.Encode(item)
 	if err != nil {
 		return buffer.Bytes(), err
-	} else {
-		return buffer.Bytes(), nil
 	}
+	return buffer.Bytes(), nil
 }
 
 func saveString(encodedString []byte, filename string) {
