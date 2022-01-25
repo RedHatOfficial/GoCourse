@@ -10,8 +10,10 @@ import (
 	"io/ioutil"
 )
 
+// Item represents value to be stored in linked list
 type Item int
 
+// Node represents one node in linked list
 type Node struct {
 	Value Item
 	Next  *Node
