@@ -22,9 +22,8 @@ func encodeStructureIntoBSON(s Node) ([]byte, error) {
 
 	if err != nil {
 		return bsonOutput, err
-	} else {
-		return bsonOutput, nil
 	}
+	return bsonOutput, nil
 }
 
 func encodeStructureIntoJSON(s Node) ([]byte, error) {
@@ -32,9 +31,8 @@ func encodeStructureIntoJSON(s Node) ([]byte, error) {
 
 	if err != nil {
 		return jsonOutput, err
-	} else {
-		return jsonOutput, nil
 	}
+	return jsonOutput, nil
 }
 
 func encodeStructureIntoIndentedJSON(s Node) ([]byte, error) {
@@ -42,9 +40,8 @@ func encodeStructureIntoIndentedJSON(s Node) ([]byte, error) {
 
 	if err != nil {
 		return jsonOutput, err
-	} else {
-		return jsonOutput, nil
 	}
+	return jsonOutput, nil
 }
 
 func encodeStructureIntoXML(s Node) ([]byte, error) {
@@ -52,9 +49,8 @@ func encodeStructureIntoXML(s Node) ([]byte, error) {
 
 	if err != nil {
 		return xmlOutput, err
-	} else {
-		return xmlOutput, nil
 	}
+	return xmlOutput, nil
 }
 
 func encodeStructureIntoIndentedXML(s Node) ([]byte, error) {
@@ -62,9 +58,8 @@ func encodeStructureIntoIndentedXML(s Node) ([]byte, error) {
 
 	if err != nil {
 		return xmlOutput, err
-	} else {
-		return xmlOutput, nil
 	}
+	return xmlOutput, nil
 }
 
 func encodeStructureIntoGob(s Node) ([]byte, error) {
@@ -74,9 +69,8 @@ func encodeStructureIntoGob(s Node) ([]byte, error) {
 	err := encoder.Encode(s)
 	if err != nil {
 		return buffer.Bytes(), err
-	} else {
-		return buffer.Bytes(), nil
 	}
+	return buffer.Bytes(), nil
 }
 
 func save(encodedStructure []byte, filename string) {
