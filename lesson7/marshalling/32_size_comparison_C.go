@@ -10,18 +10,22 @@ import (
 	"io/ioutil"
 )
 
+// Item represents value stored in binary tree
 type Item int
 
+// Node represents one node in binary tree
 type Node struct {
 	Value Item
 	Left  *Node
 	Right *Node
 }
 
+// BinaryTree is a root node of binary tree
 type BinaryTree struct {
 	Root *Node
 }
 
+// Insert method inserts new value into binary tree
 func (bt *BinaryTree) Insert(value Item) {
 	node := &Node{value, nil, nil}
 	if bt.Root == nil {
