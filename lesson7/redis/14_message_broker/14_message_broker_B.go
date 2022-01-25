@@ -22,7 +22,7 @@ func printQueueLength(length int64) {
 
 // mustEnqueue zajistí vložení prvku do fronty popř. pád aplikace v případě,
 // kdy vložení není možné provést (Redis je odpojen atd.)
-func mustEnqueueInteger(client *redis.Client, context context.Context, key string, value int) {
+func mustEnqueueInteger(context context.Context, client *redis.Client, key string, value int) {
 	fmt.Printf("Enqueuing %d into queue named '%s'\n", value, key)
 
 	// přidání prvku do seznamu
@@ -33,15 +33,15 @@ func mustEnqueueInteger(client *redis.Client, context context.Context, key strin
 	printQueueLength(length)
 }
 
-func producer(client *redis.Client, context context.Context, key string, from int, to int) {
+func producer(context context.Context, client *redis.Client, key string, from int, to int) {
 	// postupné vložení prvků do fronty
 	for i := from; i < to; i++ {
-		mustEnqueueInteger(client, context, queueName, i)
+		mustEnqueueInteger(context, client, queueName, i)
 		time.Sleep(1 * time.Second)
 	}
 }
 
-func consumer(client *redis.Client, context context.Context, key string, timeout time.Duration) {
+func consumer(context context.Context, client *redis.Client, key string, timeout time.Duration) {
 	// přečtení všech hodnot z fronty
 	for {
 
@@ -99,7 +99,7 @@ func main() {
 	client.Del(context, queueName)
 
 	// spustíme producenta zpráv
-	go producer(client, context, queueName, 0, 10)
+	go producer(context, client, queueName, 0, 10)
 
 	timeout, err := time.ParseDuration("10s")
 	if err != nil {
@@ -110,5 +110,5 @@ func main() {
 	time.Sleep(7 * time.Second)
 
 	// nyní již můžeme spustit konzumenta zpráv
-	consumer(client, context, queueName, timeout)
+	consumer(context, client, queueName, timeout)
 }
