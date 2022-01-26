@@ -25,4 +25,5 @@ func main() {
 	log.Printf("Status: %s", httpResp.Status)
 	io.Copy(os.Stdout, httpResp.Body)
 }
+
 // End OMIT
