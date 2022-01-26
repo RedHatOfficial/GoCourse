@@ -70,9 +70,8 @@ func encodeBinaryTreeIntoBSON(bt BinaryTree) ([]byte, error) {
 
 	if err != nil {
 		return bsonOutput, err
-	} else {
-		return bsonOutput, nil
 	}
+	return bsonOutput, nil
 }
 
 func encodeBinaryTreeIntoJSON(bt BinaryTree) ([]byte, error) {
@@ -80,9 +79,8 @@ func encodeBinaryTreeIntoJSON(bt BinaryTree) ([]byte, error) {
 
 	if err != nil {
 		return jsonOutput, err
-	} else {
-		return jsonOutput, nil
 	}
+	return jsonOutput, nil
 }
 
 func encodeBinaryTreeIntoIndentedJSON(bt BinaryTree) ([]byte, error) {
@@ -90,9 +88,8 @@ func encodeBinaryTreeIntoIndentedJSON(bt BinaryTree) ([]byte, error) {
 
 	if err != nil {
 		return jsonOutput, err
-	} else {
-		return jsonOutput, nil
 	}
+	return jsonOutput, nil
 }
 
 func encodeBinaryTreeIntoXML(bt BinaryTree) ([]byte, error) {
@@ -100,9 +97,8 @@ func encodeBinaryTreeIntoXML(bt BinaryTree) ([]byte, error) {
 
 	if err != nil {
 		return xmlOutput, err
-	} else {
-		return xmlOutput, nil
 	}
+	return xmlOutput, nil
 }
 
 func encodeBinaryTreeIntoIndentedXML(bt BinaryTree) ([]byte, error) {
@@ -110,9 +106,8 @@ func encodeBinaryTreeIntoIndentedXML(bt BinaryTree) ([]byte, error) {
 
 	if err != nil {
 		return xmlOutput, err
-	} else {
-		return xmlOutput, nil
 	}
+	return xmlOutput, nil
 }
 
 func encodeBinaryTreeIntoGob(bt BinaryTree) ([]byte, error) {
@@ -122,9 +117,8 @@ func encodeBinaryTreeIntoGob(bt BinaryTree) ([]byte, error) {
 	err := encoder.Encode(bt)
 	if err != nil {
 		return buffer.Bytes(), err
-	} else {
-		return buffer.Bytes(), nil
 	}
+	return buffer.Bytes(), nil
 }
 
 func saveBinaryTree(encodedTree []byte, filename string) {
