@@ -30,13 +30,13 @@ func main() {
 	const border = 50
 
 	var rects = []sdl.Rect{
-		sdl.Rect{
+		{
 			X: border,
 			Y: border,
 			W: width / 2,
 			H: height / 2,
 		},
-		sdl.Rect{
+		{
 			X: width - width/2 - border,
 			Y: height - height/2 - border,
 			W: width / 2,
