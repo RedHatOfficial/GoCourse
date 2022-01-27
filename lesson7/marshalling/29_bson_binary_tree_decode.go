@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"gopkg.in/mgo.v2/bson"
-	"io/ioutil"
+	"os"
 )
 
 // Item represents value stored in binary tree node
@@ -77,7 +77,7 @@ func decodeBinaryTree(encodedTree []byte) (BinaryTree, error) {
 }
 
 func saveBinaryTree(encodedTree []byte, filename string) {
-	err := ioutil.WriteFile(filename, encodedTree, 0644)
+	err := os.WriteFile(filename, encodedTree, 0644)
 	if err != nil {
 		fmt.Println(err)
 	} else {
