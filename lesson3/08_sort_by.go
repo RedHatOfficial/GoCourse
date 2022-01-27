@@ -19,13 +19,13 @@ func printRoles(roles []Role) {
 
 func main() {
 	roles := []Role{
-		Role{"Eliška", "Najbrtová"},
-		Role{"Jenny", "Suk"},
-		Role{"Anička", "Šafářová"},
-		Role{"Sváťa", "Pulec"},
-		Role{"Blažej", "Motyčka"},
-		Role{"Eda", "Wasserfall"},
-		Role{"Přemysl", "Hájek"},
+		{"Eliška", "Najbrtová"},
+		{"Jenny", "Suk"},
+		{"Anička", "Šafářová"},
+		{"Sváťa", "Pulec"},
+		{"Blažej", "Motyčka"},
+		{"Eda", "Wasserfall"},
+		{"Přemysl", "Hájek"},
 	}
 
 	fmt.Println("Unsorted:")
