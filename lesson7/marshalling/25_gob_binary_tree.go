@@ -5,7 +5,7 @@ import (
 	"encoding/gob"
 	"encoding/hex"
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 // Item represents value stored in binary tree node
@@ -62,7 +62,7 @@ func encodeAndDecodeBinaryTree(bt BinaryTree) {
 		encoded := hex.EncodeToString(content)
 		fmt.Println(encoded)
 
-		err = ioutil.WriteFile("tree1.gob", content, 0644)
+		err = os.WriteFile("tree1.gob", content, 0644)
 		if err != nil {
 			fmt.Println(err)
 		} else {
