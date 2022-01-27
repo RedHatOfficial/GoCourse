@@ -7,7 +7,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"gopkg.in/mgo.v2/bson"
-	"io/ioutil"
+	"os"
 )
 
 // Item is data type of one item in a node
@@ -77,7 +77,7 @@ func encodeStructureIntoGob(s Node) ([]byte, error) {
 }
 
 func save(encodedStructure []byte, filename string) {
-	err := ioutil.WriteFile(filename, encodedStructure, 0644)
+	err := os.WriteFile(filename, encodedStructure, 0644)
 	if err != nil {
 		fmt.Println(err)
 	} else {
