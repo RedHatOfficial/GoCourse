@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"gopkg.in/mgo.v2/bson"
-	"io/ioutil"
+	"os"
 )
 
 // User struct represent one item to be unmarshalled from BSON
@@ -16,7 +16,7 @@ type User struct {
 func main() {
 	var user User
 
-	bsonInput, err := ioutil.ReadFile("1.bson")
+	bsonInput, err := os.ReadFile("1.bson")
 	if err != nil {
 		fmt.Println(err)
 		return
