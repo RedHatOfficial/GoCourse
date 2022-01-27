@@ -14,15 +14,15 @@ type User struct {
 
 func main() {
 	var users = [3]User{
-		User{
+		{
 			id:      1,
 			name:    "Pepek",
 			surname: "Vyskoč"},
-		User{
+		{
 			id:      2,
 			name:    "Pepek",
 			surname: "Vyskoč"},
-		User{
+		{
 			id:      3,
 			name:    "Josef",
 			surname: "Vyskočil"},
