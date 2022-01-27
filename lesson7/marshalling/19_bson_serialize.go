@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"gopkg.in/mgo.v2/bson"
-	"io/ioutil"
+	"os"
 )
 
 // User struct represent one item to be marshalled into BSON
@@ -26,7 +26,7 @@ func main() {
 		fmt.Println(err)
 	} else {
 		fmt.Printf("Encoded into %d bytes\n", len(bsonOutput))
-		err := ioutil.WriteFile("1.bson", bsonOutput, 0644)
+		err := os.WriteFile("1.bson", bsonOutput, 0644)
 		if err != nil {
 			fmt.Println(err)
 		} else {
