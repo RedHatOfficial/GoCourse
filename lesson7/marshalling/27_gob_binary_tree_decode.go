@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/gob"
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 // Item represents value stored in binary tree node
@@ -81,7 +81,7 @@ func decodeBinaryTree(encodedTree bytes.Buffer) (BinaryTree, error) {
 }
 
 func saveBinaryTree(encodedTree bytes.Buffer, filename string) {
-	err := ioutil.WriteFile(filename, encodedTree.Bytes(), 0644)
+	err := os.WriteFile(filename, encodedTree.Bytes(), 0644)
 	if err != nil {
 		fmt.Println(err)
 	} else {
