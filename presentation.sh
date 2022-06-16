@@ -1,2 +1,2 @@
 # please look at README.md how to install the presentation tool
-present
+go run golang.org/x/tools/cmd/present
