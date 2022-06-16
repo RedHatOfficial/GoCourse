@@ -1,0 +1,34 @@
+Go language course
+Lesson 8
+15 Jul 2022
+Tags: golang, go
+
+Pavel Tišnovský
+Red Hat, Inc.
+email@email.email
+https://github.com/RedHatOfficial/GoCourse
+@RedHat
+
+* Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/fiveyears.jpg
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/fiveyears.jpg _ 900
+
+* Generics in Go
+
+* Why generics?
+
+- to be able to create something similar to Numpy in Go
+- true abstract data types
+- lists
+- trees
+- priority queues
+- ...
+
+* Compile time or runtime?
+- interface{} - runtime
+- type parameters - compile time
+
+ $ go tool compile -S 06_comparable.go > 06_comparable.s
+ $ go tool compile -S 08_compare_type_parameters.go > 08_compare_type_parameters.s
