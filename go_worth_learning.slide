@@ -1,6 +1,6 @@
 Is Go language actually worth learning?
 Red Hat
-14 Apr 2021
+16 Jun 2022
 Tags: golang, go
 
 Pavel Tišnovský <ptisnovs@redhat.com>
@@ -12,6 +12,7 @@ Red Hat, Inc.
 
 There are lots of interesting programming languages that you can learn.
 The question is, should you perfect them all? The answer is no, of course.
+
 So what about the Go language - is it worth try?
 
 In this presentation we are going to talk about Go's pros (goroutines,
@@ -32,6 +33,7 @@ previous century :)
 - Launched in November 2009 by Google
 - Rob Pike, Ken Thompson, Robert Griesemer
 - More readable replacement for C/C++/Java/...
+- Better suits corporations needs
 - „Less is more“
 
 
@@ -57,6 +59,7 @@ previous century :)
 .link https://coreos.com/operators/ Kubernetes Operators
 .link https://min.io/ MinIO
 .link https://nsq.io/ NSQ
+.link https://www.redhat.com/en/technologies/cloud-computing/openshift OpenShift
 
 
 
@@ -69,14 +72,14 @@ previous century :)
 - microservices
 - ease to install ("DLL hell" can't happen)
 - for DevOps from DevOps
-- fast builds (CI tools like it ;-)
+- fast (actually super fast) builds (CI tools like it ;-)
 
 
 
 * Attention
 - Go is a blend of modern approaches combined with quite old ideas
-- error handling
-- no generics
+- explicit error handling
+- no generics till version 1.18
 - no templates
 - no class-based OOP
 - no `try`/`catch`/`finally`
@@ -86,6 +89,8 @@ previous century :)
 
 
 * Interfaces are automatically implemented
+- "satisfied" in Go lingo
+
 .image ./images/interface.jpg
 
 
@@ -99,7 +104,7 @@ previous century :)
 - standardized framework for tests
 - stricter rules (`++`/`--`, pointers, ...)
 - no exception handling control structures (yet?)
-- no generic data types (yet?)
+- no generic data types till Go 1.18
 
 
 
@@ -128,6 +133,26 @@ previous century :)
 
 
 
+* Bit of history
+
+- 60's: insufficient program flow control
+- "GOTO considered harmful"
+- solved by introducing structured programming
+- -> new syntax
+
+* Bit of history
+
+- 70's: insufficient state control
+- solved by introducing OOP
+- -> new syntax
+
+* Bit of history
+- 2000: insufficient concurrency control
+- not solved for a long time
+- Go's goroutines + channels
+- Python's + JavaScript's async
+- -> new syntax
+
 * Support for concurrency
 
 - Communicating sequential processes (a formal language etc. etc.)
@@ -135,6 +160,39 @@ previous century :)
 - So called _goroutines_
 - Channels
 
+
+
+* Concurrency and/or parallelism
+
+- Serial: runs tasks in an order with one CPU core
+- Concurrent: runs many tasks simultaneously with a less number of CPU cores (or even 1)
+- Parallel: runs n tasks simultaneously with n CPU cores
+
+* Concurrency
+
+- when multiple tasks can run in overlapping periods
+- needs only one CPU core
+- main problem: interruptions
+
+* Parallelism
+
+- needs more than one CPU core
+- main problem: isolation
+- second problem: coordination
+
+* Solutions for concurrency and parallelism
+
+- processes
+- threads
+- coroutines
+
+
+* Solutions for concurrency and parallelism
+
+- processes
+- threads
+- **goroutines*
+- coroutines
 
 
 * Goroutines + channels is a way to ... Go
@@ -152,6 +210,27 @@ previous century :)
 - Java: no value types, no structures, object headers
 
 
+* Memory locality
+
+- RAM is no longer "Random Access Memory"
+
+* Memory locality
+
+.image ./images/computer_latency_1.png _ 700
+
+
+* Memory locality and access times
+
+- We humans are bad comparing very small time periods
+- Dtto for other units (length, money etc.)
+
+
+* Memory locality and access times
+
+.image ./images/computer_latency_2.png _ 1000
+
+
+* Go and KISS principle
 
 * Dynamic devel teams
 .image ./images/teams.png
