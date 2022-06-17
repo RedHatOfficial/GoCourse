@@ -17,5 +17,5 @@ func printValue(value int) {
 }
 
 func main() {
-	printValue("www.root.cz")
+	printValue("Go language!")
 }
