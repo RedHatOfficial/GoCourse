@@ -1,4 +1,4 @@
-Go language course
+Generics in Go
 Lesson 8
 15 Jul 2022
 Tags: golang, go
@@ -9,13 +9,19 @@ email@email.email
 https://github.com/RedHatOfficial/GoCourse
 @RedHat
 
+
+
 * Gophers
 #The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
 #Source https://golang.org/doc/gopher/fiveyears.jpg
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
+
+
 * Generics in Go
+
+
 
 * Why generics?
 
@@ -26,9 +32,206 @@ https://github.com/RedHatOfficial/GoCourse
 - priority queues
 - ...
 
+
+
+* Non-generic functions
+
+.play lesson8/01_print.go
+
+
+
+* Overloaded function in Go?
+
+.play lesson8/02_print_overload.go
+
+
+
+* No automatic type conversions
+
+.play lesson8/03_print_no_conversion.go
+
+
+
+* Generics implemented in runtime
+
+.play lesson8/04_print_interface.go
+
+
+
+* Generic function
+
+.play lesson8/05_generic_print.go
+
+
+
+* Selection of generic function
+
+.play lesson8/06_type_parameter.go
+
+
+
+* Compilation type checks
+
+.play lesson8/07_type_parameter_check.go
+
+
+
+* Concrete comparable interface
+
+.play lesson8/08_comparable.go
+
+
+
+* Problem with overloading
+
+.play lesson8/09_comparable_variable_types.go
+
+
+
+* Generic comparable interface
+
+.play lesson8/10_compare_type_parameters.go
+
+
+
 * Compile time or runtime?
+- Python
+
+
+
+.code lesson8/Test.py
+
+
+
+* Compile time or runtime?
+- Python
+
+.code lesson8/Test.py.asm
+
+
+
+* Compile time or runtime?
+- Java
+
+.code lesson8/Test.java
+
+
+
+* Compile time or runtime?
+
+.code lesson8/Test.java.asm / public static void main/,/^}/
+
+
+
+* Generic comparable interface (again)
+
+.play lesson8/10_compare_type_parameters.go
+
+
+
+* Compile time or runtime?
+- go
 - interface{} - runtime
 - type parameters - compile time
 
- $ go tool compile -S 06_comparable.go > 06_comparable.s
- $ go tool compile -S 08_compare_type_parameters.go > 08_compare_type_parameters.s
+ $ go tool compile -S 08_comparable.go > 08_comparable.s
+ $ go tool compile -S 10_compare_type_parameters.go > 10_compare_type_parameters.s
+
+
+
+* Compiled concrete function
+
+  "".compare STEXT nosplit size=7 args=0x10 locals=0x0 funcid=0x0 align=0x0
+        0x0000 00000 (08_comparable.go:7)       TEXT    "".compare(SB), NOSPLIT|ABIInternal, $0-16
+        0x0000 00000 (08_comparable.go:7)       PCDATA  $3, $1
+        0x0000 00000 (08_comparable.go:8)       CMPQ    BX, AX
+        0x0003 00003 (08_comparable.go:8)       SETGT   AL
+        0x0006 00006 (08_comparable.go:8)       RET
+
+
+* Compiled generic function
+
+  "".compare[go.shape.int_0] STEXT dupok nosplit size=7 args=0x18 locals=0x0 funcid=0x0 align=0x0
+        0x0000 00000 (10_compare_type_parameters.go:11) TEXT    "".compare[go.shape.int_0](SB), DUPOK|NOSPLIT|ABIInternal, $0-24
+        0x0000 00000 (10_compare_type_parameters.go:11) PCDATA  $3, $1
+        0x0000 00000 (10_compare_type_parameters.go:12) CMPQ    CX, BX
+        0x0003 00003 (10_compare_type_parameters.go:12) SETGT   AL
+        0x0006 00006 (10_compare_type_parameters.go:12) RET
+  "".compare[go.shape.float64_0] STEXT dupok nosplit size=8 args=0x18 locals=0x0 funcid=0x0 align=0x0
+        0x0000 00000 (10_compare_type_parameters.go:11) TEXT    "".compare[go.shape.float64_0](SB), DUPOK|NOSPLIT|ABIInternal, $0-24
+        0x0000 00000 (10_compare_type_parameters.go:11) PCDATA  $3, $1
+        0x0000 00000 (10_compare_type_parameters.go:12) UCOMISD X0, X1
+        0x0004 00004 (10_compare_type_parameters.go:12) SETHI   AL
+        0x0007 00007 (10_compare_type_parameters.go:12) RET
+  "".compare[go.shape.string_0] STEXT dupok size=120 args=0x28 locals=0x28 funcid=0x0 align=0x0
+        0x0000 00000 (10_compare_type_parameters.go:11) TEXT    "".compare[go.shape.string_0](SB), DUPOK|ABIInternal, $40-40
+        0x0000 00000 (10_compare_type_parameters.go:11) CMPQ    SP, 16(R14)
+        0x0004 00004 (10_compare_type_parameters.go:11) PCDATA  $0, $-2
+        0x0004 00004 (10_compare_type_parameters.go:11) JLS     63
+        ...
+        ...
+        0x002a 00042 (10_compare_type_parameters.go:12) PCDATA  $1, $1
+        0x002a 00042 (10_compare_type_parameters.go:12) CALL    runtime.cmpstring(SB)
+        ...
+        ...
+        0x003e 00062 (10_compare_type_parameters.go:12) RET
+
+
+
+* "Universal numeric" data type?
+
+.play lesson8/11_add_int.go
+
+
+
+* "Universal numeric" data type?
+
+.play lesson8/12_add_type_parameters.go
+
+
+
+* No automatic type conversion (1/2)
+
+.play lesson8/13_add_type_parameters.go /^package main/,/^func main/
+
+
+
+* No automatic type conversion (2/2)
+
+.play lesson8/13_add_type_parameters.go /^func main/,/^}/
+
+
+
+* Type approximations (1/2)
+
+.play lesson8/14_add_type_parameters.go /^package main/,/^func main/
+
+
+
+* Type approximations (2/2)
+
+.play lesson8/14_add_type_parameters.go /^func main/,/^}/
+
+
+
+* Concrete "pow" function
+
+.play lesson8/21_pow_floats_B.go
+
+
+
+* Generic "pow" function
+
+.play lesson8/22_pow_generic_B.go
+
+
+
+* Generic method vs. generic function
+
+.play lesson8/34_whats_better.go
+
+
+
+* Generic linked list implementation
+
+.play lesson8/35_list.go

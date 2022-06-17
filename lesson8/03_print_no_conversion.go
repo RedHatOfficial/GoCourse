@@ -12,6 +12,6 @@ func printValue(value Value) {
 }
 
 func main() {
-	v := "www.root.cz" // string
+	v := "Go language!" // string
 	printValue(v)
 }
