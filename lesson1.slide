@@ -50,7 +50,7 @@ https://github.com/RedHatOfficial/GoCourse
 .code lesson1/build_hello.go
 
 * Unicode support
-.play lesson1/hello_r.go
+.play lesson1/hello_u.go
 
 * Packages
 - special package main: main() for executables
