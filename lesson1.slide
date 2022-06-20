@@ -31,6 +31,10 @@ https://github.com/RedHatOfficial/GoCourse
 - Tour of Go [[https://tour.golang.org/welcome/1]]
 - Effective Go [[https://golang.org/doc/effective_go.html]]
 - Go Doc [[https://godoc.org/]]
+- Go cheatsheet [[http://www.cheat-sheets.org/saved-copy/go-lang-cheat-sheet-master.20181212/golang_refcard.pdf]]
+- The Zen of Go [[https://the-zen-of-go.netlify.app/]]
+
+
 
 * Development interface
 - Vim;-)
