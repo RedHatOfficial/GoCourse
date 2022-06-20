@@ -517,6 +517,11 @@ Outline:
 
 
 
+* Sets
+- is is possible to simulate them using maps
+
+  map[key_type]struct{}
+
 ############################################################
 
 * Loops and the range clause
