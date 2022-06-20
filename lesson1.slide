@@ -36,6 +36,18 @@ https://github.com/RedHatOfficial/GoCourse
 - Vim;-)
 - Visual Studio Code + go lang support [[https://code.visualstudio.com/docs/setup/linux]]
 
+
+
+* Go keywords
+
+  break     case   chan    const       continue
+  default   defer  else    fallthrough for
+  func      go     goto    if          import
+  interface map    package range       return
+  select    struct switch  type        var
+
+
+
 * Packages and Imports
 - Program building blocks ("libraries")
 - Imported by other programs
