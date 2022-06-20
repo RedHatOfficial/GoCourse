@@ -7,6 +7,10 @@ Stanislav Kozina <skozina@redhat.com>
 Red Hat, Inc.
 https://github.com/RedHatOfficial/GoCourse
 
+* Sources
+- [[https://github.com/RedHatOfficial/GoCourse]]
+.image ./common/qr_address.png
+
 * Concurrency
 - Definition: Computations happening at the same time
 - Even on single CPU (kernel makes that feeling)
