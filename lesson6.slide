@@ -8,6 +8,10 @@ email@email.email
 https://github.com/RedHatOfficial/GoCourse
 @RedHat
 
+* Sources
+- [[https://github.com/RedHatOfficial/GoCourse]]
+.image ./common/qr_address.png
+
 * Web services in Go
 
 - one of he most common thing written in go these days
