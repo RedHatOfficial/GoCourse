@@ -2,45 +2,45 @@ package main
 
 import "fmt"
 
-// Datový typ představující lineární jednosměrně vázaný seznam
+// Singly linked list header structure
 type List[T any] struct {
 	Head *Item[T]
 }
 
-// Prvek jednosměrně vázaného seznamu
+// Item stored in singly linked list
 type Item[T any] struct {
 	Value T
 	Next  *Item[T]
 }
 
-// Konstrukce prázdného seznamu (s ukazatelem na nil)
+// NewList constructs empty singly linked list
 func NewList[T any]() *List[T] {
 	return &List[T]{}
 }
 
-// Přidání nového prvku na začátek seznamu
+// Insert method adds new item into the list
 func (list *List[T]) Insert(value T) {
 	item := Item[T]{
 		Value: value,
 	}
 
-	// navázání na původní hlavu seznamu
+	// link to the recend head
 	item.Next = list.Head
 
-	// změna pozice hlavy seznamu
+	// change head to point/link to new item
 	list.Head = &item
 }
 
-// Tisk obsahu celého seznamu
+// Print method prints the whole list
 func (list *List[Value]) Print() {
-	// první prvek v seznamu (nebo nil)
+	// reference to the first list item (or nil)
 	item := list.Head
 
-	// postupný průchod dalšími navázanými prvky
+	// iterate over all list items
 	for item != nil {
 		fmt.Println(item.Value)
 
-		// přechod na další navázaný prvek
+		// go to the next item in the list
 		item = item.Next
 	}
 
