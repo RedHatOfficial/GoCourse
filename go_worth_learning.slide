@@ -39,18 +39,35 @@ previous century :)
 
 
 * Introduction
-- compiled
+- (statically) compiled
 - statically typed
+- allows cross-compilation
 - garbage collected
 - built-in concurrency
 - strict formatting rules
+- type inference
+
+
+
+* Usage
 - server-side web (PHP, Node.js, Python, Ruby, Java)
+- client-side web (compilation to WebAssembly)
 - cloud technologies (Docker, Podman, Kubernetes, Kubernetes Operators, MinIO, ...)
 - available for all interesting systems
 - and most architectures (x86-64, ARMv6, ARMv8, even s390x and PowerPC64 LE)
 - custom back end + cgo
 
 
+* More readable compared to C/C++
+
+- Evolved from C
+- Declarations in postfix
+- Much faster for parser to parse sources
+- Exported symbols begin with Capital letter
+- [[https://blog.golang.org/gos-declaration-syntax]]
+
+.code syntax_c.go
+.code syntax_go.go
 
 * Cloud technologies
 .link https://www.docker.com/ Docker
@@ -59,7 +76,9 @@ previous century :)
 .link https://coreos.com/operators/ Kubernetes Operators
 .link https://min.io/ MinIO
 .link https://nsq.io/ NSQ
+.link https://nats.io/ NATS
 .link https://www.redhat.com/en/technologies/cloud-computing/openshift OpenShift
+.link https://geth.ethereum.org/ Go Ethereum
 
 
 
