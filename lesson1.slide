@@ -93,6 +93,9 @@ https://github.com/RedHatOfficial/GoCourse
 * Multiple return values
 .play lesson1/functions2.go
 
+* Multiple return values
+.play lesson1/functions2B.go
+
 * Named return values
 .play lesson1/functions3.go
 
