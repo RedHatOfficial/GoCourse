@@ -69,6 +69,12 @@ https://github.com/RedHatOfficial/GoCourse
 * Select on multiple channels
 .play lesson4/select.go
 
+* Quit + ack pattern
+.play lesson4/quit_ack.go /^package main/,/^func main/
+
+* Quit + ack pattern (cont.)
+.play lesson4/quit_ack.go /^func main/,/^}/
+
 * Default selection
 - Default action to take if all other actions would block
 
