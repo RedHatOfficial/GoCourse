@@ -217,7 +217,7 @@ previous century :)
 * Goroutines + channels is a way to ... Go
 
 - Deadlocks are not such a big problem then
-.image ./images/deadlock.jpg _ 700
+.image ./images/deadlock.gif _ 700
 
 
 
