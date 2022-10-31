@@ -66,8 +66,8 @@ previous century :)
 - Exported symbols begin with Capital letter
 - [[https://blog.golang.org/gos-declaration-syntax]]
 
-.code syntax_c.go
-.code syntax_go.go
+.code src/syntax_c.go
+.code src/syntax_go.go
 
 * Cloud technologies
 .link https://www.docker.com/ Docker
