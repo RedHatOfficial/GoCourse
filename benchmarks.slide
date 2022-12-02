@@ -1,0 +1,24 @@
+Go language course
+Benchmarks for Go programs
+01 Dec 2022
+Tags: golang, go, benchmarking
+
+Pavel Tišnovský
+Red Hat, Inc.
+ptisnovs@redhat.com
+https://github.com/RedHatOfficial/GoCourse
+@RedHat
+
+
+
+* Sources
+- [[https://github.com/RedHatOfficial/GoCourse]]
+.image ./common/qr_address.png
+
+
+
+* Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/fiveyears.jpg
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/fiveyears.jpg _ 900
