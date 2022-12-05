@@ -22,3 +22,36 @@ https://github.com/RedHatOfficial/GoCourse
 #Source https://golang.org/doc/gopher/fiveyears.jpg
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
+
+
+
+* Benchmarks
+
+.code benchmarks/map_test.go /^package main/,/^type value/
+
+* First benchmark
+
+.code benchmarks/map_test.go /^func BenchmarkInsertIntoPreallocatedMap/,/^}/
+
+* Second benchmark
+
+.code benchmarks/map_test.go /^func BenchmarkInsertIntoEmptyMap/,/^}/
+
+* Start benchmark
+
+- go test -bench=. -benchtime=1000x
+
+* Memory profile
+
+- go test -bench=. -benchmem -memprofile profile.out
+- go tool pprof profile.out
+- go tool pprof -web profile.out
+- go tool pprof -http localhost:8080 profile.out
+
+* CPU profile
+
+- go test -bench=. -benchmem -cpuprofile profile.out
+- go tool pprof profile.out
+- go tool pprof -web profile.out
+- go tool pprof -http localhost:8080 profile.out
+
