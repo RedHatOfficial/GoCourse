@@ -27,19 +27,33 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Benchmarks
 
+- part of standard Go tooling
+- can be combined with profiling functions and methods
+
+
+* Simple benchmark for maps
+
 .code benchmarks/map_test.go /^package main/,/^type value/
 
-* First benchmark
+
+
+* First part of benchmark
 
 .code benchmarks/map_test.go /^func BenchmarkInsertIntoPreallocatedMap/,/^}/
 
-* Second benchmark
+
+
+* Second part of benchmark
 
 .code benchmarks/map_test.go /^func BenchmarkInsertIntoEmptyMap/,/^}/
+
+
 
 * Start benchmark
 
 - go test -bench=. -benchtime=1000x
+
+
 
 * Memory profile
 
@@ -48,10 +62,16 @@ https://github.com/RedHatOfficial/GoCourse
 - go tool pprof -web profile.out
 - go tool pprof -http localhost:8080 profile.out
 
+
+
 * CPU profile
 
 - go test -bench=. -benchmem -cpuprofile profile.out
 - go tool pprof profile.out
 - go tool pprof -web profile.out
 - go tool pprof -http localhost:8080 profile.out
+
+
+
+* Timers
 
