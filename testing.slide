@@ -52,9 +52,15 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 
-* Standard `testing` package
-- Each test needs to be stored in a function `func` `TestXxx(*testing.T)`
-- Basic Methods for `testing.T` structure (data type)
+* Standard "testing" package
+- Based on [[https://pkg.go.dev/testing]] package
+- Sources containing tests need to end with `_test.go`
+- Each test needs to be stored in a function named `func` `TestXxx(*testing.T)`
+- Basic methods for `testing.T` structure (data type)
+
+
+
+* Standard "testing" package
 - There are no "assertions" in the `testing` package!
 - `Log(args` `...interface{})`
 - `Skip(args` `...interface{})`
@@ -65,7 +71,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 
-* Standard `testing` package
+* Standard "testing" package
 - Formatting output
 - `Logf(format` `string,` `args` `...interface{})`
 - `Skipf(format` `string,` `args` `...interface{})`
@@ -100,6 +106,22 @@ https://github.com/RedHatOfficial/GoCourse
 
 .code testing/testing/tests02/add.go
 .code testing/testing/tests02/add_test.go
+
+
+
+* Tests in its own package
+
+- this is preffered way
+- need proper project setup
+
+.code testing/testing/tests01B/go.mod
+
+
+
+* Tests in its own package
+
+.code testing/testing/tests01B/add.go
+.code testing/testing/tests01B/add_test.go
 
 
 
