@@ -125,6 +125,27 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 
+* Local functions and tests in its own package
+
+- local functions are not visible by default
+- need global symbols pointing to local one
+
+
+
+* Local functions and tests in its own package
+
+.code testing/testing/tests02B/add.go
+.code testing/testing/tests02B/add_test.go
+
+
+
+* Local functions and tests in its own package
+
+- helper file
+
+.code testing/testing/tests02B/export_test.go
+
+
 * Test failures (due to an error in source code)
 
 .code testing/testing/tests03/add.go
