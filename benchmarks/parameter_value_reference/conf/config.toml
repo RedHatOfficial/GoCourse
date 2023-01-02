@@ -1,0 +1,77 @@
+[logging]
+debug = true
+log_level = "info"
+
+[kafka_broker]
+enabled = true
+address = "kafka:29092" #provide in deployment env or as secret
+security_protocol = "PLAINTEXT"
+cert_path = "not-set"
+sasl_mechanism = "PLAIN"
+sasl_username = "not-used"
+sasl_password = "not-used"
+topic = "platform.notifications.ingress" #provide in deployment env or as secret
+timeout = "60s"
+likelihood_threshold = 0
+impact_threshold = 0
+severity_threshold = 0
+total_risk_threshold = 3
+event_filter = "totalRisk >= totalRiskThreshold"
+
+[service_log]
+client_id = "a-service-id"
+client_secret = "a-secret"
+token_url = ""
+enabled = false
+url = "https://api.foo.bar.com/api/v1/logs/"
+timeout = "15s"
+likelihood_threshold = 0
+impact_threshold = 0
+severity_threshold = 0
+total_risk_threshold = 0
+event_filter = "totalRisk >= totalRiskThreshold"
+rule_details_uri = "https://ui.foo.bar.com/page/{module}|{error_key}"
+
+[storage]
+db_driver = "postgres"
+pg_username = "postgres" #provide in deployment env or as secret
+pg_password = "postgres" #provide in deployment env or as secret
+pg_host = "localhost" #provide in deployment env or as secret
+pg_port = 5432 #provide in deployment env or as secret
+pg_db_name = "notification" #provide in deployment env or as secret
+pg_params = "sslmode=disable"
+log_sql_queries = true
+
+[dependencies]
+content_server = "localhost:8082" #provide in deployment env or as secret
+content_endpoint = "/api/v1/content" #provide in deployment env or as secret
+template_renderer_server = "localhost:8083" #provide in deployment env or as secret
+template_renderer_endpoint = "/v1/rendered_reports" #provide in deployment env or as secret
+
+[notifications]
+insights_advisor_url = "https://console.foo.bar.com/info/{object_id}"
+cluster_details_uri = "https://console.foo.bar.com/details/{object_id}#insights"
+rule_details_uri = "https://console.foo.bar.com/details/{object_id}/modules/{module}/{error_key}"
+# valid units are SQL epoch time units: months days hours minutes seconds"
+cooldown = "24 hours"
+
+[metrics]
+job_name = "notification_service"
+# The metrics in Prometheus will be $namespace_$subsystem_$name
+namespace = "notification_service"
+subsystem = "notification_backend"
+gateway_url = "localhost:9091"
+gateway_auth_token = ""
+retries = 3
+# Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h".
+retry_after = "60s"
+
+[cleaner]
+# valid units are SQL epoch time units: months days hours minutes seconds"
+max_age = "90 days"
+
+[processing]
+filter_allowed_clusters = false
+allowed_clusters = []
+filter_blocked_clusters = false
+blocked_clusters = []
