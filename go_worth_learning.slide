@@ -110,7 +110,7 @@ previous century :)
 * Interfaces are automatically implemented
 - "satisfied" in Go lingo
 
-.image ./images/interface.jpg
+.image ./images/interface.svg _ 500
 
 
 
@@ -143,7 +143,7 @@ previous century :)
 
 
 * Multi-core CPUs
-.image ./images/perf.png
+.image ./images/perf.jpg _ 700
 
 
 
@@ -235,7 +235,7 @@ previous century :)
 
 * Memory locality
 
-.image ./images/computer_latency_1.png _ 700
+.image ./images/computer_latency_1.jpg _ 300
 
 
 * Memory locality and access times
@@ -246,13 +246,13 @@ previous century :)
 
 * Memory locality and access times
 
-.image ./images/computer_latency_2.png _ 1000
+.image ./images/computer_latency_2.png _ 500
 
 
 * Go and KISS principle
 
 * Dynamic devel teams
-.image ./images/teams.png
+.image ./images/teams.png _ 500
 
 
 
