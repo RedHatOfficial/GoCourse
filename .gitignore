@@ -3,3 +3,6 @@ cgo-math
 cgo-string
 nohup.out
 issue.py
+
+#proprietary Mac/OSX system file that holds attributes/meta-data about the folder it resides in
+.DS_Store 
