@@ -3,7 +3,7 @@ package main
 import "testing"
 import "math"
 
-//T1
+// T1
 func TestSinLibC(t *testing.T) {
 	expected := 0.178058
 	got := Csin(0.179013)
@@ -12,7 +12,7 @@ func TestSinLibC(t *testing.T) {
 	}
 }
 
-//T1
+// T1
 var datacos = []struct {
 	input    float64
 	expected float64
@@ -24,7 +24,7 @@ var datacos = []struct {
 	{0.649966, 0.796104},
 }
 
-//T2
+// T2
 func TestCosC(t *testing.T) {
 	for count, i := range datacos {
 		if testing.Short() && count > 5 {
@@ -37,7 +37,7 @@ func TestCosC(t *testing.T) {
 	}
 }
 
-//T2
+// T2
 var datagamma = []float64{
 	0.6628236482,
 	0.0929215899,
