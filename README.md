@@ -1,6 +1,7 @@
 # Go language course
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/RedHatOfficial/GoCourse)](https://goreportcard.com/report/github.com/RedHatOfficial/GoCourse)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/RedHatOfficial/GoCourse)
 
 This repository contains material for Go language course in Go [present format](https://godoc.org/golang.org/x/tools/present). To view the slides run the present command in the top level directory.
 
