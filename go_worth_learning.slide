@@ -99,7 +99,6 @@ previous century :)
 - Go is a blend of modern approaches combined with quite old ideas
 - explicit error handling
 - no generics till version 1.18
-- no templates
 - no class-based OOP
 - no `try`/`catch`/`finally`
 - `goto` keyword
