@@ -1,0 +1,17 @@
+Go language primer
+Red Hat
+1 May 2023
+Tags: golang, go
+
+Pavel Tišnovský <ptisnovs@redhat.com>
+Red Hat, Inc.
+
+* Sources
+- [[https://github.com/RedHatOfficial/GoCourse]]
+.image ./common/qr_address.png
+
+* Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/fiveyears.jpg
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/fiveyears.jpg _ 900
