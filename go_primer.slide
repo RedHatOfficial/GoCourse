@@ -109,3 +109,96 @@ Red Hat, Inc.
 * Ignoring return values
 - '_' idiom can be used to drop return values
 .play lesson1/ret2.go
+
+* defer statement
+- `defer` is a keyword in the Go programming language
+- used to "remember" commands that will be called before `return` or exit
+- based on LIFO (stack) of remembered commands
+- parameters are evaluated when `defer` is declared (ie. in runtime)
+- (not when the specified code is called)
+- it is possible to change function return value(s) via `defer`
+
+* Basic usage of defer statement
+- function `on_finish()` is called before exit from `main()`
+.play lesson2/01_defer_basic_usage.go
+
+* Structs (records)
+- a.k.a. records
+- user-defined data type (so called named structure)
+- or anonymous structure
+- dot operator to access struct members
+- initialization using {}
+- or by using named members (which is more explicit and better)
+- structs are comparable
+- pass to functions as value or via pointer (by reference)
+
+* Structs and dot operator
+.play lesson2/11_struct.go
+
+* Comparison of whole structs is possible!
+- `==` and `!=` operators
+.play lesson2/14_struct_comparison.go /^func main/,/^}/
+
+* Comparison of whole structs is possible! (cont.)
+.play lesson2/14_struct_comparison.go /^func main/,/^}/
+
+* Arrays
+- basic data type in the Go programming language
+- all array items has the same type
+- (well, you can use `interface{}` to allow _dynamic_typing_behaviour_)
+- type of array is derived from type of items *and* array size
+- (unlike slices)
+- index in range 0..length-1
+- items indexing via [] (as in most other languages)
+
+* Array copy
+- unlike slices, arrays can be copied
+.play lesson2/17_array_copy.go
+
+* Slices
+- proper data type in the Go programming language
+- interface to sequences (better than arrays)
+- slices are used more often than _plain_ _old_ _arrays_
+- type of slice is derived from type of items
+- slices has defined length and capacity (those numbers can be different)
+- internaly a slice is triple: (pointer to the first element + `len` + `cap`)
+- so called "slice operator" `[from:to]`
+- `append` function to add a new element to slice (complicated internally)
+
+
+
+* Usage of slices
+
+.play lesson2/18_slices.go /package main/,/cont//
+
+
+
+* Usage of slices (cont.)
+
+.play lesson2/18_slices.go /cont/,/^}//
+
+
+
+* Slices and arrays as data source for them
+
+- slice can be created from any array
+- but the slice does not contain any data, just a pointer to array element
+- so any modify in slice element is reflected in an array as well
+
+.play lesson2/19_slice_copy.go /package main/,/cont//
+
+* Pointers
+- always points to an element of some type
+- ie. `void` pointers are not supported
+- implicit pointer value is `nil`
+- address of element can be retrieved using the `&` operator
+- access via pointer (reference in some other languages) using the `*` operator
+
+
+
+* Basic usage of pointers
+- please note the usage of `*p_i++`
+
+.play lesson2/22_pointer_to_int.go
+
+
