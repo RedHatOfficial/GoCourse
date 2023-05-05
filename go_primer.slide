@@ -201,4 +201,59 @@ Red Hat, Inc.
 
 .play lesson2/22_pointer_to_int.go
 
+* Maps
+- a.k.a. associative array or hash
+- container for key-value pairs
+- "nil map":
+    var m1 map[int]string
+- empty map:
+    var m3 map[int]string = make(map[int]string)
+    m1 := make(map[int]string)
+
+
+
+* Maps
+- three basic operations: add/put, get, and delete
+- add/put items to a map:
+    m3[0] = "zero"
+    m3[1] = "one"
+    m3[2] = "two"
+- get item from a map:
+    m3[2]
+- delete from a map
+    delete(m3, 0)
+
+* Loops and the range clause
+- `range` keyword used in `for` to loop over array items, map pairs etc.
+- provides an item index as well (Java on the other side...)
+
+
+
+* Iterating over an array
+.play lesson2/33_for_range_1.go
+
+
+
+* Iterating over slice
+.play lesson2/35_for_range_3.go
+
+
+
+* Iterating over Unicode glyphs
+.play lesson2/36_for_range_4.go
+
+
+
+* Iterating over map pairs (key+value)
+.play lesson2/37_for_range_map.go
+
+
+* User-defined data types
+- `type` keyword
+- Go is very strict in typing (see examples)
+
+
+
+* User-defined data types
+.play lesson2/38_user_types.go
 
