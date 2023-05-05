@@ -257,3 +257,52 @@ Red Hat, Inc.
 * User-defined data types
 .play lesson2/38_user_types.go
 
+* Methods on types
+- a _method_ is a function that has a defined receiver
+- (in OOP: a method is a function on an instance of an object)
+- concept of a _receiver_
+- usage - method declaration
+
+    func (receiver) method_name(parameters) return_types {
+        ...
+        ...
+        ...
+    }
+
+- method is called by
+
+    some_object.method_name(parameters)
+
+- methods can modify (mutate) a receiver
+- call by value vs. call by reference (via pointer)
+
+
+
+* User type with one method
+.play lesson3/09_methods.go
+
+* Interfaces
+- set of methods required to implement such interface
+- declared via `interface` keyword:
+
+    type XI interface {
+        method1()
+        method2(int) int
+    }
+
+- interface type — variable of interface type, can hold any value implementing an interface
+- variable of interface type *I* can hold any value _implementing_ *I*
+
+
+
+* Implementing an interface
+- a.k.a. _satisfying_ an interface
+- no such keyword (`implements` or anything similar)
+- in Go: every type which implements all interface’s method automatically satisfies such interface
+
+
+
+* How to satisfy an interface
+- artifical example
+.play lesson3/13_B_satisfy.go
+
