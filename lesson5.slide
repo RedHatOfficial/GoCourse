@@ -20,27 +20,46 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Testing and Benchmarking in Go
 - Unit test "framework" integral to the Go command
-- go test
+- `go` `test`
 - (Micro)Benchmark "framework" part of it too
-- go test -bench .
-- package testing
-- code needs to be "vetable", pass go vet check
+- `go` `test` `-bench` `.`
+- package `testing`
+- code needs to be "vetable", pass `go` `vet` check
 
 * Tests
-- in _test.go files
-- all Test*(t *testing.T) functions get executed
+- in `_test.go` files
+- all `Test*(t` `*testing.T)` functions get executed
 
 * Test main
-- func TestMain(m *testing.M)
-- m.Run
+- `func` `TestMain(m` `*testing.M)`
+- `m.Run`
 - provides ability to do setup, passing CLI flags,...
 - execute tests that don't fit the basic framework, etc.
 - checkout misc/cgo GC tests
 
 * Benchmarks
-- in _test.go files
-- all Benchmark*(b *testing.B) functions get executed
-- can benchmark not only performance(-bench), but memory usage(-benchmem)
+- in `_test.go` files
+- all `Benchmark*(b` `*testing.B)` functions get executed
+- can benchmark not only performance(`-bench`), but memory usage(`-benchmem`)
+
+* Assertions in Go
+- `assert` is not keyword in Go
+- but assert-like functions and methods exist
+- third party libraries
+
+* Assertions in Go (factorial)
+.code testing/assertions/assertions1/factorial.go
+
+* Assertions in Go (factorial)
+.code testing/assertions/assertions1/factorial_test.go
+
+* More assertions-like functions
+
+.code testing/assertions/assertions2/factorial_test.go
+
+* "Dot import" usage
+
+.code testing/assertions/assertions3/factorial_test.go
 
 * Go test tips&tricks
 - you can use build tags and/or short mode
