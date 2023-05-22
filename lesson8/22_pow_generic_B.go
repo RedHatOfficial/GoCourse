@@ -9,7 +9,7 @@ type floats interface {
 	float32 | float64
 }
 
-func pow[T floats](x T, y T) T {
+func pow[T floats](x, y T) T {
 	return T(math.Pow(float64(x), float64(y)))
 }
 
