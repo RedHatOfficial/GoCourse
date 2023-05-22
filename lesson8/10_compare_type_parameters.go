@@ -8,7 +8,7 @@ type comparable interface {
 	int | float64 | string
 }
 
-func compare[T comparable](x T, y T) bool {
+func compare[T comparable](x, y T) bool {
 	return x < y
 }
 
