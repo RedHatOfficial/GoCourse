@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func compare(x int, y int) bool {
+func compare(x, y int) bool {
 	return x < y
 }
 
