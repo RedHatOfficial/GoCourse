@@ -6,8 +6,9 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"gopkg.in/mgo.v2/bson"
 	"os"
+
+	"gopkg.in/mgo.v2/bson"
 )
 
 // Vector represents type of data to be serialized into various formats
@@ -70,7 +71,7 @@ func encodeVectorIntoGob(vector Vector) ([]byte, error) {
 }
 
 func saveVector(encodedVector []byte, filename string) {
-	err := os.WriteFile(filename, encodedVector, 0644)
+	err := os.WriteFile(filename, encodedVector, 0o644)
 	if err != nil {
 		fmt.Println(err)
 	} else {
