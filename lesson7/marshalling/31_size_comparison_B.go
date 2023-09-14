@@ -6,8 +6,9 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"gopkg.in/mgo.v2/bson"
 	"os"
+
+	"gopkg.in/mgo.v2/bson"
 )
 
 // Item is a structure that will be encoded into BSON and other formats
@@ -72,7 +73,7 @@ func encodeStringIntoGob(item Item) ([]byte, error) {
 }
 
 func saveString(encodedString []byte, filename string) {
-	err := os.WriteFile(filename, encodedString, 0644)
+	err := os.WriteFile(filename, encodedString, 0o644)
 	if err != nil {
 		fmt.Println(err)
 	} else {
