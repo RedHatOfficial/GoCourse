@@ -1,6 +1,6 @@
 Is Go language actually worth learning?
 Red Hat
-16 Jun 2022
+18 Jun 2022
 Tags: golang, go
 
 Pavel Tišnovský <ptisnovs@redhat.com>
@@ -68,6 +68,34 @@ previous century :)
 
 .code src/syntax_c.go
 .code src/syntax_go.go
+
+* More readable compared to C++
+
+- In C++ we don't say "Missing asterisk"
+- we say:
+
+    "error C2664:
+    'void std::vector<block,std::alocator<_Ty> >::push_back(const block &)':
+    cannot convert argument 1 from
+    'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<block> > >'
+    to 'block &&'"
+    
+- and i think that's beautiful
+- not mine, source:
+.link https://goo.gl/Akxjih
+
+* More readable compared to C++
+
+    #include <vector>
+    #include <algorithm>
+    int main()
+    {
+        int a;
+        std::vector< std::vector <int> > v;
+        std::vector< std::vector <int> >::const_iterator it = std::find( v.begin(), v.end(), a );
+    }
+
+- gcc -c error.cpp will produce 15786 bytes of output, with a longest line of 330 characters
 
 * Cloud technologies
 .link https://www.docker.com/ Docker
