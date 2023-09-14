@@ -8,7 +8,7 @@ type numeric interface {
 	int | float64 | complex128
 }
 
-func add[T numeric](x T, y T) T {
+func add[T numeric](x, y T) T {
 	return x + y
 }
 
