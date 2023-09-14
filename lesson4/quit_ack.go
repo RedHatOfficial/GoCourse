@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
-func worker(data chan int, quit chan int, ack chan int) {
+func worker(data, quit, ack chan int) {
 	for {
 		select {
 		case x := <-data:
