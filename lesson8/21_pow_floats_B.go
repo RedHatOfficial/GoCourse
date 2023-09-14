@@ -5,11 +5,11 @@ import (
 	"math"
 )
 
-func pow32(x float32, y float32) float32 {
+func pow32(x, y float32) float32 {
 	return float32(math.Pow(float64(x), float64(y)))
 }
 
-func pow64(x float64, y float64) float64 {
+func pow64(x, y float64) float64 {
 	return math.Pow(x, y)
 }
 
