@@ -81,7 +81,7 @@ func decodeBinaryTree(encodedTree bytes.Buffer) (BinaryTree, error) {
 }
 
 func saveBinaryTree(encodedTree bytes.Buffer, filename string) {
-	err := os.WriteFile(filename, encodedTree.Bytes(), 0644)
+	err := os.WriteFile(filename, encodedTree.Bytes(), 0o644)
 	if err != nil {
 		fmt.Println(err)
 	} else {
