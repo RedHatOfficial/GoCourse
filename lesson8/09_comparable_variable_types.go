@@ -5,15 +5,15 @@ package main
 
 import "fmt"
 
-func compareInts(x int, y int) bool {
+func compareInts(x, y int) bool {
 	return x < y
 }
 
-func compareFloats(x float64, y float64) bool {
+func compareFloats(x, y float64) bool {
 	return x < y
 }
 
-func compareStrings(x string, y string) bool {
+func compareStrings(x, y string) bool {
 	return x < y
 }
 
