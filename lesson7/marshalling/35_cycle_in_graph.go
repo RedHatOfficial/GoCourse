@@ -6,8 +6,9 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"gopkg.in/mgo.v2/bson"
 	"os"
+
+	"gopkg.in/mgo.v2/bson"
 )
 
 // Item represents value to be stored in linked list
@@ -76,7 +77,7 @@ func encodeStructureIntoGob(s Node) ([]byte, error) {
 }
 
 func save(encodedStructure []byte, filename string) {
-	err := os.WriteFile(filename, encodedStructure, 0644)
+	err := os.WriteFile(filename, encodedStructure, 0o644)
 	if err != nil {
 		fmt.Println(err)
 	} else {
