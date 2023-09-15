@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/Arafatk/glot"
 	"math"
+
+	"github.com/Arafatk/glot"
 )
 
 // Plot represents context for a graph/chart
@@ -38,9 +39,7 @@ func main() {
 		pointsX[i] = float64(i) * 2.0 * math.Pi / points
 	}
 
-	function1 := func(t float64) float64 {
-		return math.Sin(t)
-	}
+	function1 := math.Sin
 
 	function2 := func(t float64) float64 {
 		return math.Sin(t + 2.0*math.Pi/3)
