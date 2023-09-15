@@ -6,8 +6,9 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"gopkg.in/mgo.v2/bson"
 	"os"
+
+	"gopkg.in/mgo.v2/bson"
 )
 
 // Item represents value stored in binary tree
@@ -122,7 +123,7 @@ func encodeBinaryTreeIntoGob(bt BinaryTree) ([]byte, error) {
 }
 
 func saveBinaryTree(encodedTree []byte, filename string) {
-	err := os.WriteFile(filename, encodedTree, 0644)
+	err := os.WriteFile(filename, encodedTree, 0o644)
 	if err != nil {
 		fmt.Println(err)
 	} else {
