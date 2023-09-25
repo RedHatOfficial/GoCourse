@@ -1,0 +1,28 @@
+Optimizations in Go
+Lesson 9
+25 Sep 2023
+Tags: golang, go
+
+Pavel Tišnovský
+Red Hat, Inc.
+email@email.email
+https://github.com/RedHatOfficial/GoCourse
+@RedHat
+
+
+
+* Sources
+- [[https://github.com/RedHatOfficial/GoCourse]]
+.image ./common/qr_address.png
+
+
+
+* Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/fiveyears.jpg
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/fiveyears.jpg _ 900
+
+
+
+* Optimizations in Go
