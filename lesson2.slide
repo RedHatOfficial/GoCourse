@@ -204,6 +204,7 @@ Outline:
 - initialization using {}
 - or by using named members (which is more explicit and better)
 - structs are comparable
+- it is possible to print whole struct
 - pass to functions as value or via pointer (by reference)
 
 
@@ -427,22 +428,29 @@ Outline:
 - a.k.a. associative array or hash
 - container for key-value pairs
 - "nil map":
+
     var m1 map[int]string
+
 - empty map:
-    var m3 map[int]string = make(map[int]string)
-    m1 := make(map[int]string)
+
+    var m2 map[int]string = make(map[int]string)
+    m3 := make(map[int]string)
 
 
 
 * Maps
 - three basic operations: add/put, get, and delete
 - add/put items to a map:
+
     m3[0] = "zero"
     m3[1] = "one"
     m3[2] = "two"
+
 - get item from a map:
+
     m3[2]
 - delete from a map
+
     delete(m3, 0)
 
 
