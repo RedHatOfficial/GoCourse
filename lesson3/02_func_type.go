@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-func funkce1(x, y int) int {
+func function1(x, y int) int {
 	return x + y
 }
 
-func funkce2(x, y int) int {
+func function2(x, y int) int {
 	return x * y
 }
 
@@ -14,11 +14,11 @@ func main() {
 	var a func(int, int) int
 	fmt.Println(a)
 
-	a = funkce1
+	a = function1
 	fmt.Println(a)
 	fmt.Println(a(10, 20))
 
-	a = funkce2
+	a = function2
 	fmt.Println(a)
 	fmt.Println(a(10, 20))
 }
