@@ -111,6 +111,14 @@ https://github.com/RedHatOfficial/GoCourse
 - go fix
 - forward ports your code to latest release version of Go
 
+* External tools
+- abcgo
+- gosec
+- gocyclo
+- goconst
+- (go)errcheck
+- gocritic
+
 * Dependency management
 
 * The Past
