@@ -202,7 +202,7 @@ Outline:
 
 
 * Circular embedding
-- disabled, detected by compiler
+- forbidden, detected by compiler
 
     type I1 interface {
         I2
@@ -277,6 +277,14 @@ Outline:
 
 
 
+* Type `any`
+- basically
+    type any interface{}
+
+- used in standard library at many places
+
+
+
 * `nil` interface
 - Interface type value consists of two components: dynamic type and dynamic value
 - *static* *type*: known by compiler, from the declaration
@@ -320,6 +328,14 @@ Outline:
 * Type assertions
 .play lesson3/19_type_assertions.go
 
+
+
+* Type assertions
+.play lesson3/handle_server_error.go
+
+
+* Panic
+.play lesson3/panic.go
 
 
 ############################################################
