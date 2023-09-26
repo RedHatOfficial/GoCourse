@@ -39,6 +39,7 @@ https://github.com/RedHatOfficial/GoCourse
 * Development interface
 - Vim;-)
 - Visual Studio Code + go lang support [[https://code.visualstudio.com/docs/setup/linux]]
+- GoLand from JetBrains
 
 
 
@@ -109,6 +110,11 @@ https://github.com/RedHatOfficial/GoCourse
 - Each type has clear zero value (0, false, "")
 .code lesson1/types.go
 
+* Outside basic types
+- math/Int
+- math/Rat
+- math/Float
+
 * Type conversions
 - No auto casts
 .play lesson1/casts.go
@@ -119,6 +125,10 @@ https://github.com/RedHatOfficial/GoCourse
 * Loops
 - Just for loop which also serves as while loop
 .play lesson1/for.go
+
+* Loops
+- break keyword
+- continue keyword
 
 * Conditions
 - Similarly to for loop allows init statement
