@@ -134,6 +134,7 @@ https://github.com/RedHatOfficial/GoCourse
 - init, vendor, download
 - go get bar@...
 - go list -m
+- go list -u -m -json all
 
 * Proxies and sumdbs
 - Proxies facilitates fetches, instead of direct
