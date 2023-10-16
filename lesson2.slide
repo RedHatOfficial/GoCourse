@@ -260,6 +260,9 @@ Outline:
 .play lesson2/15_print_user.go /^func main/,/^}/
 
 
+* Struct embedding
+.play lesson2/40_struct_embedding.go
+
 
 * Anonymous structure
 - just declare new variable and specify its type to `struct` _something_
