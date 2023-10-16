@@ -14,7 +14,7 @@ func (line *Line) length() float64 {
 	if line == nil {
 		return 0
 	}
-    return math.Hypot(line.x1-line.x2, line.y1-line.y2)
+	return math.Hypot(line.x1-line.x2, line.y1-line.y2)
 }
 
 func main() {
