@@ -155,6 +155,9 @@ Outline:
 .play lesson3/11_methods_ptr.go
 
 
+* Nil receiver
+.play lesson3/21_nil_receiver.go
+
 
 * More methods for the same type
 .play lesson3/12_more_methods.go /// Line/,/End OMIT/
