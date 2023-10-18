@@ -1,0 +1,110 @@
+# Calling Go from Pythonn
+
+Pavel Tišnovský
+https://github.com/RedHatOfficial/GoCourse
+
+## Two different worlds
+
+* Python has support for FFI, cffi, ctypes etc.
+* It is possible to compile Go library to .so/.dll
+   - integration seems easy
+* But
+   - in fact the integration is based on common ground: C
+   - different data types
+   - totally different data structures
+   - GC on both sides!
+* Let's try more convenien approaches first
+
+## Howto integrate Go with C
+
+* Go library with exported function
+* Compilation in shared library (DLL)
+* Loading library into C
+
+## Go library
+
+.code go_python/example1.go
+
+## Compile and build a library
+
+```
+go build -buildmode=c-shared so1.go
+```
+
+## Loading Go library from C (1/2)
+
+.code go_python/example1A.c
+
+## Loading Go library from C (2/2)
+
+.code go_python/example1B.c
+
+
+* Compile and build
+
+```
+gcc -ansi use_so1.c -ldl
+```
+
+## Now use Python instead of C
+
+## System-wide library (or LD_LIBRARY_PATH)
+
+.code go_python/example1A.py
+
+## Local library
+
+.code go_python/example1B.py
+
+## `main` and `init` functions possible
+
+.code go_python/example2.go
+
+## Go function with parameters and return value
+
+.code go_python/example3.go
+
+## Call from Python
+
+.code go_python/example3A.py
+
+## Common problems
+
+.code go_python/example3B.py
+
+.code go_python/example3C.py
+
+## System-independent data types
+
+.code go_python/example4.go
+
+## Python side
+
+.code go_python/example4A.py
+
+## Max vals
+
+.code go_python/example4B.py
+
+.code go_python/example4C.py
+
+## Passing strings to Go
+
+.code go_python/example5.go
+
+## Strings on Python side
+
+.code go_python/example5.py
+
+## Type `*C.char`
+
+.code go_python/example6.go
+
+## Strings on Python side
+
+.code go_python/example6A.py
+
+.code go_python/example6B.py
+
+.code go_python/example6C.py
+
