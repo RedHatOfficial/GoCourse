@@ -135,6 +135,7 @@ https://github.com/RedHatOfficial/GoCourse
 - go get bar@...
 - go list -m
 - go list -u -m -json all
+- go list -u -m -json all | go-mod-outdated -update
 
 * Proxies and sumdbs
 - Proxies facilitates fetches, instead of direct
