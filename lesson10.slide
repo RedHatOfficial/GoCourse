@@ -1,0 +1,169 @@
+Databases
+Lesson 10
+Tags: golang, go
+
+Stanislav Zeman <zeman@standa.dev>
+ModernTV s.r.o.
+https://github.com/RedHatOfficial/GoCourse
+@RedHat
+
+* Sources
+- [[https://github.com/RedHatOfficial/GoCourse]]
+.image ./common/qr_address.png
+
+* Standard library
+
+- [[https://pkg.go.dev/database/sql][databases/sql]] package
+- only provides generic interface around SQL databases
+- needs to be used in conjuntion with a database driver 
+- list of [[https://github.com/golang/go/wiki/SQLDrivers][supported drivers]] 
+- low-level
+
+* Usage
+
+.code lesson10/sql.go
+
+* Types of queries
+
+- *Exec*: when no rows are returned
+.code lesson10/sql_exec.go
+
+- *QueryRow*: when at most one row is expected
+.code lesson10/sql_query_row.go
+
+* Types of queries
+- *Query*: multiple values are returned
+.code lesson10/sql_query.go
+
+* GORM
+
+- full-featured ORM
+- high-level
+- [[https://gorm.io/index.html][GORM project page]]
+
+* Showcase
+
+.code lesson10/gorm_showcase.go
+
+* Model
+
+.code lesson10/gorm_model.go
+
+* CRUD - Create
+
+- creating single record
+.code lesson10/gorm_create.go
+
+- create multiple records
+.code lesson10/gorm_create_multiple.go
+
+- create with selected fields
+.code lesson10/gorm_create_selected_fields.go
+
+* CRUD - Read
+
+- reading a single record
+.code lesson10/gorm_read.go
+
+* CRUD - Read
+
+- reading using primary key
+.code lesson10/gorm_read_pk.go
+
+- read all records
+.code lesson10/gorm_read_all.go
+
+* CRUD - Read
+
+- reading using conditions
+.code lesson10/gorm_read_conditions.go
+
+* CRUD - Update
+
+- *Save* saves all fields
+.code lesson10/gorm_save.go
+
+- if *Save* value does not contain primary key, it will execute create instead
+.code lesson10/gorm_save_create.go
+
+* CRUD - Update
+
+- update single column
+.code lesson10/gorm_update_single.go
+
+- update multiple columns
+.code lesson10/gorm_update_multiple.go
+
+- without specifying the user using the Model, GORM executes batch update 
+.code lesson10/gorm_update_batch.go
+
+* CRUD - Delete 
+
+- deleting using primary key
+.code lesson10/gorm_delete_pk.go
+
+* CRUD - Delete 
+
+- batch delete using where
+.code lesson10/gorm_batch_delete.go
+.code lesson10/gorm_batch_delete_with_pk.go
+
+* CRUD - Delete 
+
+- does soft delete when structure containts gorm.DeletedAt field 
+.code lesson10/gorm_soft_delete.go
+
+* Associations - Has Many
+
+- 1:N - declaration using slice and foreign key
+.code lesson10/gorm_has_many_declare.go
+
+- retrieving the data
+.code lesson10/gorm_has_many_retrieve.go
+
+* Associations - Many to Many
+
+- N:M - automatically add a join table
+- declaration using slices and tags
+.code lesson10/gorm_many_to_many_declare.go
+
+* Associations - Many to Many
+
+- retrieving the data
+.code lesson10/gorm_many_to_many_retrieve.go
+
+* Conventions
+
+- uses field *ID* as the table's primary key by default
+.code lesson10/gorm_id.go
+
+- can be overwritten with a tag
+.code lesson10/gorm_overwritten_id.go
+
+* Conventions
+
+- uses struct names as table names
+- converts all names to snake_case
+.code lesson10/gorm_snake_case.go
+
+- table names can be overwritten using Tabler interface
+.code lesson10/gorm_tabler.go
+
+* Conventions
+
+- column names can be overwritten using tags
+.code lesson10/gorm_column_tags.go
+
+* Conventions
+
+- *CreatedAt* and *UpdatedAt* are automatically tracked for you
+.code lesson10/gorm_created_at.go
+
+- can be disabled
+.code lesson10/gorm_disabled_created_at.go
+
+* Raw SQL 
+
+- also supports raw sql execution
+.code lesson10/gorm_raw_sql.go
+.code lesson10/gorm_raw_sql_exec.go
