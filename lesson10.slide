@@ -127,6 +127,8 @@ https://github.com/RedHatOfficial/GoCourse
 - declaration using slices and tags
 .code lesson10/gorm_many_to_many_declare.go
 
+* Associations - Many to Many
+
 - retrieving the data
 .code lesson10/gorm_many_to_many_retrieve.go
 
