@@ -45,6 +45,10 @@ https://github.com/RedHatOfficial/GoCourse
 
 .code lesson10/gorm_showcase.go
 
+* Model
+
+.code lesson10/gorm_model.go
+
 * CRUD - Create
 
 - creating single record
