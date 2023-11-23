@@ -1,7 +1,12 @@
-# Calling Go from Pythonn
+# Calling Go from Python
 
 Pavel Tišnovský
 https://github.com/RedHatOfficial/GoCourse
+
+## Go + Python
+
+.image ./common/golang.png
+.image ./common/python.png
 
 ## Two different worlds
 
@@ -12,13 +17,13 @@ https://github.com/RedHatOfficial/GoCourse
    - in fact the integration is based on common ground: C
    - different data types
    - totally different data structures
-   - GC on both sides!
-* Let's try more convenien approaches first
+   - GC on both sides! (different ones)
+* Let's try more convenient approaches first
 
-## Howto integrate Go with C
+## Step #1: how to integrate Go with C
 
 * Go library with exported function
-* Compilation in shared library (DLL)
+* Compilation into shared library (DLL, so)
 * Loading library into C
 
 ## Go library
@@ -46,7 +51,7 @@ go build -buildmode=c-shared so1.go
 gcc -ansi use_so1.c -ldl
 ```
 
-## Now use Python instead of C
+## Step 2: now use Python instead of C
 
 ## System-wide library (or LD_LIBRARY_PATH)
 
