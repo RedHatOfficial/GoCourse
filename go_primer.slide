@@ -1,6 +1,6 @@
 Go language primer
 Red Hat
-1 May 2023
+1 May 2024
 Tags: golang, go
 
 Pavel Tišnovský <ptisnovs@redhat.com>
@@ -18,11 +18,11 @@ Red Hat, Inc.
 
 * Go keywords
 
-  break     case   chan    const       continue
-  default   defer  else    fallthrough for
-  func      go     goto    if          import
-  interface map    package range       return
-  select    struct switch  type        var
+  break        case      chan       const          continue
+  default      defer     else       fallthrough    for
+  func         go        goto       if             import
+  interface    map       package    range          return
+  select       struct    switch     type           var
 
 * Packages and Imports
 - Program building blocks ("libraries")
@@ -32,8 +32,10 @@ Red Hat, Inc.
 
 .code lesson1/packages.go
 
-* Hello world
+* Hello world in Go
+.play lesson1/hello3.go
 .play lesson1/hello.go
+.play lesson1/hello2.go
 
 * Syntax
 - Evolved from C
@@ -70,17 +72,16 @@ Red Hat, Inc.
 * Constants
 .play lesson1/const.go
 
-* Loops
-- Just for loop which also serves as while loop
-.play lesson1/for.go
-
 * Conditions
 - Similarly to for loop allows init statement
 - Variables declared there don't exist outside of the if block
+- No parethesis around the condition expression
+- Blocks required! (re Apple Goto fail)
 .play lesson1/if.go
 
 * Else statement
 - Variables declared in the init statement do exist in the else block
+- Else on the same line as closing bracket
 .play lesson1/if2.go
 
 * Switch statement
@@ -97,6 +98,10 @@ Red Hat, Inc.
 * Switch with no condition
 - switch without condition is like switch true
 .play lesson1/switch3.go
+
+* Loops
+- Just for loop which also serves as while loop and endless loop
+.play lesson1/for.go
 
 * Error handling
 - error is built-in type
