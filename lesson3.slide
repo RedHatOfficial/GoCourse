@@ -155,6 +155,10 @@ Outline:
 .play lesson3/11_methods_ptr.go
 
 
+* Shorter variant
+.play lesson3/11_methods_ptr_2.go
+
+
 * Nil receiver
 .play lesson3/21_nil_receiver.go
 

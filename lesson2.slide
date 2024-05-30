@@ -193,6 +193,10 @@ Outline:
 .play lesson2/10_defer_return_values.go
 
 
+* Defer and existing app
+.play lesson2/on_finish.go
+
+
 
 ############################################################
 
