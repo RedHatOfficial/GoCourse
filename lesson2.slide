@@ -283,7 +283,7 @@ Outline:
 - type of array is derived from type of items *and* array size
 - (unlike slices)
 - index in range 0..length-1
-- items indexing via [] (as in most other languages)
+- items indexing via [ ] (as in most other languages)
 
 
 
