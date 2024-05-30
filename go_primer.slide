@@ -207,23 +207,27 @@ Red Hat, Inc.
 - a.k.a. associative array or hash
 - container for key-value pairs
 - "nil map":
-    var m1 map[int]string
+    var m1 map[string]int
 - empty map:
-    var m3 map[int]string = make(map[int]string)
-    m1 := make(map[int]string)
+    var m2 map[string]int = make(map[string]int)
+    m3 := make(map[string]int)
 
 
 
 * Maps
-- three basic operations: add/put, get, and delete
+- four basic operations: add/put, get, delete, and contains
 - add/put items to a map:
-    m3[0] = "zero"
-    m3[1] = "one"
-    m3[2] = "two"
+    m3["zero"] = 0
+    m3["one"] = 1
+    m3["two"] = 2
 - get item from a map:
-    m3[2]
+    m3["two"]
 - delete from a map
-    delete(m3, 0)
+    delete(m3, "zero")
+- contains
+    v, exists = m3["two"]
+
+
 
 * Loops and the range clause
 - `range` keyword used in `for` to loop over array items, map pairs etc.
