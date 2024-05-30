@@ -129,6 +129,7 @@ previous century :)
 - no generics till version 1.18
 - no class-based OOP
 - no `try`/`catch`/`finally`
+- no ternary operator
 - `goto` keyword
 - `nil` identifier
 
