@@ -111,9 +111,9 @@ https://github.com/RedHatOfficial/GoCourse
 .code lesson1/types.go
 
 * Outside basic types
-- math/Int
-- math/Rat
-- math/Float
+- math.big/Int
+- math.big/Rat
+- math.big/Float
 
 * Type conversions
 - No auto casts
