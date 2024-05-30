@@ -343,6 +343,18 @@ Outline:
 
 ############################################################
 
+* Go keywords
+
+  break     case   chan    const       continue
+  default   defer  else    fallthrough for
+  func      go     goto    if          import
+  interface map    package range       return
+  select    struct switch  type        var
+
+- https://github.com/tisnik/go-root/blob/master/tools/keywords_frequency.txt
+
+############################################################
+
 * Overview of standard libraries
 - Go is used for making CLI apps, network tools, web servers etc.
 - it is reflected in its standard library
