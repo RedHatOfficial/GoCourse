@@ -33,7 +33,7 @@ https://github.com/RedHatOfficial/GoCourse
 ## Compile and build a library
 
 ```
-go build -buildmode=c-shared so1.go
+go build -buildmode=c-shared example1.go
 ```
 
 ## Loading Go library from C (1/2)
@@ -48,7 +48,7 @@ go build -buildmode=c-shared so1.go
 * Compile and build
 
 ```
-gcc -ansi use_so1.c -ldl
+gcc -ansi example1.c -ldl
 ```
 
 ## Step 2: now use Python instead of C
