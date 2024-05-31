@@ -120,6 +120,7 @@ https://github.com/RedHatOfficial/GoCourse
 - goconst
 - (go)errcheck
 - gocritic
+- golangci-lint
 
 * Dependency management
 
