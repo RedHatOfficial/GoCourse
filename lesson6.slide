@@ -78,3 +78,8 @@ https://github.com/RedHatOfficial/GoCourse
 * Proxy
 
 .play lesson6/proxy.go
+
+* Metrics
+
+.plat lesson6/metrics.go
+
