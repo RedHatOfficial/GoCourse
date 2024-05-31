@@ -1,5 +1,5 @@
 import ctypes
 
-so1 = ctypes.CDLL("./so1.so")
+example1 = ctypes.CDLL("./example1.so")
 
-so1.hello()
+example1.hello()

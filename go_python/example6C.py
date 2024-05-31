@@ -1,6 +1,6 @@
 import ctypes
 
-so6 = ctypes.CDLL("./so6.so")
+example6 = ctypes.CDLL("./example6.so")
 
-l = so6.hello("ěščř ЩжΛλ".encode("utf-8"))
+l = example6.hello("ěščř ЩжΛλ".encode("utf-8"))
 print(l)

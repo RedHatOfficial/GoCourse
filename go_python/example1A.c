@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <dlfcn.h>
 
-#include "so1.h"
+#include "example1.h"
 
 int main()
 {
     void *library;
     void (*hello)();
 
-    library = dlopen("./so1.so", RTLD_LAZY);
+    library = dlopen("./example1.so", RTLD_LAZY);
     if (library != NULL) {
         printf("dynamic library loaded: %p\n", library);
     } else {

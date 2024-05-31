@@ -1,9 +1,9 @@
 import ctypes
 
-so4 = ctypes.CDLL("./so4.so")
+example4 = ctypes.CDLL("./example4.so")
 
 a = 1
 b = 2
 
-c = so4.add(a, b)
+c = example4.add(a, b)
 print(c)

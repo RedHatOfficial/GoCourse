@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <dlfcn.h>
 
-#include "so1.h"
+#include "example1.h"
 
 int main()
 {

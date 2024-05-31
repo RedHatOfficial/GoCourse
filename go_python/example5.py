@@ -1,6 +1,6 @@
 import ctypes
 
-so5 = ctypes.CDLL("./so5.so")
+example5 = ctypes.CDLL("./example5.so")
 
-l = so5.hello("World!")
+l = example5.hello("World!")
 print(l)
