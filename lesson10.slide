@@ -15,7 +15,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 - [[https://pkg.go.dev/database/sql][databases/sql]] package
 - only provides generic interface around SQL databases
-- needs to be used in conjuntion with a database driver 
+- needs to be used in conjunction with a database driver 
 - list of [[https://github.com/golang/go/wiki/SQLDrivers][supported drivers]] 
 - low-level
 
@@ -110,7 +110,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 * CRUD - Delete 
 
-- does soft delete when structure containts gorm.DeletedAt field 
+- does soft delete when structure contains gorm.DeletedAt field 
 .code lesson10/gorm_soft_delete.go
 
 * Associations - Has Many

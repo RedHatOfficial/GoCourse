@@ -109,7 +109,7 @@ https://github.com/RedHatOfficial/GoCourse
 - go vet
 - reports suspicions code construct, possible bugs
 - go fmt
-- formates code to the common coding standard
+- formats code to the common coding standard
 - go fix
 - forward ports your code to latest release version of Go
 
