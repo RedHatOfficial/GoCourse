@@ -5,7 +5,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 ## Simple but useful performance improvements in Go
 
-* Go compiler is pretty straightfoward (= dumb)
+* Go compiler is pretty straightforward (= dumb)
 * It needs some help from developers
 
 ## Some interesting areas backed by experience
@@ -1093,7 +1093,7 @@ return bb.String()
 * SSE
     - SSE 2, SSE 3, SSE 4.1, SSE 4.2
 * AVX
-    - splitted into multiple sets
+    - split into multiple sets
     - F16C etc.
 
 

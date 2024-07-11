@@ -111,7 +111,7 @@ https://github.com/RedHatOfficial/GoCourse
 
 * Tests in its own package
 
-- this is preffered way
+- this is preferred way
 - need proper project setup
 
 .code testing/testing/tests01B/go.mod
@@ -430,7 +430,7 @@ Author: https://github.com/leandroreox
 
 
 
-* Tests splitted into more functions
+* Tests split into more functions
 .code ./testing/goblin/07_nested_struct_test.go
 
 

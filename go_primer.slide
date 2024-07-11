@@ -75,7 +75,7 @@ Red Hat, Inc.
 * Conditions
 - Similarly to for loop allows init statement
 - Variables declared there don't exist outside of the if block
-- No parethesis around the condition expression
+- No parenthesis around the condition expression
 - Blocks required! (re Apple Goto fail)
 .play lesson1/if.go
 
@@ -163,7 +163,7 @@ Red Hat, Inc.
 - slices are used more often than _plain_ _old_ _arrays_
 - type of slice is derived from type of items
 - slices has defined length and capacity (those numbers can be different)
-- internaly a slice is triple: (pointer to the first element + `len` + `cap`)
+- internally a slice is triple: (pointer to the first element + `len` + `cap`)
 - so called "slice operator" `[from:to]`
 - `append` function to add a new element to slice (complicated internally)
 
@@ -309,7 +309,7 @@ Red Hat, Inc.
 
 
 * How to satisfy an interface
-- artifical example
+- artificial example
 .play lesson3/13_B_satisfy.go
 
 

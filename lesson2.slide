@@ -315,7 +315,7 @@ Outline:
 - slices are used more often than _plain_ _old_ _arrays_
 - type of slice is derived from type of items
 - slices has defined length and capacity (those numbers can be different)
-- internaly a slice is triple: (pointer to the first element + `len` + `cap`)
+- internally a slice is triple: (pointer to the first element + `len` + `cap`)
 - so called "slice operator" `[from:to]`
 - `append` function to add a new element to slice (complicated internally)
 
@@ -460,12 +460,12 @@ Outline:
 
 
 
-* Unitialized map ("nil map")
+* Uninitialized map ("nil map")
 .play lesson2/26_uninitialized_map.go
 
 
 
-* Unitialized map ("nil map")
+* Uninitialized map ("nil map")
 .play lesson2/26_B_uninitialized_map.go
 
 
