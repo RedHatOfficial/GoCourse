@@ -1,0 +1,19 @@
+Apache Kafka for Gophers
+A Cloud Native Guide
+
+18 Nov 2024
+Tags: golang, go, kafka, strimzi
+
+Aykut Bulgu <aykut@redhat.com>
+Red Hat, Inc.
+https://github.com/RedHatOfficial/GoCourse
+
+* Sources
+- [[https://github.com/RedHatOfficial/GoCourse]]
+.image ./common/qr_address.png
+
+* Gophers
+#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+#Source https://golang.org/doc/gopher/fiveyears.jpg
+#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./common/fiveyears.jpg _ 900
