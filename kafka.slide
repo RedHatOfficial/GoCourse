@@ -1,19 +1,114 @@
-Apache Kafka for Gophers
-A Cloud Native Guide
+# Cloud Native Kafka for Gophers
 
-18 Nov 2024
+A guide for using Kafka & Strimzi in Golang
+11 Nov 2024
+
+//Summary: This is a great document you want to read.
 Tags: golang, go, kafka, strimzi
 
-Aykut Bulgu <aykut@redhat.com>
-Red Hat, Inc.
-https://github.com/RedHatOfficial/GoCourse
+Aykut Bulgu <aykut@systemcraftsman.com>
+Red Hat, Inc. | System Craftsman
+https://www.systemcraftsman.com
+@SystemCraftsman
 
-* Sources
-- [[https://github.com/RedHatOfficial/GoCourse]]
-.image ./common/qr_address.png
+## About Me
 
-* Gophers
-#The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
-#Source https://golang.org/doc/gopher/fiveyears.jpg
-#The design and this image is licensed under the Creative Commons 3.0 Attributions license.
+.image ./kafka/images/back_to_the_engineering.png _ 700
+
+## About Me
+
+.code ./kafka/aboutme.yaml
+
+## Gophers
+
 .image ./common/fiveyears.jpg _ 900
+.caption _Gopher_ by [[https://instagram.com/reneefrench][Renee French]]
+
+## What is Apache Kafka?
+
+// Section title
+
+## Apache Kafka Concepts
+
+TODO
+
+## Cloud Native Kafka: Strimzi
+
+// Section title
+
+## Cloud Native Kafka: Strimzi
+
+.image ./kafka/images/strimzi_def.png _ 700
+
+## Kubernetes Native Kafka: Strimzi
+
+.image ./kafka/images/strimzi_arch.png _ 700
+
+## Creating a Kafka Cluster
+
+The Strimzi operator is running on our local Kubernetes cluster, in the default namespace.
+
+.play ./kafka/code/show_operator_state.go /START OMIT/,/END OMIT/
+
+Create the Kafka cluster called `kafka-cluster` on the default namespace by using [Strimzi Kafka CLI](https://github.com/SystemCraftsman/strimzi-kafka-cli). Another way is to use YAMLs and `kubectl`.
+
+.play ./kafka/code/create_strimzi_cluster.go /START OMIT/,/END OMIT/
+
+## Using Strimzi Kafka with Golang
+.image ./kafka/images/gopher_kafka_cook.png _ 600
+.caption _Image_From:_https://medium.com/trendyol-tech/batch-processing-with-confluent-kafka-go-707790e7d563_
+
+## Golang Kafka Clients
+
+Some popular Kafka libraries for Go:
+
+* **Sarama** by Shopify
+* **Confluent Kafka Go**
+* **Franz-go** by Twilio
+* **kafka-go** by Segment
+* **Goka** by Lovoo
+
+
+## Sarama
+
+* One of the most widely used Go clients for Kafka, developed by Shopify. Now under IBM maintenance.*
+* Supports Kafka producers and consumers, including synchronous and asynchronous processing.
+* Provides configuration options for message retries, compression, and partition handling.
+* It’s suitable for both high-level consumers (like consumer groups) and lower-level (partition) consumers.
+
+.caption [*] _https://github.com/IBM/sarama/issues/2461_
+
+## Sarama - Producer
+
+.code ./kafka/code/sarama_producer.go /START1 OMIT/,/END1 OMIT/
+.code ./kafka/code/sarama_producer.go /START2 OMIT/,/END2 OMIT/
+
+## Sarama - Consumer
+.code ./kafka/code/sarama_consumer.go /START OMIT/,/END OMIT/
+
+## Confluent Kafka Go
+
+* Developed by Confluent, it’s a Go wrapper around the C/C++ library `librdkafka`.
+* Provides advanced features for Kafka, including exactly-once semantics, which are not available in Sarama.
+* Ideal for enterprise-grade applications with a need for high throughput, low latency, and Confluent-specific capabilities.
+* Well-integrated with the Confluent platform and its features like Schema Registry.
+
+## Confluent Kafka Go - Producer
+
+.code ./kafka/code/confluent_producer.go /START1 OMIT/,/END1 OMIT/
+.code ./kafka/code/confluent_producer.go /START2 OMIT/,/END2 OMIT/
+
+## Confluent Kafka Go - Consumer
+
+.code ./kafka/code/confluent_consumer.go /START OMIT/,/END OMIT/
+
+## kafka-go
+
+* Built by Segment, it’s a pure Go implementation of the Kafka protocol.
+* Suitable for applications needing a simpler API without depending on `librdkafka`.
+* Offers key functionalities like producer, consumer, and reader abstractions, with support for batching, compression, and automatic topic creation.
+* Supports distributed applications, such as multi-partition reading and writing.
+
+## Sources
+- [https://github.com/RedHatOfficial/GoCourse](https://github.com/RedHatOfficial/GoCourse)
+.image ./common/qr_address.png
