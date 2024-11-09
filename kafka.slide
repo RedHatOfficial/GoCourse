@@ -22,11 +22,15 @@ https://www.systemcraftsman.com
 ## Gophers
 
 .image ./common/fiveyears.jpg _ 900
-.caption _Gopher_ by [[https://instagram.com/reneefrench][Renee French]]
+.caption _Gopher(s)_ by [[https://instagram.com/reneefrench][Renee French]]
 
 ## What is Apache Kafka?
 
 // Section title
+
+## What is Apache Kafka?
+
+TODO
 
 ## Apache Kafka Concepts
 
@@ -56,7 +60,7 @@ Create the Kafka cluster called `kafka-cluster` on the default namespace by usin
 
 ## Using Strimzi Kafka with Golang
 .image ./kafka/images/gopher_kafka_cook.png _ 600
-.caption _Image_From:_https://medium.com/trendyol-tech/batch-processing-with-confluent-kafka-go-707790e7d563_
+.caption _Image_from:_https://medium.com/trendyol-tech/batch-processing-with-confluent-kafka-go-707790e7d563_
 
 ## Golang Kafka Clients
 
@@ -64,8 +68,8 @@ Some popular Kafka libraries for Go:
 
 * **Sarama** by Shopify
 * **Confluent Kafka Go**
-* **Franz-go** by Twilio
 * **kafka-go** by Segment
+* **Franz-go** by Twilio
 * **Goka** by Lovoo
 
 
@@ -108,6 +112,26 @@ Some popular Kafka libraries for Go:
 * Suitable for applications needing a simpler API without depending on `librdkafka`.
 * Offers key functionalities like producer, consumer, and reader abstractions, with support for batching, compression, and automatic topic creation.
 * Supports distributed applications, such as multi-partition reading and writing.
+
+## kafka-go - Producer
+
+## kafka-go - Consumer
+
+## franz-go
+
+* A recent library developed by Twilio that also provides a pure Go Kafka client.
+* Focuses on high-performance and ease of use with support for consumer groups, transactions, and connection pooling.
+* Supports Kafka 2.0+ features, including better handling of Kafka protocol updates.
+* Franz-go can be a good alternative to `kafka-go` for its modern approach and robust documentation.
+
+## franz-go - Producer
+
+## franz-go - Consumer
+
+## Goka
+
+* Goka is a Go library specifically designed for building stream processing applications with Kafka.
+* Unlike general-purpose Kafka clients, Goka is more focused on implementing concepts from Kafka Streams, making it a great choice if you're working on stateful stream processing in Go.
 
 ## Sources
 - [https://github.com/RedHatOfficial/GoCourse](https://github.com/RedHatOfficial/GoCourse)
