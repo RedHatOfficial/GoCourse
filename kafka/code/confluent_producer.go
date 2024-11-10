@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"github.com/confluentinc/confluent-kafka-go/v2/kafka"
 )
 
 /*
 // START1 OMIT
-$ go get github.com/confluentinc/confluent-kafka-go/kafka
+$ go get github.com/confluentinc/confluent-kafka-go/v2/kafka
 // END1 OMIT
 */
 func main() {
@@ -20,8 +20,10 @@ func main() {
 	}
 	defer producer.Close()
 
+	topic_name := "test-topic"
+
 	message := &kafka.Message{
-		TopicPartition: kafka.TopicPartition{Topic: &"test-topic", Partition: kafka.PartitionAny},
+		TopicPartition: kafka.TopicPartition{Topic: &topic_name, Partition: kafka.PartitionAny},
 		Value:          []byte("Hello, Kafka from Confluent Kafka Go!"),
 	}
 

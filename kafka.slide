@@ -82,9 +82,11 @@ Some popular Kafka libraries for Go:
 
 .caption [*] _https://github.com/IBM/sarama/issues/2461_
 
-## Sarama - Producer
+Command for including the library:
 
 .code ./kafka/code/sarama_producer.go /START1 OMIT/,/END1 OMIT/
+
+## Sarama - Producer
 .code ./kafka/code/sarama_producer.go /START2 OMIT/,/END2 OMIT/
 
 ## Sarama - Consumer
@@ -97,14 +99,17 @@ Some popular Kafka libraries for Go:
 * Ideal for enterprise-grade applications with a need for high throughput, low latency, and Confluent-specific capabilities.
 * Well-integrated with the Confluent platform and its features like Schema Registry.
 
-## Confluent Kafka Go - Producer
+Command for including the library:
 
 .code ./kafka/code/confluent_producer.go /START1 OMIT/,/END1 OMIT/
-.code ./kafka/code/confluent_producer.go /START2 OMIT/,/END2 OMIT/
+
+## Confluent Kafka Go - Producer
+
+.play ./kafka/code/confluent_producer.go /START2 OMIT/,/END2 OMIT/
 
 ## Confluent Kafka Go - Consumer
 
-.code ./kafka/code/confluent_consumer.go /START OMIT/,/END OMIT/
+.play ./kafka/code/confluent_consumer.go /START OMIT/,/END OMIT/
 
 ## kafka-go
 
@@ -113,9 +118,17 @@ Some popular Kafka libraries for Go:
 * Offers key functionalities like producer, consumer, and reader abstractions, with support for batching, compression, and automatic topic creation.
 * Supports distributed applications, such as multi-partition reading and writing.
 
+Command for including the library:
+
+.code ./kafka/code/kafka_go_producer.go /START1 OMIT/,/END1 OMIT/
+
 ## kafka-go - Producer
 
+.code ./kafka/code/kafka_go_producer.go /START2 OMIT/,/END2 OMIT/
+
 ## kafka-go - Consumer
+
+.code ./kafka/code/kafka_go_consumer.go /START OMIT/,/END OMIT/
 
 ## franz-go
 
@@ -124,14 +137,22 @@ Some popular Kafka libraries for Go:
 * Supports Kafka 2.0+ features, including better handling of Kafka protocol updates.
 * Franz-go can be a good alternative to `kafka-go` for its modern approach and robust documentation.
 
+Command for including the library:
+
+.code ./kafka/code/franz_go_producer.go /START1 OMIT/,/END1 OMIT/
+
 ## franz-go - Producer
 
+.code ./kafka/code/franz_go_producer.go /START2 OMIT/,/END2 OMIT/
+
 ## franz-go - Consumer
+
+.code ./kafka/code/franz_go_consumer.go /START OMIT/,/END OMIT/
 
 ## Goka
 
 * Goka is a Go library specifically designed for building stream processing applications with Kafka.
-* Unlike general-purpose Kafka clients, Goka is more focused on implementing concepts from Kafka Streams, making it a great choice if you're working on stateful stream processing in Go.
+* Unlike general-purpose Kafka clients, Goka is more focused on implementing concepts from Kafka Streams, making it a great choice if you're working on stateful stream processing in Go. 
 
 ## Sources
 - [https://github.com/RedHatOfficial/GoCourse](https://github.com/RedHatOfficial/GoCourse)
