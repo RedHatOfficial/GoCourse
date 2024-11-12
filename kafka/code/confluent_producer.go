@@ -9,7 +9,7 @@ import (
 
 /*
 // START1 OMIT
-$ go get github.com/confluentinc/confluent-kafka-go/v2/kafka
+$ go get github.com/confluentinc/confluent-kafka-go/kafka
 // END1 OMIT
 */
 func main() {

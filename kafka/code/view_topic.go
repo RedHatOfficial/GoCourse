@@ -10,18 +10,15 @@ import (
 
 /*
 // START OMIT
-$ kfk clusters --create \
---cluster kafka-cluster \
---replicas 1 --zk-replicas 1 \
---namespace default \
---yes
+$ kfk topics --describe \
+--topic orders \
+-c kafka-cluster -n default
 // END OMIT
 */
 func main() {
-	cmd := exec.Command("kfk", "clusters", "--create",
-		"--cluster", "kafka-cluster",
-		"--replicas", "1", "--zk-replicas", "1",
-		"--namespace", "default", "--yes")
+	cmd := exec.Command("kfk", "topics", "--describe",
+		"--topic", "orders",
+		"-c", "kafka-cluster", "-n", "default")
 
 	var stdBuffer bytes.Buffer
 	mw := io.MultiWriter(os.Stdout, &stdBuffer)
@@ -34,4 +31,5 @@ func main() {
 	}
 
 	//log.Println(stdBuffer.String())
+
 }

@@ -24,41 +24,100 @@ https://www.systemcraftsman.com
 .image ./common/fiveyears.jpg _ 900
 .caption _Gopher(s)_ by [[https://instagram.com/reneefrench][Renee French]]
 
+## Apache Kafka
+
+//Section title
+
+## What is Apache Kafka?
+.image ./kafka/images/kafka.png _ 600
+Apache Kafka is a distributed system designed for streams. It is built to be an horizontally-scalable, fault-tolerant, commit log, and allows distributed data streams and stream processing applications.
+
 ## What is Apache Kafka?
 
-// Section title
+* Developed at LinkedIn back in 2010, open sourced in 2011
+* Designed to be fast, scalable, durable and highly available
+* Distributed by design
+* Data partitioning (sharding)
+* High throughput
+* Ability to handle huge number of consumers
 
-## What is Apache Kafka?
+## Apache Kafka Ecosystem
 
-TODO
+* **Kafka Core**
+  * Broker
+  * Producer API, Consumer API, Admin API
+  * Management tools
+* Kafka Connect
+* Kafka Streams API
+* Mirror Maker / Mirror Maker 2
+* REST Proxy for bridging HTTP and Kafka
+* Schema Registry
 
-## Apache Kafka Concepts
+## Apache Kafka Concepts - Brokers & HA
 
-TODO
+.image ./kafka/images/brokers_ha_1.png _ 800
+
+## Apache Kafka Concepts - Brokers & HA
+
+.image ./kafka/images/brokers_ha_2.png _ 1000
+
+## Apache Kafka Concepts - Producers
+
+.image ./kafka/images/producers.png _ 900
+
+## Apache Kafka Concepts - Consumers
+
+.image ./kafka/images/consumers.png _ 900
+
+## Apache Kafka Use Cases
+
+Real time ...
+
+* Messaging
+* Activity Tracking
+* Stream Processing
+* Data Integration
+* Metrics
+* Log aggregation
 
 ## Cloud Native Kafka: Strimzi
 
-// Section title
+//Section title
 
 ## Cloud Native Kafka: Strimzi
 
 .image ./kafka/images/strimzi_def.png _ 700
 
+## Why Strimzi? Why run Kafka on Kubernetes?
+
+* Simplified Deployment and Management
+* Scalability and Flexibility
+* High Availability and Fault Tolerance
+* Infrastructure Agnostic
+* Operational Efficiency
+* Seamless Integration with Other Kubernetes Ecosystem Tools
+* Developer Productivity
+
 ## Kubernetes Native Kafka: Strimzi
 
 .image ./kafka/images/strimzi_arch.png _ 700
 
-## Creating a Kafka Cluster
+## A Quick Peek to a Kafka Cluster on Kubernetes
 
-The Strimzi operator is running on our local Kubernetes cluster, in the default namespace.
+The Strimzi operator and a pre-created Kafka cluster is running on our local Kubernetes cluster, in the `default` namespace.
 
 .play ./kafka/code/show_operator_state.go /START OMIT/,/END OMIT/
 
-Create the Kafka cluster called `kafka-cluster` on the default namespace by using [Strimzi Kafka CLI](https://github.com/SystemCraftsman/strimzi-kafka-cli). Another way is to use YAMLs and `kubectl`.
+Let's have a quick look at the Kafka cluster called `kafka-cluster` by using [Strimzi Kafka CLI](https://github.com/SystemCraftsman/strimzi-kafka-cli). Another way is to use YAMLs and `kubectl`.
 
-.play ./kafka/code/create_strimzi_cluster.go /START OMIT/,/END OMIT/
+.play ./kafka/code/show_strimzi_cluster.go /START OMIT/,/END OMIT/
+
+## The Golang Side
+
+//Section title
 
 ## Using Strimzi Kafka with Golang
+
 .image ./kafka/images/gopher_kafka_cook.png _ 600
 .caption _Image_from:_https://medium.com/trendyol-tech/batch-processing-with-confluent-kafka-go-707790e7d563_
 
@@ -105,11 +164,11 @@ Command for including the library:
 
 ## Confluent Kafka Go - Producer
 
-.play ./kafka/code/confluent_producer.go /START2 OMIT/,/END2 OMIT/
+.code ./kafka/code/confluent_producer.go /START2 OMIT/,/END2 OMIT/
 
 ## Confluent Kafka Go - Consumer
 
-.play ./kafka/code/confluent_consumer.go /START OMIT/,/END OMIT/
+.code ./kafka/code/confluent_consumer.go /START OMIT/,/END OMIT/
 
 ## kafka-go
 
@@ -154,6 +213,56 @@ Command for including the library:
 * Goka is a Go library specifically designed for building stream processing applications with Kafka.
 * Unlike general-purpose Kafka clients, Goka is more focused on implementing concepts from Kafka Streams, making it a great choice if you're working on stateful stream processing in Go. 
 
-## Sources
-- [https://github.com/RedHatOfficial/GoCourse](https://github.com/RedHatOfficial/GoCourse)
-.image ./common/qr_address.png
+## Demo
+
+//Section title
+
+## The Coffee Shop
+
+.image ./kafka/images/coffeeshop.jpg _ 800
+[https://github.com/RedHatTraining/AD482-ToT-CoffeeShop](https://github.com/RedHatTraining/AD482-ToT-CoffeeShop)
+
+## The Coffee Shop - History
+
+.image ./kafka/images/coffeeshop_history_sync.png _ 700
+
+## The Coffee Shop - History
+
+.image ./kafka/images/coffeeshop_history_async.png _ 700
+
+## The Coffee Shop - Simplified
+
+.image ./kafka/images/coffeeshop_arch_diagram.png _ 1000
+
+## Creating the Topic
+
+Run the following Strimzi CLI command to create the topic on your Strimzi cluster:
+
+.play ./kafka/code/create_topic.go /START OMIT/,/END OMIT/
+
+Topic details:
+
+.play ./kafka/code/view_topic.go /START OMIT/,/END OMIT/
+
+Open the IDE for the rest of the demo:)
+
+.play ./kafka/code/open_ide.go /START OMIT/,/END OMIT/
+
+## Source of the Demo
+
+.image ./kafka/images/demo_qr_code.png _ 400
+[https://github.com/SystemCraftsman/coffeeshop-kafka-go-demo](https://github.com/SystemCraftsman/coffeeshop-kafka-go-demo)
+
+## MISC
+
+// Section title
+
+## Golang Present Library
+
+.image ./kafka/images/present.png _ 700
+[https://pkg.go.dev/golang.org/x/tools/present](https://pkg.go.dev/golang.org/x/tools/present)
+
+## GoKonf - November 23rd
+
+.image ./kafka/images/go_konf.jpeg _ 700
+[https://gokonf.com/](https://gokonf.com/)
