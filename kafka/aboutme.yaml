@@ -1,0 +1,24 @@
+#oc apply -f aykutbulgu.yaml
+apiVersion: redhat/v6
+kind: Principal Software Engineer
+metadata:
+  name: Aykut Bulgu
+  namespace: Red Hat Ansible Engineering (previously Kafka)
+  annotations:
+    twitter: @systemcraftsman
+    email:
+      - aykut@systemcraftsman.com
+      - abulgu@redhat.com
+    ex-organizer: Software Craftsmanship Turkey
+    founder: System Craftsman
+  labels:
+    married: yes
+    children: 2
+    interests:
+      - basketball/nba/rockets
+      - gamification
+      - stoicism; mentalism
+spec:
+replicas: 1
+containers:
+  - image: aykut:latest
