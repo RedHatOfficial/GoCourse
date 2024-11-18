@@ -1,0 +1,267 @@
+# Cloud Native Kafka for Gophers
+
+A guide for using Kafka & Strimzi in Golang
+11 Nov 2024
+
+Tags: golang, go, kafka, strimzi
+
+Aykut Bulgu <aykut@systemcraftsman.com>
+Red Hat, Inc. | System Craftsman
+https://www.systemcraftsman.com
+@SystemCraftsman
+
+## About Me
+
+.image ./kafka/images/back_to_the_engineering.png _ 700
+
+## About Me
+
+.code ./kafka/aboutme.yaml
+
+## Gophers
+
+.image ./common/fiveyears.jpg _ 900
+.caption _Gopher(s)_ by [[https://instagram.com/reneefrench][Renee French]]
+
+## Apache Kafka
+
+//Section title
+
+## What is Apache Kafka?
+.image ./kafka/images/kafka.png _ 600
+Apache Kafka is a distributed system designed for streams. It is built to be an horizontally-scalable, fault-tolerant, commit log, and allows distributed data streams and stream processing applications.
+
+## What is Apache Kafka?
+
+* Developed at LinkedIn back in 2010, open sourced in 2011
+* Designed to be fast, scalable, durable and highly available
+* Distributed by design
+* Data partitioning (sharding)
+* High throughput
+* Ability to handle huge number of consumers
+
+## Apache Kafka Ecosystem
+
+* **Kafka Core**
+  * Broker
+  * Producer API, Consumer API, Admin API
+  * Management tools
+* Kafka Connect
+* Kafka Streams API
+* Mirror Maker / Mirror Maker 2
+* REST Proxy for bridging HTTP and Kafka
+* Schema Registry
+
+## Apache Kafka Concepts - Brokers & HA
+
+.image ./kafka/images/brokers_ha_1.png _ 800
+
+## Apache Kafka Concepts - Brokers & HA
+
+.image ./kafka/images/brokers_ha_2.png _ 1000
+
+## Apache Kafka Concepts - Producers
+
+.image ./kafka/images/producers.png _ 900
+
+## Apache Kafka Concepts - Consumers
+
+.image ./kafka/images/consumers.png _ 900
+
+## Apache Kafka Use Cases
+
+Real time ...
+
+* Messaging
+* Activity Tracking
+* Stream Processing
+* Data Integration
+* Metrics
+* Log aggregation
+
+## Cloud Native Kafka: Strimzi
+
+//Section title
+
+## Cloud Native Kafka: Strimzi
+
+.image ./kafka/images/strimzi_def.png _ 700
+
+## Why Strimzi? Why run Kafka on Kubernetes?
+
+* Simplified Deployment and Management
+* Scalability and Flexibility
+* High Availability and Fault Tolerance
+* Infrastructure Agnostic
+* Operational Efficiency
+* Seamless Integration with Other Kubernetes Ecosystem Tools
+* Developer Productivity
+
+## Kubernetes Native Kafka: Strimzi
+
+.image ./kafka/images/strimzi_arch.png _ 700
+
+## A Quick Peek to a Kafka Cluster on Kubernetes
+
+The Strimzi operator and a pre-created Kafka cluster is running on our local Kubernetes cluster, in the `default` namespace.
+
+.play ./kafka/code/show_operator_state.go /START OMIT/,/END OMIT/
+
+Let's have a quick look at the Kafka cluster called `kafka-cluster` by using [Strimzi Kafka CLI](https://github.com/SystemCraftsman/strimzi-kafka-cli). Another way is to use YAMLs and `kubectl`.
+
+.play ./kafka/code/show_strimzi_cluster.go /START OMIT/,/END OMIT/
+
+## The Golang Side
+
+//Section title
+
+## Using Strimzi Kafka with Golang
+
+.image ./kafka/images/gopher_kafka_cook.png _ 600
+.caption _Image_from:_https://medium.com/trendyol-tech/batch-processing-with-confluent-kafka-go-707790e7d563_
+
+## Golang Kafka Clients
+
+Some popular Kafka libraries for Go:
+
+* **Sarama** by Shopify
+* **Confluent Kafka Go**
+* **kafka-go** by Segment
+* **Franz-go** by Twilio
+* **Goka** by Lovoo
+
+
+## Sarama
+
+* One of the most widely used Go clients for Kafka, developed by Shopify. Now under IBM maintenance.*
+* Supports Kafka producers and consumers, including synchronous and asynchronous processing.
+* Provides configuration options for message retries, compression, and partition handling.
+* It’s suitable for both high-level consumers (like consumer groups) and lower-level (partition) consumers.
+
+.caption [*] _https://github.com/IBM/sarama/issues/2461_
+
+Command for including the library:
+
+.code ./kafka/code/sarama_producer.go /START1 OMIT/,/END1 OMIT/
+
+## Sarama - Producer
+.code ./kafka/code/sarama_producer.go /START2 OMIT/,/END2 OMIT/
+
+## Sarama - Consumer
+.code ./kafka/code/sarama_consumer.go /START OMIT/,/END OMIT/
+
+## Confluent Kafka Go
+
+* Developed by Confluent, it’s a Go wrapper around the C/C++ library `librdkafka`.
+* Provides advanced features for Kafka, including exactly-once semantics, which are not available in Sarama.
+* Ideal for enterprise-grade applications with a need for high throughput, low latency, and Confluent-specific capabilities.
+* Well-integrated with the Confluent platform and its features like Schema Registry.
+
+Command for including the library:
+
+.code ./kafka/code/confluent_producer.go /START1 OMIT/,/END1 OMIT/
+
+## Confluent Kafka Go - Producer
+
+.code ./kafka/code/confluent_producer.go /START2 OMIT/,/END2 OMIT/
+
+## Confluent Kafka Go - Consumer
+
+.code ./kafka/code/confluent_consumer.go /START OMIT/,/END OMIT/
+
+## kafka-go
+
+* Built by Segment, it’s a pure Go implementation of the Kafka protocol.
+* Suitable for applications needing a simpler API without depending on `librdkafka`.
+* Offers key functionalities like producer, consumer, and reader abstractions, with support for batching, compression, and automatic topic creation.
+* Supports distributed applications, such as multi-partition reading and writing.
+
+Command for including the library:
+
+.code ./kafka/code/kafka_go_producer.go /START1 OMIT/,/END1 OMIT/
+
+## kafka-go - Producer
+
+.code ./kafka/code/kafka_go_producer.go /START2 OMIT/,/END2 OMIT/
+
+## kafka-go - Consumer
+
+.code ./kafka/code/kafka_go_consumer.go /START OMIT/,/END OMIT/
+
+## franz-go
+
+* A recent library developed by Twilio that also provides a pure Go Kafka client.
+* Focuses on high-performance and ease of use with support for consumer groups, transactions, and connection pooling.
+* Supports Kafka 2.0+ features, including better handling of Kafka protocol updates.
+* Franz-go can be a good alternative to `kafka-go` for its modern approach and robust documentation.
+
+Command for including the library:
+
+.code ./kafka/code/franz_go_producer.go /START1 OMIT/,/END1 OMIT/
+
+## franz-go - Producer
+
+.code ./kafka/code/franz_go_producer.go /START2 OMIT/,/END2 OMIT/
+
+## franz-go - Consumer
+
+.code ./kafka/code/franz_go_consumer.go /START OMIT/,/END OMIT/
+
+## Goka
+
+* Goka is a Go library specifically designed for building stream processing applications with Kafka.
+* Unlike general-purpose Kafka clients, Goka is more focused on implementing concepts from Kafka Streams, making it a great choice if you're working on stateful stream processing in Go. 
+
+## Demo
+
+//Section title
+
+## The Coffee Shop
+
+.image ./kafka/images/coffeeshop.jpg _ 800
+[https://github.com/RedHatTraining/AD482-ToT-CoffeeShop](https://github.com/RedHatTraining/AD482-ToT-CoffeeShop)
+
+## The Coffee Shop - History
+
+.image ./kafka/images/coffeeshop_history_sync.png _ 700
+
+## The Coffee Shop - History
+
+.image ./kafka/images/coffeeshop_history_async.png _ 700
+
+## The Coffee Shop - Simplified
+
+.image ./kafka/images/coffeeshop_arch_diagram.png _ 1000
+
+## Creating the Topic
+
+Run the following Strimzi CLI command to create the topic on your Strimzi cluster:
+
+.play ./kafka/code/create_topic.go /START OMIT/,/END OMIT/
+
+Topic details:
+
+.play ./kafka/code/view_topic.go /START OMIT/,/END OMIT/
+
+Open the IDE for the rest of the demo:)
+
+.play ./kafka/code/open_ide.go /START OMIT/,/END OMIT/
+
+## Source of the Demo
+
+.image ./kafka/images/demo_qr_code.png _ 400
+[https://github.com/SystemCraftsman/coffeeshop-kafka-go-demo](https://github.com/SystemCraftsman/coffeeshop-kafka-go-demo)
+
+## MISC
+
+// Section title
+
+## Golang Present Library
+
+.image ./kafka/images/present.png _ 700
+[https://pkg.go.dev/golang.org/x/tools/present](https://pkg.go.dev/golang.org/x/tools/present)
+
+## GoKonf - November 23rd
+
+.image ./kafka/images/go_konf.jpeg _ 700
+[https://gokonf.com/](https://gokonf.com/)
