@@ -1,9 +1,8 @@
 Go language primer
-Red Hat
-1 May 2024
+Pavel Tišnovský <golang@centrum.cz>
+12 Jun 2024
 Tags: golang, go
 
-Pavel Tišnovský <ptisnovs@redhat.com>
 Red Hat, Inc.
 
 * Sources
@@ -16,13 +15,17 @@ Red Hat, Inc.
 #The design and this image is licensed under the Creative Commons 3.0 Attributions license.
 .image ./common/fiveyears.jpg _ 900
 
+* Gopher
+
+.image ./common/gopher.jpg _ 600
+
 * Go keywords
 
-  break        case      chan       const          continue
-  default      defer     else       fallthrough    for
-  func         go        goto       if             import
-  interface    map       package    range          return
-  select       struct    switch     type           var
+   break         case       chan        const           continue
+   default       defer      else        fallthrough     for
+   func          go         goto        if              import
+   interface     map        package     range           return
+   select        struct     switch      type            var
 
 * Packages and Imports
 - Program building blocks ("libraries")
@@ -171,13 +174,7 @@ Red Hat, Inc.
 
 * Usage of slices
 
-.play lesson2/18_slices.go /package main/,/cont//
-
-
-
-* Usage of slices (cont.)
-
-.play lesson2/18_slices.go /cont/,/^}//
+.play lesson2/21_slice_append.go
 
 
 
@@ -207,8 +204,11 @@ Red Hat, Inc.
 - a.k.a. associative array or hash
 - container for key-value pairs
 - "nil map":
+
     var m1 map[string]int
+
 - empty map:
+
     var m2 map[string]int = make(map[string]int)
     m3 := make(map[string]int)
 
@@ -216,16 +216,24 @@ Red Hat, Inc.
 
 * Maps
 - four basic operations: add/put, get, delete, and contains
+
 - add/put items to a map:
+
     m3["zero"] = 0
     m3["one"] = 1
     m3["two"] = 2
+
 - get item from a map:
-    m3["two"]
+
+    result := m3["two"]
+
 - delete from a map
+
     delete(m3, "zero")
+
 - contains
-    v, exists = m3["two"]
+
+    v, exists := m3["two"]
 
 
 
@@ -234,6 +242,9 @@ Red Hat, Inc.
 - provides an item index as well (Java on the other side...)
 
 
+
+* Iterating over integer values
+.play lesson2/int_range.go
 
 * Iterating over an array
 .play lesson2/33_for_range_1.go
@@ -304,7 +315,7 @@ Red Hat, Inc.
 * Implementing an interface
 - a.k.a. _satisfying_ an interface
 - no such keyword (`implements` or anything similar)
-- in Go: every type which implements all interface’s method automatically satisfies such interface
+- in Go: - every type which implements all interface’s method automatically satisfies such interface
 
 
 
@@ -345,4 +356,16 @@ Red Hat, Inc.
 * Channels
 - Unbuffered channels do block (and golang kindly detects deadlock)
 .play lesson4/chan3.go
+
+* HTTP and friends
+
+.play lesson6/web_server.go
+
+* JSON parsing: unknown format
+
+.play lesson6/web_server_json.go
+
+* JSON parsing: known format
+
+.play lesson6/web_server_json_2.go
 
