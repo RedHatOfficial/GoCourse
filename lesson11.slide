@@ -86,11 +86,11 @@ https://github.com/RedHatOfficial/GoCourse
 
 .play lesson11/json_marshal_struct.go
 
-* Indenting
+* Indenting the JSON output
 
 .play lesson11/json_marshal_struct_indent.go
 
-* Attribute names
+* Attribute names in JSON
 
 .play lesson11/json_marshal_struct_names.go
 
@@ -98,33 +98,51 @@ https://github.com/RedHatOfficial/GoCourse
 
 .play lesson11/json_marshal_struct_names_skip.go
 
-* Marshal array
+* Marshaling array
 
 .play lesson11/json_marshal_array.go
 
-* Array of `any`
+* Array of any values
+
+- `any` is an alias for `interface{}`
 
 .play lesson11/json_marshal_array_any.go
 
-* Floating point numers
+* Map
+
+.play lesson11/json_marshal_map.go
+
+* Floating point numbers
 
 .play lesson11/json_marshal_floats.go
 
-* Floating point special values
+* Floating point special values 1/2
 
 .play lesson11/json_marshal_floats_specvalues.go /^package main/,/^func main/
 
-* Cont.
+* Floating point special values 2/2
 
 .play lesson11/json_marshal_floats_specvalues.go /^func main/,/^}/
 
-* Floating point special values
+* Floating point special values with error checks 1/2
 
 .play lesson11/json_marshal_floats_specvalues_err.go /^package main/,/^func main/
 
-* Cont.
+* Floating point special values with error checks 2/2
 
 .play lesson11/json_marshal_floats_specvalues_err.go /^func main/,/^}/
+
+* Unmarshalling 1/2
+
+.play lesson11/json_unmarshal.go /^package main/,/^func main/
+
+* Unmarshalling 2/2
+
+.play lesson11/json_unmarshal.go /^func main/,/^}/
+
+* Unmarshalling with error checking
+
+.play lesson11/json_unmarshal_error.go
 
 * XML
 
