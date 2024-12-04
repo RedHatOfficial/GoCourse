@@ -2,19 +2,29 @@ package main
 
 import "fmt"
 
+type User struct {
+	id      int
+	name    string
+	surname string
+}
+
+type allowed_type interface {
+	~int | ~string | User
+}
+
 // Singly linked list header structure
-type List[T any] struct {
+type List[T allowed_type] struct {
 	Head *Item[T]
 }
 
 // Item stored in singly linked list
-type Item[T any] struct {
+type Item[T allowed_type] struct {
 	Value T
 	Next  *Item[T]
 }
 
 // NewList constructs empty singly linked list
-func NewList[T any]() *List[T] {
+func NewList[T allowed_type]() *List[T] {
 	return &List[T]{}
 }
 
@@ -65,4 +75,15 @@ func main() {
 	list2.Insert("fourth")
 
 	list2.Print()
+
+	user1 := User{
+		id:      1,
+		name:    "John",
+		surname: "Doe",
+	}
+
+	list3 := NewList[User]()
+	list3.Insert(user1)
+	list3.Print()
+
 }
