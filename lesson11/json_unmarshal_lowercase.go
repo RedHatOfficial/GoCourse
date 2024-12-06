@@ -17,6 +17,7 @@ func main() {
 		Name:    "John",
 		surname: "Doe"}
 
+	fmt.Println(user)
 	userAsJSON, _ := json.MarshalIndent(user, "", "    ")
 
 	var user2 User
