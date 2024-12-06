@@ -82,25 +82,37 @@ https://github.com/RedHatOfficial/GoCourse
 .code lesson11/JsonMarshalIndent.go
 .code lesson11/JsonUnmarshal.go
 
+
+
 * JSON marshaling
 
 .play lesson11/json_marshal_struct.go
+
+
 
 * Indenting the JSON output
 
 .play lesson11/json_marshal_struct_indent.go
 
+
+
 * Attribute names in JSON
 
 .play lesson11/json_marshal_struct_names.go
+
+
 
 * Skip attribute(s)
 
 .play lesson11/json_marshal_struct_names_skip.go
 
+
+
 * Marshaling array
 
 .play lesson11/json_marshal_array.go
+
+
 
 * Array of any values
 
@@ -108,41 +120,73 @@ https://github.com/RedHatOfficial/GoCourse
 
 .play lesson11/json_marshal_array_any.go
 
+
+
 * Map
 
 .play lesson11/json_marshal_map.go
+
+
 
 * Floating point numbers
 
 .play lesson11/json_marshal_floats.go
 
+
+
 * Floating point special values 1/2
 
 .play lesson11/json_marshal_floats_specvalues.go /^package main/,/^func main/
+
+
 
 * Floating point special values 2/2
 
 .play lesson11/json_marshal_floats_specvalues.go /^func main/,/^}/
 
+
+
 * Floating point special values with error checks 1/2
 
 .play lesson11/json_marshal_floats_specvalues_err.go /^package main/,/^func main/
+
+
 
 * Floating point special values with error checks 2/2
 
 .play lesson11/json_marshal_floats_specvalues_err.go /^func main/,/^}/
 
+
+
 * Unmarshalling 1/2
 
 .play lesson11/json_unmarshal.go /^package main/,/^func main/
+
+
 
 * Unmarshalling 2/2
 
 .play lesson11/json_unmarshal.go /^func main/,/^}/
 
+
+
 * Unmarshalling with error checking
 
 .play lesson11/json_unmarshal_error.go
+
+
+
+* Unmarshalling struct with lowercase item 1/2
+
+.play lesson11/json_unmarshal_lowercase.go /^package main/,/^func main/
+
+
+
+* Unmarshalling struct with lowercase item 2/2
+
+.play lesson11/json_unmarshal_lowercase.go /^func main/,/^}/
+
+
 
 * XML
 
@@ -150,6 +194,94 @@ https://github.com/RedHatOfficial/GoCourse
 - attributes -> nodes or attributes
 - root node name specification
 - sub-nodes support
+
+.code lesson11/XMLMarshal.go
+.code lesson11/XMLMarshalIndent.go
+.code lesson11/XMLUnmarshal.go
+
+
+
+* XML marshalling
+
+.play lesson11/xml_marshal_struct.go
+
+
+
+* Indenting
+
+.play lesson11/xml_marshal_struct_indent.go
+
+
+
+* Specific node names
+
+.play lesson11/xml_marshal_struct_names.go
+
+
+
+* Root node name specification
+
+.play lesson11/xml_marshal_xml_name.go
+
+
+
+* XML and Go: advanced features
+
+
+
+* XML and JSON specifiers 1/2
+
+.play lesson11/xml_and_json.go /^package main/,/^func main/
+
+
+
+* XML and JSON specifiers 2/2
+
+.play lesson11/xml_and_json.go /^func main/,/^}/
+
+
+
+* Controlling XML tree shape: subnodes
+
+.play lesson11/xml_marshal_control_1.go
+
+
+
+* Controlling XML tree shape: attributes
+
+.play lesson11/xml_marshal_control_2.go
+
+
+
+* Controlling XML tree shape: combination
+
+.play lesson11/xml_marshal_control_3.go
+
+
+
+* Special types and values in XML 1/2
+
+.play lesson11/xml_marshal_special_types_1.go /^package main/,/^func main/
+
+
+
+* Special types and values in XML 2/2
+
+.play lesson11/xml_marshal_special_types_1.go /^func main/,/^}/
+
+
+
+* Nested structures in XML 1/2
+
+.play lesson11/xml_marshal_special_types_2.go /^package main/,/^func main/
+
+
+
+* Nested structures in XML 2/2
+
+.play lesson11/xml_marshal_special_types_2.go /^func main/,/^}/
+
+
 
 * gob
 

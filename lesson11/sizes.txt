@@ -1,0 +1,6 @@
+   Format      JSON     JSON    BSON     XML       XML     gob
+Data         oneline   indent          oneline   indent  
+--------------------------------------------------------------
+[]float64     21017    26018    12895   39016    40015    8960
+string         1118     1125     1123    1134     1140    1145
+binary tree    8575    42115     7406    8076    31378    1431
