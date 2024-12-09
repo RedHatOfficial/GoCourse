@@ -43,6 +43,9 @@ https://github.com/RedHatOfficial/GoCourse
 - gob
 - CBOR
 - BSON
+- MessagePack
+
+- https://en.wikipedia.org/wiki/Comparison_of_data-serialization_formats
 
 
 
@@ -283,24 +286,95 @@ https://github.com/RedHatOfficial/GoCourse
 
 
 
+* MessagePack
+
+- binary format
+- efficient data storage
+- objects can be stored as maps
+- true arrays
+
+* MessagePack: supported data types
+
+- Nil (null, None)
+- Boolean
+- Integer (small ones stored efficently)
+- Float (single, double) incl. Nan + Infinity
+- String
+- Binary (byte array)
+- Array (sequence of objects)
+- Map (sequence of key-value pairs)
+- Extension
+
+* MessagePack: serializing `nil`
+
+.play lesson11/msgpack_nil.go /^package main/,/^func main/
+
+* cont.
+
+.play lesson11/msgpack_nil.go /^func main/,/^}/
+
+* MessagePack: serializing small integer
+
+.play lesson11/msgpack_small_int.go /^func main/,/^}/
+
+* MessagePack: serializing single float
+
+.play lesson11/msgpack_single.go /^func main/,/^}/
+
+* MessagePack: serializing a map
+
+.play lesson11/msgpack_map.go /^func main/,/^}/
+
+* MessagePack: serializing map of any 1/2
+
+.play lesson11/msgpack_map2.go /^func main/,/Encoder created/
+
+* MessagePack: serializing map of any 2/2
+
+.play lesson11/msgpack_map2.go /Encoder created/,/^}/
+
 * gob
+
+- Gobs of data
+- based on reflection
+- very efficient (size+speed)
+- built-in into Go stanard library
+
+* gob marshalling 1/2
+
+.play lesson11/gob_marshal_struct.go /^package/,/^func main/
+
+* gob marshalling 2/2
+
+.play lesson11/gob_marshal_struct.go /^func main/,/^}/
 
 * BSON
 
-* CBOR
+- "binary JSON"
 
-- Concise Binary Object Representation
+* BSON serialization 1/2
+
+.play lesson11/bson_serialize.go /^package/,/^func main/
+
+* BSON serialization 2/2
+
+.play lesson11/bson_serialize.go /^func main/,/^}/
+
+* BSON deserialization 1/2
+
+.play lesson11/bson_deserialize.go /^package/,/^func main/
+
+* BSON deserialization 2/2
+
+.play lesson11/bson_deserialize.go /^func main/,/^}/
+
+* Size comparisons
+
+.play lesson11/size_comparison.go
 
 * Size comparisons
 
 .code lesson11/sizes.txt
-
-* Configuration files
-
-- INI files
-- TOML
-- YAML
-- even JSON, XML etc.
 
 
 #last slide
