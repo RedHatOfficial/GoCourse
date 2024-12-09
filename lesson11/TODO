@@ -1,4 +1,0 @@
-bson_deserialize.go
-bson_serialize.go
-gob_marshal_struct.go
-size_comparison.go
