@@ -7,6 +7,8 @@ import (
 	"encoding/xml"
 	"fmt"
 	"os"
+
+	"github.com/ugorji/go/codec"
 )
 
 // Item represents value stored in binary tree
@@ -111,6 +113,23 @@ func encodeBinaryTreeIntoGob(bt BinaryTree) ([]byte, error) {
 	return buffer.Bytes(), nil
 }
 
+func encodeBinaryTreeIntoMsgPack(bt BinaryTree) ([]byte, error) {
+	var buffer bytes.Buffer
+
+	// handler
+	var handler codec.MsgpackHandle
+
+	// objekt realizující zakódování dat
+	encoder := codec.NewEncoder(&buffer, &handler)
+
+	// zakódování dat
+	err := encoder.Encode(bt)
+	if err != nil {
+		return buffer.Bytes(), err
+	}
+	return buffer.Bytes(), nil
+}
+
 func saveBinaryTree(encodedTree []byte, filename string) {
 	err := os.WriteFile(filename, encodedTree, 0o644)
 	if err != nil {
@@ -179,4 +198,13 @@ func main() {
 	}
 	printBufferInfo(encodedTree)
 	saveBinaryTree(encodedTree, "tree1.gob")
+
+	encodedTree, err = encodeBinaryTreeIntoMsgPack(bt)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	printBufferInfo(encodedTree)
+	saveBinaryTree(encodedTree, "/tmp/tree1.bin")
+
 }
