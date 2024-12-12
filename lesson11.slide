@@ -76,6 +76,13 @@ https://github.com/RedHatOfficial/GoCourse
 - can be implemented by any structure (where needed)
 
 
+* Why BinaryMarshaler and BinaryUnmarshaler
+
+- "universal" container for moving data around
+
+.code lesson11/Reader.go
+.code lesson11/Writer.go
+
 
 * JSON
 
