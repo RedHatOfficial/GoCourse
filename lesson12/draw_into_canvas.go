@@ -1,3 +1,4 @@
+// Technologie GopherJS
 package main
 
 import (

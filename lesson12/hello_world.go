@@ -1,3 +1,7 @@
+// Technologie GopherJS
+//
+// Program typu "Hello, world!"
+
 package main
 
 import (

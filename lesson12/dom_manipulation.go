@@ -1,4 +1,4 @@
-// Technologie WebAssembly
+// Technologie GopherJS
 //
 // - manipulace s DOMem přímo z jazyka Go
 // - změna atributu vybraného elementu
