@@ -1,4 +1,7 @@
 // Technologie GopherJS
+//
+// - kresleni do canvasu
+
 package main
 
 import (
