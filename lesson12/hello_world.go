@@ -1,6 +1,7 @@
 // Technologie GopherJS
 //
 // Program typu "Hello, world!"
+// Použití funkce fmt.Println
 
 package main
 
