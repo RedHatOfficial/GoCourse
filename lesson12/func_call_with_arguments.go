@@ -1,6 +1,8 @@
 // Technologie WebAssembly
 //
 // - rozhraní mezi jazyky Go a JavaScript
+// - zobrazení počtu argumentů předaných funkci PrintArguments
+// - zobrazení obsahu argumentů předaných funkci PrintArguments
 
 package main
 

@@ -1,6 +1,7 @@
 // Technologie WebAssembly
 //
 // - rozhraní mezi jazyky Go a JavaScript
+// - funkce PrintHello neočekává resp. nezpracovává žadné argumenty
 
 package main
 

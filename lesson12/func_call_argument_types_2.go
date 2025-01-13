@@ -1,6 +1,8 @@
 // Technologie WebAssembly
 //
 // - rozhraní mezi jazyky Go a JavaScript
+// - metoda PrintArguments vytiskne typy svých argumentů
+// - lepší řešení založené na typu js.Type
 
 package main
 
