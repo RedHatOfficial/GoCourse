@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Function call: with two FP arguments</title>
+    </head>
+    <body>
+        <h1 id="header">Function call: with two FP arguments</h2>
+        <script src="func_call_two_floats.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // korektní argumenty
+            printSum(1.1, 2.2);
+            printSum(1e10, 1e10);
+            printSum(1e100, 1e100);
+
+            // ¹patný poèet argumentù
+            printSum(10, 10, 20);
+            printSum(10);
+
+            // ¹patný typ argumentu
+            printSum("1", 2.0);
+            printSum(1.0, "2");
+            printSum(1.0, true);
+            printSum(1.0, null);
+        </script>
+    </body>
+</html>
+
