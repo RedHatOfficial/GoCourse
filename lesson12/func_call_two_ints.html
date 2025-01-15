@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Function call: with two integer arguments</title>
+    </head>
+    <body>
+        <h1 id="header">Function call: with two integer arguments</h2>
+        <script src="func_call_two_ints.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // korektní argumenty
+            printSum(1, 2);
+            printSum(10, 20);
+            printSum(100, 200);
+            printSum(-1, -2);
+
+            // ¹patný poèet argumentù
+            printSum(10, 10, 20);
+            printSum(10);
+
+            // ¹patný typ argumentu
+            printSum("1", 2);
+            printSum(1, "2");
+            printSum(1, true);
+            printSum(1, null);
+
+            // mezní pøípad
+            printSum(1.1, 2.2);
+        </script>
+    </body>
+</html>
+
