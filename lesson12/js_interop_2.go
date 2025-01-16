@@ -33,14 +33,16 @@ func PrintHello(this js.Value, args []js.Value) any {
 func main() {
 	fmt.Println("started")
 
-	c := make(chan bool)
+	//c := make(chan bool)
 
 	// export funkce PrintHello tak, aby byla volatelná
 	// z JavaScriptu
 	js.Global().Set("printHello", js.FuncOf(PrintHello))
 
 	// realizace nekonečného čekání
-	<-c
+	// (nutno provést při překladu do WebAssembly, ktežto
+	// v případě použití GopherJS je možné hlavní funkci ukončit)
+	//<-c
 
 	fmt.Println("finished")
 }
