@@ -54,6 +54,8 @@ func main() {
 	js.Global().Set("calcSum", js.FuncOf(CalcSum))
 
 	// realizace nekonečného čekání
+	// (nutno provést při překladu do WebAssembly, ktežto
+	// v případě použití GopherJS je možné hlavní funkci ukončit)
 	<-c
 
 	fmt.Println("finished")
