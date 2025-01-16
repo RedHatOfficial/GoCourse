@@ -38,6 +38,8 @@ func main() {
 	js.Global().Set("printArguments", js.FuncOf(PrintArguments))
 
 	// realizace nekonečného čekání
+	// (nutno provést při překladu do WebAssembly, ktežto
+	// v případě použití GopherJS je možné hlavní funkci ukončit)
 	<-c
 
 	fmt.Println("finished")
