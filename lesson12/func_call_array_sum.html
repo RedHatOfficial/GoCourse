@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Function call: array sum</title>
+    </head>
+    <body>
+        <h1 id="header">Function call: array sum</h2>
+        <script src="func_call_array_sum.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // korektní argumenty
+            arraySum([]);
+            arraySum([1]);
+            arraySum([1, 2, 3]);
+            arraySum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+            // nekorektní argumenty
+            arraySum(["foo", "bar", "baz"])
+            arraySum([true, false]);
+        </script>
+    </body>
+</html>
+
