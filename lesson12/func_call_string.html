@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Function call: with string argument</title>
+    </head>
+    <body>
+        <h1 id="header">Function call: with string argument</h2>
+        <script src="func_call_string.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            // korektní argumenty
+            printMessage("");
+            printMessage("Hello, world!");
+            printMessage("pøíli¹ ¾lu»ouèký kùò");
+
+            // ¹patný poèet argumentù
+            printMessage("foo", "bar")
+            printMessage();
+
+            // ¹patný typ argumentu
+            printMessage(2);
+            printMessage(null);
+            printMessage(undefined);
+        </script>
+    </body>
+</html>
+
