@@ -7,8 +7,8 @@ import (
 )
 
 func RunGomacro(script string) any {
-	interp := fast.New()
-	vals, _ := interp.Eval(script)
+	interpreter := fast.New()
+	vals, _ := interpreter.Eval(script)
 	return vals[0].ReflectValue()
 }
 
