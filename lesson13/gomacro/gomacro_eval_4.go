@@ -17,8 +17,8 @@ multiply(x, y)
 `
 
 func RunGomacro(script string) any {
-	interp := fast.New()
-	vals, _ := interp.Eval(script)
+	interpreter := fast.New()
+	vals, _ := interpreter.Eval(script)
 	if len(vals) < 1 {
 		return "no value"
 	}
