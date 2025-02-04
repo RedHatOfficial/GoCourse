@@ -1,4 +1,4 @@
-module gomacro
+module gomacro_tests
 
 go 1.22.1
 
