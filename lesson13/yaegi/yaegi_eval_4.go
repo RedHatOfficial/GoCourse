@@ -14,11 +14,11 @@ func multiply(a, b int) int {
 `
 
 func RunYaegi(script string) any {
-	i := interp.New(interp.Options{})
+	interpreter := interp.New(interp.Options{})
 
-	i.Use(stdlib.Symbols)
+	interpreter.Use(stdlib.Symbols)
 
-	ret, err := i.Eval(script)
+	ret, err := interpreter.Eval(script)
 	if err != nil {
 		panic(err)
 	}
