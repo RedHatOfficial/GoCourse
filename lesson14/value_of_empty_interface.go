@@ -5,19 +5,9 @@ import (
 	"reflect"
 )
 
-func test_get_type(x any) {
-	value := reflect.ValueOf(x)
-	fmt.Println(x)
-	fmt.Println(value)
-	fmt.Println()
-}
-
-type user struct {
-	name    string
-	surname string
-}
-
 func main() {
-	var nil1 interface{} = nil
-	test_get_type(nil1)
+	var x interface{} = nil
+	v := reflect.ValueOf(x)
+	fmt.Printf("value %v of type %T\n", x, x)
+	fmt.Printf("value %v of type %T\n", v, v)
 }
