@@ -11,11 +11,6 @@ func test_get_type(x any) {
 	fmt.Println("type is: ", typ)
 }
 
-type user struct {
-	name    string
-	surname string
-}
-
 func main() {
 	var nil1 interface{} = nil
 	test_get_type(nil1)
