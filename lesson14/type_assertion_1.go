@@ -15,7 +15,7 @@ func test_type(value any) {
 		return
 	}
 
-	string_val, ok := value.(bool)
+	string_val, ok := value.(string)
 	if ok {
 		fmt.Println("String value:", string_val)
 		return
