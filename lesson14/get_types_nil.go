@@ -28,4 +28,7 @@ func main() {
 
 	var nil4 *user = nil
 	test_get_type(nil4)
+
+	var nil5 []int = nil
+	test_get_type(nil5)
 }
