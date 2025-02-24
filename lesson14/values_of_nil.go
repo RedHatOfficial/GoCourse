@@ -29,4 +29,10 @@ func main() {
 
 	var nil4 *user = nil
 	test_get_type(nil4)
+
+	var nil5 interface{} = nil
+	test_get_type(nil5)
+
+	var nil6 []int = nil
+	test_get_type(nil6)
 }
