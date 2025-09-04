@@ -138,14 +138,14 @@ Red Hat, Inc.
 - pass to functions as value or via pointer (by reference)
 
 * Structs and dot operator
-.play lesson2/11_struct.go
+.play lesson2/12_struct.go
 
 * Comparison of whole structs is possible!
 - `==` and `!=` operators
-.play lesson2/14_struct_comparison.go /^func main/,/^}/
+.play lesson2/15_struct_comparison.go /^func main/,/^}/
 
 * Comparison of whole structs is possible! (cont.)
-.play lesson2/14_struct_comparison.go /^func main/,/^}/
+.play lesson2/15_struct_comparison.go /^func main/,/^}/
 
 * Arrays
 - basic data type in the Go programming language
@@ -158,7 +158,7 @@ Red Hat, Inc.
 
 * Array copy
 - unlike slices, arrays can be copied
-.play lesson2/17_array_copy.go
+.play lesson2/18_array_copy.go
 
 * Slices
 - proper data type in the Go programming language
@@ -174,7 +174,7 @@ Red Hat, Inc.
 
 * Usage of slices
 
-.play lesson2/21_slice_append.go
+.play lesson2/22_slice_append.go
 
 
 
@@ -184,7 +184,7 @@ Red Hat, Inc.
 - but the slice does not contain any data, just a pointer to array element
 - so any modify in slice element is reflected in an array as well
 
-.play lesson2/19_slice_copy.go /package main/,/cont//
+.play lesson2/20_slice_copy.go /package main/,/cont//
 
 * Pointers
 - always points to an element of some type
@@ -198,7 +198,7 @@ Red Hat, Inc.
 * Basic usage of pointers
 - please note the usage of `*p_i++`
 
-.play lesson2/22_pointer_to_int.go
+.play lesson2/23_pointer_to_int.go
 
 * Maps
 - a.k.a. associative array or hash

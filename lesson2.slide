@@ -194,7 +194,7 @@ Outline:
 
 
 * Defer and existing app
-.play lesson2/on_finish.go
+.play lesson2/11_on_finish.go
 
 
 
@@ -214,7 +214,7 @@ Outline:
 
 
 * Structs and dot operator
-.play lesson2/11_struct.go
+.play lesson2/12_struct.go
 
 
 
@@ -226,7 +226,7 @@ Outline:
 
 
 * Initialization of struct members (cont.)
-.play lesson2/12_struct_init.go
+.play lesson2/13_struct_init.go
 
 
 
@@ -238,30 +238,30 @@ Outline:
 
 
 * Better (more explicit) initialization of struct members (cont.)
-.play lesson2/13_better_struct_init.go
+.play lesson2/14_better_struct_init.go
 
 
 
 * Comparison of whole structs is possible!
 - `==` and `!=` operators
-.play lesson2/14_struct_comparison.go /^func main/,/^}/
+.play lesson2/15_struct_comparison.go /^func main/,/^}/
 
 
 
 * Comparison of whole structs is possible! (cont.)
-.play lesson2/14_struct_comparison.go /^func main/,/^}/
+.play lesson2/15_struct_comparison.go /^func main/,/^}/
 
 
 
 * Passing structs as values into functions
 - by value
 - by reference (via pointer)
-.play lesson2/15_print_user.go /package main/,/^func main//
+.play lesson2/16_print_user.go /package main/,/^func main//
 
 
 
 * Passing structs as values into functions (cont.)
-.play lesson2/15_print_user.go /^func main/,/^}/
+.play lesson2/16_print_user.go /^func main/,/^}/
 
 
 * Struct embedding
@@ -292,18 +292,18 @@ Outline:
 
 
 * Basic operations with arrays
-.play lesson2/16_arrays.go
+.play lesson2/17_arrays.go
 
 
 
 * Matrix (two dimensional array)
-.play lesson2/16B_arrays.go
+.play lesson2/17B_arrays.go
 
 
 
 * Array copy
 - unlike slices, arrays can be copied
-.play lesson2/17_array_copy.go
+.play lesson2/18_array_copy.go
 
 
 
@@ -323,13 +323,13 @@ Outline:
 
 * Usage of slices
 
-.play lesson2/18_slices.go /package main/,/cont//
+.play lesson2/19_slices.go /package main/,/cont//
 
 
 
 * Usage of slices (cont.)
 
-.play lesson2/18_slices.go /cont/,/^}//
+.play lesson2/19_slices.go /cont/,/^}//
 
 
 
@@ -339,7 +339,7 @@ Outline:
 - but the slice does not contain any data, just a pointer to array element
 - so any modify in slice element is reflected in an array as well
 
-.play lesson2/19_slice_copy.go /package main/,/cont//
+.play lesson2/20_slice_copy.go /package main/,/cont//
 
 
 
@@ -347,25 +347,25 @@ Outline:
 - modify array elements
 - then modify the same elements, but via slice
 
-.play lesson2/19_slice_copy.go /cont/,/^}//
+.play lesson2/20_slice_copy.go /cont/,/^}//
 
 
 
 * Slice from slice
 - "slicing" of another slice is possible
-.play lesson2/20_slice_from_slice.go /package main/,/cont//
+.play lesson2/21_slice_from_slice.go /package main/,/cont//
 
 
 
 * Slice from slice (cont.)
-.play lesson2/20_slice_from_slice.go /cont/,/^}//
+.play lesson2/21_slice_from_slice.go /cont/,/^}//
 
 
 
 * Append function
 - the function `append` returns a new slice
 - the capacity of new slice can be increased (realloc magic inside!)
-.play lesson2/21_slice_append.go
+.play lesson2/22_slice_append.go
 
 
 
@@ -383,49 +383,49 @@ Outline:
 * Basic usage of pointers
 - please note the usage of `*p_i++`
 
-.play lesson2/22_pointer_to_int.go
+.play lesson2/23_pointer_to_int.go
 
 
 
 * Pointer to structure
 
-.play lesson2/23_pointer_to_struct.go /package main/,/func main//
+.play lesson2/24_pointer_to_struct.go /package main/,/func main//
 
 
 
 * Pointer to structure (cont.)
 - please note the possibility to write `p_u.id` instead of `(*p_u).id`
-.play lesson2/23_pointer_to_struct.go /func main/,/^}//
+.play lesson2/24_pointer_to_struct.go /func main/,/^}//
 
 
 
 * Pointer to structure item/member
-.play lesson2/24_pointer_to_struct_item.go /package main/,/func main//
+.play lesson2/26_pointer_to_struct_item.go /package main/,/func main//
 
 
 
 * Pointer to structure item/member (cont.)
-.play lesson2/24_pointer_to_struct_item.go /func main/,/^}//
+.play lesson2/26_pointer_to_struct_item.go /func main/,/^}//
 
 
 
 * Pointer to array item
-.play lesson2/25_pointer_to_array.go /package main/,/cont//
+.play lesson2/26_pointer_to_array.go /package main/,/cont//
 
 
 
 * Pointer to array item (cont.)
-.play lesson2/25_pointer_to_array.go /cont/,/^}//
+.play lesson2/26_pointer_to_array.go /cont/,/^}//
 
 
 
 * Return pointer to local variable from C function
-.code lesson2/25_B_return_pointer.c
+.code lesson2/26_B_return_pointer.c
 
 
 
 * Return pointer to local variable from Go function
-.play lesson2/25_B_return_pointer.go
+.play lesson2/26_B_return_pointer.go
 
 
 
@@ -461,7 +461,7 @@ Outline:
 
 
 * Uninitialized map ("nil map")
-.play lesson2/26_uninitialized_map.go
+.play lesson2/27_uninitialized_map.go
 
 
 
@@ -471,27 +471,27 @@ Outline:
 
 
 * Empty map (int -> string)
-.play lesson2/27_initialized_map.go
-
-
-
-* Empty map (string -> int)
-.play lesson2/27_B_initialized_map.go
-
-
-
-* Empty map (shorter idiom)
 .play lesson2/28_initialized_map.go
 
 
 
+* Empty map (string -> int)
+.play lesson2/28_B_initialized_map.go
+
+
+
+* Empty map (shorter idiom)
+.play lesson2/29_initialized_map.go
+
+
+
 * Maps and struct
-.play lesson2/29_map_and_struct.go /^package main/,/^func main/
+.play lesson2/30_map_and_struct.go /^package main/,/^func main/
 
 
 
 * Maps and struct (cont.)
-.play lesson2/29_map_and_struct.go /^func main/,/^}/
+.play lesson2/30_map_and_struct.go /^func main/,/^}/
 
 
 
