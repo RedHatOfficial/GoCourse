@@ -22,6 +22,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer httpResp.Body.Close()
 	log.Printf("Status: %s", httpResp.Status)
 	io.Copy(os.Stdout, httpResp.Body)
 }
