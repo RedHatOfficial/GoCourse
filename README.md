@@ -12,6 +12,7 @@ This assumes that you have go compiler and git installed and on $PATH of your sy
 ```shell
 git clone https://github.com/RedHatOfficial/GoCourse.git
 cd GoCourse
+go get golang.org/x/tools/cmd/present
 go run golang.org/x/tools/cmd/present
 ```
 
