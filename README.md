@@ -12,8 +12,7 @@ This assumes that you have go compiler and git installed and on $PATH of your sy
 ```shell
 git clone https://github.com/RedHatOfficial/GoCourse.git
 cd GoCourse
-go get golang.org/x/tools/cmd/present
-go run golang.org/x/tools/cmd/present
+go run golang.org/x/tools/cmd/present@latest
 ```
 
 Afterwards connect with your browser to the mentioned address. To terminate the server use Ctrl+C.
@@ -22,5 +21,5 @@ Afterwards connect with your browser to the mentioned address. To terminate the 
 
 It is possible to start service that serves slides to other computers via HTTP.
 ```shell
-go run golang.org/x/tools/cmd/present -http=:3999 -play=false
+go run golang.org/x/tools/cmd/present@latest -http=:3999 -play=false
 ```
