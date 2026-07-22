@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var m1 map[int]string = make(map[int]string)
+	m1 := make(map[int]string)
 	fmt.Println(m1)
 
 	m1[1] = "one"
