@@ -13,7 +13,7 @@ Red Hat, Inc.
 There are lots of interesting programming languages that you can learn.
 The question is, should you perfect them all? The answer is no, of course.
 
-So what about the Go language - is it worth try?
+So what about the Go language - is it worth trying?
 
 In this presentation we are going to talk about Go's pros (goroutines,
 channels, GC, type systems) and cons (a language with attributes taken from the
@@ -82,7 +82,7 @@ previous century :)
     
 - and i think that's beautiful
 - not mine, source:
-.link https://goo.gl/Akxjih
+.link https://www.reddit.com/r/ProgrammerHumor/comments/8nwyma/c_is_a_beautiful_language/
 
 * More readable compared to C++
 
@@ -101,7 +101,7 @@ previous century :)
 .link https://www.docker.com/ Docker
 .link https://podman.io/ Podman
 .link https://kubernetes.io/ Kubernetes
-.link https://coreos.com/operators/ Kubernetes Operators
+.link https://operatorframework.io/ Kubernetes Operators
 .link https://min.io/ MinIO
 .link https://nsq.io/ NSQ
 .link https://nats.io/ NATS
