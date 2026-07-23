@@ -1,3 +1,3 @@
 module github.com/RedHatOfficial/GoCourse
 
-go 1.17
+go 1.23
