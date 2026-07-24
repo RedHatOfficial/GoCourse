@@ -15,4 +15,7 @@ func main() {
 	http.Handle("/", httputil.NewSingleHostReverseProxy(&target))
 	log.Printf("Proxy started")
 	http.ListenAndServe("localhost:8081", nil)
+	if err := http.ListenAndServe("localhost:8081", nil); err != nil {
+		log.Fatal(err)
+	}
 }
